@@ -1,0 +1,15 @@
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\bin\Debug\net6.0\latihan_csharp.exe
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\bin\Debug\net6.0\latihan_csharp.deps.json
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\bin\Debug\net6.0\latihan_csharp.runtimeconfig.json
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\bin\Debug\net6.0\latihan_csharp.dll
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\bin\Debug\net6.0\latihan_csharp.pdb
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.csproj.AssemblyReference.cache
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.AssemblyInfoInputs.cache
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.AssemblyInfo.cs
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.csproj.CoreCompileInputs.cache
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.dll
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\refint\latihan_csharp.dll
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.pdb
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\latihan_csharp.genruntimeconfig.cache
+E:\Documents\GitHub\latihan_csharp\latihan_csharp\obj\Debug\net6.0\ref\latihan_csharp.dll

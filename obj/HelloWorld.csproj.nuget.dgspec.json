@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Task Assignment\\HelloWorld\\HelloWorld.csproj": {}
+    "E:\\TaskAssignment\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "E:\\Task Assignment\\HelloWorld\\HelloWorld.csproj": {
+    "E:\\TaskAssignment\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Task Assignment\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "E:\\TaskAssignment\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "E:\\Task Assignment\\HelloWorld\\HelloWorld.csproj",
+        "projectPath": "E:\\TaskAssignment\\HelloWorld\\HelloWorld.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "E:\\Task Assignment\\HelloWorld\\obj\\",
+        "outputPath": "E:\\TaskAssignment\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

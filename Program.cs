@@ -85,18 +85,62 @@ class Program
         //     return luas;
         // }
 
-        Volume kerucut = new Volume(314.28, 15);
-        Console.WriteLine("Volume kerucut: {0} cm3", (double)1/3*kerucut.LuasAlas*kerucut.tinggi);
-    }
-    public class Volume
-    {
-        public double LuasAlas;
-        public double tinggi;
+    //     Volume kerucut = new Volume(314.28, 15);
+    //     Console.WriteLine("Volume kerucut: {0} cm3", (double)1/3*kerucut.LuasAlas*kerucut.tinggi);
+    // }
+    // public class Volume
+    // {
+    //     public double LuasAlas;
+    //     public double tinggi;
 
-        public Volume(double LuasAlas, double tinggi)
-        {
-            this.LuasAlas = 314.28;
-            this.tinggi = 15;
-        }
+    //     public Volume(double LuasAlas, double tinggi)
+    //     {
+    //         this.LuasAlas = 314.28;
+    //         this.tinggi = 15;
+    // }
+
+    // //deklarasi secara implisit
+    // //integer
+    // int number=10;
+    // //string
+    // string nama = "Indra Oki Sandy";
+    // //double
+    // double myDouble = 33.60;
+    // //bool
+    // bool isHandsome = true;
+    // //float
+    // float myFloat = 20.56f;
+    // //decimal
+    // decimal myDecimal = 30.22m;
+    // //character
+    // char c = 'c';
+    // //short
+    // short myShort = 22222;
+    // //long
+    // long myLong = 8888888888888888888;
+    // //byte
+    // byte myByte = 255;
+
+    //deklarasi secara explisit
+    //integer
+    int number;
+    //string
+    string nama;
+    //double
+    double myDouble;
+    //bool
+    bool isHandsome;
+    //float
+    float myFloat;
+    //decimal
+    decimal myDecimal;
+    //character
+    char c;
+    //short
+    short myShort;
+    //long
+    long myLong;
+    //byte
+    byte myByte;
     }
 }

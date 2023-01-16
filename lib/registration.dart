@@ -12,6 +12,7 @@ class _RegistrationState extends State<Registration> {
   TextEditingController nameController = TextEditingController();
   TextEditingController classController = TextEditingController();
   TextEditingController schoolController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -30,86 +31,123 @@ class _RegistrationState extends State<Registration> {
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Spacer(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Flexible(
-                    flex: 4,
-                    child: Text('Nama'),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  Flexible(
-                    flex: 2,
-                    child: nameText(),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Flexible(
-                    flex: 4,
-                    child: Text('Kelas'),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  Flexible(
-                    flex: 2,
-                    child: classText(),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Flexible(
-                    flex: 4,
-                    child: Text('Sekolah'),
-                  ),
-                  const SizedBox(
-                    width: 35,
-                  ),
-                  Flexible(
-                    flex: 2,
-                    child: schoolText(),
-                  ),
-                ],
-              ),
-              const Spacer(),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff006699)),
-                child: const Padding(
-                  padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                  child: Text('Next'),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Spacer(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Flexible(
+                      flex: 4,
+                      child: Text('Nama'),
+                    ),
+                    const SizedBox(
+                      width: 35,
+                    ),
+                    Flexible(
+                      flex: 2,
+                      child: nameText(),
+                    ),
+                  ],
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-            ],
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Flexible(
+                      flex: 4,
+                      child: Text('Kelas'),
+                    ),
+                    const SizedBox(
+                      width: 35,
+                    ),
+                    Flexible(
+                      flex: 2,
+                      child: classText(),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Flexible(
+                      flex: 4,
+                      child: Text('Sekolah'),
+                    ),
+                    const SizedBox(
+                      width: 35,
+                    ),
+                    Flexible(
+                      flex: 2,
+                      child: schoolText(),
+                    ),
+                  ],
+                ),
+                const Spacer(),
+                ElevatedButton(
+                  onPressed: () {
+                    // if (_formKey.currentState!.validate()) {
+
+                    // }
+                    Navigator.pushNamed(context, '/logoscreen');
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff006699)),
+                  child: const Padding(
+                    padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                    child: Text('Next'),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 
+  showAlertDialog() {
+    AlertDialog alert = AlertDialog(
+      title: const Text('Error'),
+      content: const Text('Mohon isi semua isian yang diberikan.'),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Ya'),
+        ),
+      ],
+    );
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (context) {
+        return alert;
+      },
+    );
+  }
+
   TextFormField schoolText() => TextFormField(
         controller: schoolController,
+        // validator: (value) {
+        //   if (value!.isEmpty) {
+        //     return showAlertDialog();
+        //   } else {
+        //     return null;
+        //   }
+        // },
         textInputAction: TextInputAction.done,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
@@ -126,6 +164,13 @@ class _RegistrationState extends State<Registration> {
 
   TextFormField classText() => TextFormField(
         controller: classController,
+        // validator: (value) {
+        //   if (value!.isEmpty) {
+        //     return showAlertDialog();
+        //   } else {
+        //     return null;
+        //   }
+        // },
         textInputAction: TextInputAction.next,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
@@ -142,6 +187,13 @@ class _RegistrationState extends State<Registration> {
 
   TextFormField nameText() => TextFormField(
         controller: nameController,
+        // validator: (value) {
+        //   if (value!.isEmpty) {
+        //     return showAlertDialog();
+        //   } else {
+        //     return null;
+        //   }
+        // },
         textInputAction: TextInputAction.next,
         keyboardType: TextInputType.name,
         decoration: InputDecoration(

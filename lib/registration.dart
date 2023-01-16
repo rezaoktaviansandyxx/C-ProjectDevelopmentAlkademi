@@ -25,8 +25,13 @@ class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        leading: const BackButton(
+          color: Colors.black,
+        ),
+        elevation: 0,
       ),
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -48,7 +53,7 @@ class _RegistrationState extends State<Registration> {
                       width: 35,
                     ),
                     Flexible(
-                      flex: 2,
+                      flex: 4,
                       child: nameText(),
                     ),
                   ],
@@ -67,7 +72,7 @@ class _RegistrationState extends State<Registration> {
                       width: 35,
                     ),
                     Flexible(
-                      flex: 2,
+                      flex: 4,
                       child: classText(),
                     ),
                   ],
@@ -86,7 +91,7 @@ class _RegistrationState extends State<Registration> {
                       width: 35,
                     ),
                     Flexible(
-                      flex: 2,
+                      flex: 4,
                       child: schoolText(),
                     ),
                   ],
@@ -95,7 +100,6 @@ class _RegistrationState extends State<Registration> {
                 ElevatedButton(
                   onPressed: () {
                     // if (_formKey.currentState!.validate()) {
-
                     // }
                     Navigator.pushNamed(context, '/logoscreen');
                   },

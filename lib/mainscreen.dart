@@ -9,7 +9,8 @@ class MainScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage('https://sekolahcikal.files.wordpress.com/2009/12/funmath.jpg'),
+            image: NetworkImage(
+                'https://sekolahcikal.files.wordpress.com/2009/12/funmath.jpg'),
             fit: BoxFit.fill,
           ),
         ),
@@ -22,7 +23,11 @@ class MainScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/registration');
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff006699)),
+                  backgroundColor: const Color(0xff006699),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 child: const Padding(
                   padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
                   child: Text('Kelas 2'),
@@ -36,7 +41,11 @@ class MainScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/registration');
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff006699)),
+                  backgroundColor: const Color(0xff006699),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 child: const Padding(
                   padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
                   child: Text('Kelas 4'),
@@ -50,7 +59,11 @@ class MainScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/registration');
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff006699)),
+                  backgroundColor: const Color(0xff006699),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 child: const Padding(
                   padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
                   child: Text('Kelas 6'),

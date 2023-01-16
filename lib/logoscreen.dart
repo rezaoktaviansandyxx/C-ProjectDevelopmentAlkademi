@@ -21,7 +21,7 @@ class LogoScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Flexible(
-                  flex: 3,
+                  flex: 2,
                   child: Container(
                     decoration: const BoxDecoration(
                       image: DecorationImage(
@@ -32,6 +32,7 @@ class LogoScreen extends StatelessWidget {
                 Flexible(
                   flex: 2,
                   child: Container(
+                    width: 200,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/images/ristekdikti.png')),
@@ -49,7 +50,11 @@ class LogoScreen extends StatelessWidget {
                       Navigator.pushNamed(context, '/assesment');
                     },
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff006699)),
+                      backgroundColor: const Color(0xff006699),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
                       child: Text('Next'),

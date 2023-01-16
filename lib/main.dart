@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/logoscreen.dart';
 import 'package:quiz_app/mainscreen.dart';
 import 'package:quiz_app/registration.dart';
-import 'package:quiz_app/tutorial.dart';
+import 'package:quiz_app/assesment.dart';
 
 void main() {
   runApp(const MyApp());

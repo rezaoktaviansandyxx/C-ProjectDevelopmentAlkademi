@@ -104,15 +104,19 @@ class _RegistrationState extends State<Registration> {
                       classController.text;
                       schoolController.text;
                       await Navigator.pushNamed(context, '/logoscreen');
-                    nameController.clear();
-                    classController.clear();
-                    schoolController.clear();
+                      nameController.clear();
+                      classController.clear();
+                      schoolController.clear();
                     } else {
                       showAlertDialog();
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff006699)),
+                    backgroundColor: const Color(0xff006699),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
                   child: const Padding(
                     padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
                     child: Text('Next'),

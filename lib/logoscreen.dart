@@ -46,7 +46,7 @@ class LogoScreen extends StatelessWidget {
                   const Spacer(),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/tutorial');
+                      Navigator.pushNamed(context, '/assesment');
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff006699)),

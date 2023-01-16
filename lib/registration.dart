@@ -98,10 +98,18 @@ class _RegistrationState extends State<Registration> {
                 ),
                 const Spacer(),
                 ElevatedButton(
-                  onPressed: () {
-                    // if (_formKey.currentState!.validate()) {
-                    // }
-                    Navigator.pushNamed(context, '/logoscreen');
+                  onPressed: () async {
+                    if (isAllFilled()) {
+                      nameController.text;
+                      classController.text;
+                      schoolController.text;
+                      await Navigator.pushNamed(context, '/logoscreen');
+                    nameController.clear();
+                    classController.clear();
+                    schoolController.clear();
+                    } else {
+                      showAlertDialog();
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699)),
@@ -143,15 +151,17 @@ class _RegistrationState extends State<Registration> {
     );
   }
 
+  isAllFilled() {
+    return nameController.text != '' &&
+        classController.text != '' &&
+        schoolController.text != '' &&
+        nameController.text != null &&
+        classController.text != null &&
+        schoolController.text != null;
+  }
+
   TextFormField schoolText() => TextFormField(
         controller: schoolController,
-        // validator: (value) {
-        //   if (value!.isEmpty) {
-        //     return showAlertDialog();
-        //   } else {
-        //     return null;
-        //   }
-        // },
         textInputAction: TextInputAction.done,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
@@ -168,13 +178,6 @@ class _RegistrationState extends State<Registration> {
 
   TextFormField classText() => TextFormField(
         controller: classController,
-        // validator: (value) {
-        //   if (value!.isEmpty) {
-        //     return showAlertDialog();
-        //   } else {
-        //     return null;
-        //   }
-        // },
         textInputAction: TextInputAction.next,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
@@ -191,13 +194,6 @@ class _RegistrationState extends State<Registration> {
 
   TextFormField nameText() => TextFormField(
         controller: nameController,
-        // validator: (value) {
-        //   if (value!.isEmpty) {
-        //     return showAlertDialog();
-        //   } else {
-        //     return null;
-        //   }
-        // },
         textInputAction: TextInputAction.next,
         keyboardType: TextInputType.name,
         decoration: InputDecoration(

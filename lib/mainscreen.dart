@@ -6,29 +6,58 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Kelas 2'),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Kelas 4'),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Kelas 6'),
-            ),
-          ],
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage('https://sekolahcikal.files.wordpress.com/2009/12/funmath.jpg'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/registration');
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xff006699)),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                  child: Text('Kelas 2'),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/registration');
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xff006699)),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                  child: Text('Kelas 4'),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/registration');
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xff006699)),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                  child: Text('Kelas 6'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

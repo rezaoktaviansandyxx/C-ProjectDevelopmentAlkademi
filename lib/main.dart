@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/mainscreen.dart';
+import 'package:quiz_app/registration.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
+      routes: {
+        // '/': (context) => const MainScreen(),
+        '/registration' :(context) => const Registration(),
+      },
       home: const MainScreen(),
     );
   }

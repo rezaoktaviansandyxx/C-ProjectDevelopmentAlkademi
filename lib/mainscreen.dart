@@ -9,8 +9,7 @@ class MainScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(
-                'https://sekolahcikal.files.wordpress.com/2009/12/funmath.jpg'),
+            image: AssetImage('assets/images/funmath.jpg'),
             fit: BoxFit.fill,
           ),
         ),

@@ -35,8 +35,7 @@ class Assesment extends StatelessWidget {
             const Spacer(),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(
-                    context, '/tutorial', (route) => false);
+                Navigator.pushNamed(context, '/tutorial');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xff006699),

@@ -152,7 +152,9 @@ class _TutorialState extends State<Tutorial> {
                           color: Colors.transparent,
                           border: Border.all(
                               width: 3.0,
-                              color: isPressedList[2] ? Colors.green : Colors.black),
+                              color: isPressedList[2]
+                                  ? Colors.green
+                                  : Colors.black),
                         ),
                         child: Card(
                           color: Colors.transparent,
@@ -190,7 +192,9 @@ class _TutorialState extends State<Tutorial> {
                           color: Colors.transparent,
                           border: Border.all(
                               width: 3.0,
-                              color: isPressedList[3] ? Colors.green : Colors.black),
+                              color: isPressedList[3]
+                                  ? Colors.green
+                                  : Colors.black),
                         ),
                         child: Card(
                           color: Colors.transparent,
@@ -224,6 +228,8 @@ class _TutorialState extends State<Tutorial> {
                 ),
                 ElevatedButton(
                   onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/startscreen', (route) => false);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff006699),

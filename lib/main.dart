@@ -3,6 +3,7 @@ import 'package:quiz_app/logoscreen.dart';
 import 'package:quiz_app/mainscreen.dart';
 import 'package:quiz_app/registration.dart';
 import 'package:quiz_app/assesment.dart';
+import 'package:quiz_app/startscreen.dart';
 import 'package:quiz_app/tutorial.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/logoscreen' :(context) => const LogoScreen(),
         '/assesment' :(context) => const Assesment(),
         '/tutorial' :(context) => const Tutorial(),
+        '/startscreen' :(context) => const StartScreen(),
       },
       home: const MainScreen(),
     );

@@ -1,8 +1,15 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-class LogoScreen extends StatelessWidget {
+class LogoScreen extends StatefulWidget {
   const LogoScreen({super.key});
 
+  @override
+  State<LogoScreen> createState() => _LogoScreenState();
+}
+
+class _LogoScreenState extends State<LogoScreen> {
+  final _assetsAudioPlayer = AssetsAudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +54,8 @@ class LogoScreen extends StatelessWidget {
                   const Spacer(),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/assesment');
+                      Navigator.pushNamed(context, '/assesment',
+                          arguments: openPlayer());
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
@@ -69,6 +77,13 @@ class LogoScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  openPlayer() async {
+    await _assetsAudioPlayer.open(
+      Audio('assets/audios/assesment.mp3'),
+      autoStart: true,
     );
   }
 }

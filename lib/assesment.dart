@@ -1,8 +1,16 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-class Assesment extends StatelessWidget {
+class Assesment extends StatefulWidget {
   const Assesment({super.key});
 
+  @override
+  State<Assesment> createState() => _AssesmentState();
+}
+
+class _AssesmentState extends State<Assesment> {
+  final _assetsAudioPlayer = AssetsAudioPlayer();
+  bool isButtonActive = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,9 +42,11 @@ class Assesment extends StatelessWidget {
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/tutorial');
-              },
+              onPressed: isButtonActive
+                  ? () async{
+                      await Navigator.pushNamed(context, '/tutorial');
+                    }
+                  : null,
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xff006699),
                 shape: RoundedRectangleBorder(

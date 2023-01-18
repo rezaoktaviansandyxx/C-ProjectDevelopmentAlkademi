@@ -33,99 +33,101 @@ class _RegistrationState extends State<Registration> {
         ),
         elevation: 0,
       ),
-      body: SizedBox(
-        height: MediaQuery.of(context).size.height,
-        child: Center(
-          child: Form(
-            key: _formKey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Flexible(
-                      flex: 4,
-                      child: Text('Nama'),
+      body: SingleChildScrollView(
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          child: Center(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Flexible(
+                        flex: 4,
+                        child: Text('Nama'),
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      Flexible(
+                        flex: 4,
+                        child: nameText(),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Flexible(
+                        flex: 4,
+                        child: Text('Kelas'),
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      Flexible(
+                        flex: 4,
+                        child: classText(),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Flexible(
+                        flex: 4,
+                        child: Text('Sekolah'),
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      Flexible(
+                        flex: 4,
+                        child: schoolText(),
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
+                  ElevatedButton(
+                    onPressed: () async {
+                      if (isAllFilled()) {
+                        nameController.text;
+                        classController.text;
+                        schoolController.text;
+                        await Navigator.pushNamed(context, '/logoscreen');
+                        nameController.clear();
+                        classController.clear();
+                        schoolController.clear();
+                      } else {
+                        showAlertDialog();
+                      }
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff006699),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
-                    const SizedBox(
-                      width: 35,
-                    ),
-                    Flexible(
-                      flex: 4,
-                      child: nameText(),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Flexible(
-                      flex: 4,
-                      child: Text('Kelas'),
-                    ),
-                    const SizedBox(
-                      width: 35,
-                    ),
-                    Flexible(
-                      flex: 4,
-                      child: classText(),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Flexible(
-                      flex: 4,
-                      child: Text('Sekolah'),
-                    ),
-                    const SizedBox(
-                      width: 35,
-                    ),
-                    Flexible(
-                      flex: 4,
-                      child: schoolText(),
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                ElevatedButton(
-                  onPressed: () async {
-                    if (isAllFilled()) {
-                      nameController.text;
-                      classController.text;
-                      schoolController.text;
-                      await Navigator.pushNamed(context, '/logoscreen');
-                      nameController.clear();
-                      classController.clear();
-                      schoolController.clear();
-                    } else {
-                      showAlertDialog();
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff006699),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                    child: const Padding(
+                      padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                      child: Text('Next'),
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                    child: Text('Next'),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

@@ -28,9 +28,9 @@ class MyApp extends StatelessWidget {
         '/assesment' :(context) => const Assessment(),
         '/tutorial' :(context) => const Tutorial(),
         '/startscreen' :(context) => const StartScreen(),
-        '/kelas2/question1' :(context) => const Question1(),
+        '/kelas2/question1' :(context) => const Question1Class2(),
       },
-      home: const MainScreen(),
+      home: const Question1Class2(),
     );
   }
 }

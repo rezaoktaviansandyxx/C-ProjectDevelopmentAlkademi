@@ -28,48 +28,46 @@ class _AssessmentState extends State<Assessment> {
         ),
         elevation: 0,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          margin: const EdgeInsets.only(left: 25, top: 60),
-          child: Column(
-            children: [
-              const ListTile(
-                title: Text(
-                  'Asesmen Matematika',
-                  style: TextStyle(fontSize: 23),
-                ),
-                subtitle: Text(
-                  'Selamat datang di dunia matematika, hari ini kamu memiliki misi untuk menjawab pertanyaan-pertanyaan seputar dunia matematika.',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xff006699),
-                  ),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        margin: const EdgeInsets.only(left: 25, top: 60),
+        child: Column(
+          children: [
+            const ListTile(
+              title: Text(
+                'Asesmen Matematika',
+                style: TextStyle(fontSize: 23),
+              ),
+              subtitle: Text(
+                'Selamat datang di dunia matematika, hari ini kamu memiliki misi untuk menjawab pertanyaan-pertanyaan seputar dunia matematika.',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Color(0xff006699),
                 ),
               ),
-              const Spacer(),
-              ElevatedButton(
-                onPressed: isEnable
-                    ? () {
-                        Navigator.pushNamed(context, '/tutorial');
-                      }
-                    : null,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff006699),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                  child: Text('Next'),
+            ),
+            const Spacer(),
+            ElevatedButton(
+              onPressed: isEnable
+                  ? () {
+                      Navigator.pushNamed(context, '/tutorial');
+                    }
+                  : null,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xff006699),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              const SizedBox(
-                height: 10,
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                child: Text('Next'),
               ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+          ],
         ),
       ),
     );

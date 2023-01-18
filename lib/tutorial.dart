@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
 class Tutorial extends StatefulWidget {
@@ -9,6 +10,13 @@ class Tutorial extends StatefulWidget {
 
 class _TutorialState extends State<Tutorial> {
   List<bool> isPressedList = [false, false, false, false];
+  final _assetsAudioPlayer = AssetsAudioPlayer();
+  bool isVisible = true;
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,11 +25,13 @@ class _TutorialState extends State<Tutorial> {
         margin: const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
         child: Column(
           children: [
-            const Align(
-              alignment: Alignment.topCenter,
-              child: Text(
-                'Tutorial',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            const SafeArea(
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  'Tutorial',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             const SizedBox(
@@ -44,81 +54,85 @@ class _TutorialState extends State<Tutorial> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          isPressedList[0] = true;
-                          isPressedList[1] = false;
-                          isPressedList[2] = false;
-                          isPressedList[3] = false;
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            top: 20,
-                            bottom: 20,
-                            left: MediaQuery.of(context).size.width / 5,
-                            right: MediaQuery.of(context).size.width / 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.transparent,
-                          border: Border.all(
-                              width: 3.0,
-                              color: isPressedList[0]
-                                  ? Colors.green
-                                  : Colors.black),
-                        ),
-                        child: Card(
-                          color: Colors.transparent,
-                          shadowColor: Colors.transparent.withOpacity(0.1),
-                          shape: RoundedRectangleBorder(
+                    Flexible(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isPressedList[0] = true;
+                            isPressedList[1] = false;
+                            isPressedList[2] = false;
+                            isPressedList[3] = false;
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.only(
+                              top: 20,
+                              bottom: 20,
+                              left: MediaQuery.of(context).size.width / 5,
+                              right: MediaQuery.of(context).size.width / 5),
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
+                            color: Colors.transparent,
+                            border: Border.all(
+                                width: 3.0,
+                                color: isPressedList[0]
+                                    ? Colors.green
+                                    : Colors.black),
                           ),
-                          child: const Text(
-                            'A. 3',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Color(0xff006699),
+                          child: Card(
+                            color: Colors.transparent,
+                            shadowColor: Colors.transparent.withOpacity(0.1),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Text(
+                              'A. 3',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          isPressedList[0] = false;
-                          isPressedList[1] = true;
-                          isPressedList[2] = false;
-                          isPressedList[3] = false;
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            top: 20,
-                            bottom: 20,
-                            left: MediaQuery.of(context).size.width / 5,
-                            right: MediaQuery.of(context).size.width / 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.transparent,
-                          border: Border.all(
-                              width: 3.0,
-                              color: isPressedList[1]
-                                  ? Colors.green
-                                  : Colors.black),
-                        ),
-                        child: Card(
-                          color: Colors.transparent,
-                          shadowColor: Colors.transparent.withOpacity(0.1),
-                          shape: RoundedRectangleBorder(
+                    Flexible(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isPressedList[0] = false;
+                            isPressedList[1] = true;
+                            isPressedList[2] = false;
+                            isPressedList[3] = false;
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.only(
+                              top: 20,
+                              bottom: 20,
+                              left: MediaQuery.of(context).size.width / 5,
+                              right: MediaQuery.of(context).size.width / 5),
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
+                            color: Colors.transparent,
+                            border: Border.all(
+                                width: 3.0,
+                                color: isPressedList[1]
+                                    ? Colors.green
+                                    : Colors.black),
                           ),
-                          child: const Text(
-                            'B. 4',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Color(0xff006699),
+                          child: Card(
+                            color: Colors.transparent,
+                            shadowColor: Colors.transparent.withOpacity(0.1),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Text(
+                              'B. 4',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
@@ -132,81 +146,85 @@ class _TutorialState extends State<Tutorial> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          isPressedList[0] = false;
-                          isPressedList[1] = false;
-                          isPressedList[2] = true;
-                          isPressedList[3] = false;
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            top: 20,
-                            bottom: 20,
-                            left: MediaQuery.of(context).size.width / 5,
-                            right: MediaQuery.of(context).size.width / 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.transparent,
-                          border: Border.all(
-                              width: 3.0,
-                              color: isPressedList[2]
-                                  ? Colors.green
-                                  : Colors.black),
-                        ),
-                        child: Card(
-                          color: Colors.transparent,
-                          shadowColor: Colors.transparent.withOpacity(0.1),
-                          shape: RoundedRectangleBorder(
+                    Flexible(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isPressedList[0] = false;
+                            isPressedList[1] = false;
+                            isPressedList[2] = true;
+                            isPressedList[3] = false;
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.only(
+                              top: 20,
+                              bottom: 20,
+                              left: MediaQuery.of(context).size.width / 5,
+                              right: MediaQuery.of(context).size.width / 5),
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
+                            color: Colors.transparent,
+                            border: Border.all(
+                                width: 3.0,
+                                color: isPressedList[2]
+                                    ? Colors.green
+                                    : Colors.black),
                           ),
-                          child: const Text(
-                            'C. 5',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Color(0xff006699),
+                          child: Card(
+                            color: Colors.transparent,
+                            shadowColor: Colors.transparent.withOpacity(0.1),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Text(
+                              'C. 5',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          isPressedList[0] = false;
-                          isPressedList[1] = false;
-                          isPressedList[2] = false;
-                          isPressedList[3] = true;
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            top: 20,
-                            bottom: 20,
-                            left: MediaQuery.of(context).size.width / 5,
-                            right: MediaQuery.of(context).size.width / 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.transparent,
-                          border: Border.all(
-                              width: 3.0,
-                              color: isPressedList[3]
-                                  ? Colors.green
-                                  : Colors.black),
-                        ),
-                        child: Card(
-                          color: Colors.transparent,
-                          shadowColor: Colors.transparent.withOpacity(0.1),
-                          shape: RoundedRectangleBorder(
+                    Flexible(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isPressedList[0] = false;
+                            isPressedList[1] = false;
+                            isPressedList[2] = false;
+                            isPressedList[3] = true;
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.only(
+                              top: 20,
+                              bottom: 20,
+                              left: MediaQuery.of(context).size.width / 5,
+                              right: MediaQuery.of(context).size.width / 5),
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
+                            color: Colors.transparent,
+                            border: Border.all(
+                                width: 3.0,
+                                color: isPressedList[3]
+                                    ? Colors.green
+                                    : Colors.black),
                           ),
-                          child: const Text(
-                            'D. 6',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Color(0xff006699),
+                          child: Card(
+                            color: Colors.transparent,
+                            shadowColor: Colors.transparent.withOpacity(0.1),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Text(
+                              'D. 6',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
@@ -222,9 +240,12 @@ class _TutorialState extends State<Tutorial> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.volume_up),
+                Visibility(
+                  visible: isVisible ? openPlayer() : true,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.volume_up),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -248,5 +269,17 @@ class _TutorialState extends State<Tutorial> {
         ),
       ),
     );
+  }
+
+  openPlayer() async {
+    await _assetsAudioPlayer.open(
+      Audio('assets/audios/tutorial.m4a'),
+      autoStart: true,
+    );
+    _assetsAudioPlayer.playlistAudioFinished.listen((event) {
+      setState(() {
+        isVisible = false;
+      });
+    });
   }
 }

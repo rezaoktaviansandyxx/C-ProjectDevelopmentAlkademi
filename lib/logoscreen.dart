@@ -1,4 +1,3 @@
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
 class LogoScreen extends StatefulWidget {
@@ -9,7 +8,6 @@ class LogoScreen extends StatefulWidget {
 }
 
 class _LogoScreenState extends State<LogoScreen> {
-  final _assetsAudioPlayer = AssetsAudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,8 +52,7 @@ class _LogoScreenState extends State<LogoScreen> {
                   const Spacer(),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/assesment',
-                          arguments: openPlayer());
+                      Navigator.pushNamed(context, '/assesment');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
@@ -77,13 +74,6 @@ class _LogoScreenState extends State<LogoScreen> {
           ],
         ),
       ),
-    );
-  }
-
-  openPlayer() async {
-    await _assetsAudioPlayer.open(
-      Audio('assets/audios/assesment.mp3'),
-      autoStart: true,
     );
   }
 }

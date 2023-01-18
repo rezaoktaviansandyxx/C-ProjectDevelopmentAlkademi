@@ -1,16 +1,22 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-class Assesment extends StatefulWidget {
-  const Assesment({super.key});
+class Assessment extends StatefulWidget {
+  const Assessment({super.key});
 
   @override
-  State<Assesment> createState() => _AssesmentState();
+  State<Assessment> createState() => _AssessmentState();
 }
 
-class _AssesmentState extends State<Assesment> {
+class _AssessmentState extends State<Assessment> {
   final _assetsAudioPlayer = AssetsAudioPlayer();
-  bool isButtonActive = true;
+  bool isEnable = false;
+  @override
+  void initState() {
+    openPlayer();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,9 +48,9 @@ class _AssesmentState extends State<Assesment> {
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: isButtonActive
-                  ? () async{
-                      await Navigator.pushNamed(context, '/tutorial');
+              onPressed: isEnable
+                  ? () {
+                      Navigator.pushNamed(context, '/tutorial');
                     }
                   : null,
               style: ElevatedButton.styleFrom(
@@ -65,5 +71,17 @@ class _AssesmentState extends State<Assesment> {
         ),
       ),
     );
+  }
+
+  openPlayer() async {
+    await _assetsAudioPlayer.open(
+      Audio('assets/audios/assesment.m4a'),
+      autoStart: true,
+    );
+    _assetsAudioPlayer.playlistAudioFinished.listen((event) {
+      setState(() {
+        isEnable = true;
+      });
+    });
   }
 }

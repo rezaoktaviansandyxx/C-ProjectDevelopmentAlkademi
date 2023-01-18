@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/logoscreen.dart';
 import 'package:quiz_app/mainscreen.dart';
 import 'package:quiz_app/registration.dart';
-import 'package:quiz_app/assesment.dart';
+import 'package:quiz_app/assessment.dart';
 import 'package:quiz_app/startscreen.dart';
 import 'package:quiz_app/tutorial.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/registration' :(context) => const Registration(),
         '/logoscreen' :(context) => const LogoScreen(),
-        '/assesment' :(context) => const Assesment(),
+        '/assesment' :(context) => const Assessment(),
         '/tutorial' :(context) => const Tutorial(),
         '/startscreen' :(context) => const StartScreen(),
       },

@@ -36,6 +36,8 @@ class _Question1Class2State extends State<Question1Class2> {
       ),
       body: Container(
         margin: const EdgeInsets.all(10),
+        width: double.infinity,
+        height: double.infinity,
         child: Column(
           children: [
             const Align(
@@ -85,6 +87,7 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -99,19 +102,27 @@ class _Question1Class2State extends State<Question1Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
-                                'A. 3',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'A.',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Color(0xff006699),
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                Expanded(
+                                  flex: 3,
+                                  child: Image.asset(
+                                    'assets/images/kelas2/seta_img_soal_no_1a.png',
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -130,6 +141,7 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -150,12 +162,27 @@ class _Question1Class2State extends State<Question1Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: const Text(
-                                'B. 4',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'B.',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xff006699),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Image.asset(
+                                      'assets/images/kelas2/seta_img_soal_no_1b.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -183,6 +210,7 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -203,12 +231,27 @@ class _Question1Class2State extends State<Question1Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: const Text(
-                                'C. 5',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'C.',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xff006699),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Image.asset(
+                                      'assets/images/kelas2/seta_img_soal_no_1c.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -228,6 +271,7 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -248,12 +292,27 @@ class _Question1Class2State extends State<Question1Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: const Text(
-                                'D. 6',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'D.',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xff006699),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Image.asset(
+                                      'assets/images/kelas2/seta_img_soal_no_1d.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -286,7 +345,7 @@ class _Question1Class2State extends State<Question1Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/');
+                      // Navigator.pushNamed(context, '/');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

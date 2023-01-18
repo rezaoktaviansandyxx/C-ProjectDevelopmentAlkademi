@@ -1,14 +1,33 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-class StartScreen extends StatelessWidget {
+class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
+
+  @override
+  State<StartScreen> createState() => _StartScreenState();
+}
+
+class _StartScreenState extends State<StartScreen> {
+  final _assetsAudioPlayer = AssetsAudioPlayer();
+  bool isEnableButton = false;
+  @override
+  void initState() {
+    openPlayer();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: isEnableButton
+              ? () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/kelas2/question1', (route) => false);
+                }
+              : null,
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xff006699),
             shape: RoundedRectangleBorder(
@@ -27,5 +46,17 @@ class StartScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  openPlayer() async {
+    await _assetsAudioPlayer.open(
+      Audio('assets/audios/startscreen.m4a'),
+      autoStart: true,
+    );
+    _assetsAudioPlayer.playlistAudioFinished.listen((event) {
+      setState(() {
+        isEnableButton = true;
+      });
+    });
   }
 }

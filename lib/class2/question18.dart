@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Question6Class2 extends StatefulWidget {
-  const Question6Class2({super.key});
+class Question18Class2 extends StatefulWidget {
+  const Question18Class2({super.key});
 
   @override
-  State<Question6Class2> createState() => _Question6Class2State();
+  State<Question18Class2> createState() => _Question18Class2State();
 }
 
-class _Question6Class2State extends State<Question6Class2> {
+class _Question18Class2State extends State<Question18Class2> {
   List<bool> isPressedList = [false, false, false, false];
   bool isVisibleIconSound = true;
   @override
@@ -16,7 +16,7 @@ class _Question6Class2State extends State<Question6Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 6',
+            'SOAL 18',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -44,7 +44,7 @@ class _Question6Class2State extends State<Question6Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Sintia memiliki sebatang coklat sebagaimana tampak pada gambar berikut!',
+                'Hafia akan meronce dengan menggunakan kepingan bangun-bangun datar. Pemasangan kepingan bangun-bangun datar tersebut terdiri atas bangun datar lingkaran, segitiga dan persegi yang akan disusun secara berurutan dan berulang sebagaimana tampak pada gambar sebagai berikut:',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -54,14 +54,14 @@ class _Question6Class2State extends State<Question6Class2> {
             const SizedBox(
               height: 5,
             ),
-            Image.asset('assets/images/class2/seta_img_soal_no_6.png'),
+            Image.asset('assets/images/class2/seta_img_soal_no_18.png'),
             const SizedBox(
               height: 5,
             ),
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Apabila Sintia memberikan sebagian coklatnya kepada Novia sehingga kedua bagian coklat mereka sama besar, maka gambar yang menunjukkan pola pembagian coklat tersebut adalah. ...',
+                'Bangun datar pada urutan ke-11 adalah. ...',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -88,7 +88,6 @@ class _Question6Class2State extends State<Question6Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -103,27 +102,12 @@ class _Question6Class2State extends State<Question6Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    'A.',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Color(0xff006699),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 3,
-                                  child: Image.asset(
-                                    'assets/images/class2/seta_img_soal_no_6a.png',
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ],
+                            child: const Text(
+                              'A. Lingkaran',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
@@ -142,7 +126,6 @@ class _Question6Class2State extends State<Question6Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -163,27 +146,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'B.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6b.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'B. Segitiga',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -211,7 +179,6 @@ class _Question6Class2State extends State<Question6Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -232,27 +199,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'C.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6c.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'C. Persegi',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -272,7 +224,6 @@ class _Question6Class2State extends State<Question6Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -293,27 +244,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'D.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6d.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'D. Trapesium',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -335,7 +271,7 @@ class _Question6Class2State extends State<Question6Class2> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        isVisibleIconSound = false;
+                        // isVisibleIconSound = false;
                       });
                       // openPlayer();
                     },
@@ -346,7 +282,7 @@ class _Question6Class2State extends State<Question6Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/');
+                      Navigator.pushNamed(context, '/kelas2/question2');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

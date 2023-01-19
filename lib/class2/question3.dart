@@ -16,7 +16,7 @@ class _Question3Class2State extends State<Question3Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 2',
+            'SOAL 3',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,

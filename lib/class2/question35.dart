@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Question6Class2 extends StatefulWidget {
-  const Question6Class2({super.key});
+class Question35Class2 extends StatefulWidget {
+  const Question35Class2({super.key});
 
   @override
-  State<Question6Class2> createState() => _Question6Class2State();
+  State<Question35Class2> createState() => _Question35Class2State();
 }
 
-class _Question6Class2State extends State<Question6Class2> {
+class _Question35Class2State extends State<Question35Class2> {
   List<bool> isPressedList = [false, false, false, false];
   bool isVisibleIconSound = true;
   @override
@@ -16,7 +16,7 @@ class _Question6Class2State extends State<Question6Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 6',
+            'SOAL 35',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -44,7 +44,7 @@ class _Question6Class2State extends State<Question6Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Sintia memiliki sebatang coklat sebagaimana tampak pada gambar berikut!',
+                'Berdasarkan hasil wawancara dengan siswa kelas 2 SD Pelita Bangsa tentang kesukaan mereka pada olahraga, terdapat 5 orang siswa yang menyukai olahraga badminton, 10 orang siswa menyukai bola basket, 15 orang siswa menyukai renang dan 20 orang siswa menyukai senam. Data tentang kesukaan siswa pada olahraga tersebut disajikan dalam diagram gambar dengan ketentuan sebagai berikut:',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -54,14 +54,20 @@ class _Question6Class2State extends State<Question6Class2> {
             const SizedBox(
               height: 5,
             ),
-            Image.asset('assets/images/class2/seta_img_soal_no_6.png'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Image.asset('assets/images/class2/seta_img_soal_no_35a.png'),
+                Image.asset('assets/images/class2/seta_img_soal_no_35b.png'),
+              ],
+            ),
             const SizedBox(
               height: 5,
             ),
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Apabila Sintia memberikan sebagian coklatnya kepada Novia sehingga kedua bagian coklat mereka sama besar, maka gambar yang menunjukkan pola pembagian coklat tersebut adalah. ...',
+                'Urutan olahraga kesukaan siswa dari yang paling banyak peminatnya sampai dengan yang paling sedikit peminatnya adalah. ...',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -103,27 +109,12 @@ class _Question6Class2State extends State<Question6Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    'A.',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Color(0xff006699),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 3,
-                                  child: Image.asset(
-                                    'assets/images/class2/seta_img_soal_no_6a.png',
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ],
+                            child: const Text(
+                              'A. Senam, basket, badminton, renang',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
@@ -163,27 +154,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'B.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6b.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'B. Badminton, basket, senam, renang',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -232,27 +208,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'C.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6c.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'C. Badminton, basket, renang, senam',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -293,27 +254,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'D.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6d.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'D. Senam, renang, basket, badminton',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -356,7 +302,7 @@ class _Question6Class2State extends State<Question6Class2> {
                     ),
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                      child: Text('Next'),
+                      child: Text('Finish'),
                     ),
                   ),
                 ),

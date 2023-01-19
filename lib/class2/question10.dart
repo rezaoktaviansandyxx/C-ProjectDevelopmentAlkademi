@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Question6Class2 extends StatefulWidget {
-  const Question6Class2({super.key});
+class Question10Class2 extends StatefulWidget {
+  const Question10Class2({super.key});
 
   @override
-  State<Question6Class2> createState() => _Question6Class2State();
+  State<Question10Class2> createState() => _Question10Class2State();
 }
 
-class _Question6Class2State extends State<Question6Class2> {
+class _Question10Class2State extends State<Question10Class2> {
   List<bool> isPressedList = [false, false, false, false];
   bool isVisibleIconSound = true;
   @override
@@ -16,7 +16,7 @@ class _Question6Class2State extends State<Question6Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 6',
+            'SOAL 10',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -44,24 +44,7 @@ class _Question6Class2State extends State<Question6Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Sintia memiliki sebatang coklat sebagaimana tampak pada gambar berikut!',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Color(0xff006699),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Image.asset('assets/images/class2/seta_img_soal_no_6.png'),
-            const SizedBox(
-              height: 5,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Apabila Sintia memberikan sebagian coklatnya kepada Novia sehingga kedua bagian coklat mereka sama besar, maka gambar yang menunjukkan pola pembagian coklat tersebut adalah. ...',
+                'Perhatikan keempat gambar yang berwarna merah dan putih pada pilihan di bawah ini! Apabila bagian yang berwarna merah dibandingkan dengan keseluruhan pada setiap gambar, maka gambar yang menunjukkan nilai bilangan pecahan seperdelapan adalah. ...',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -119,7 +102,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                 Expanded(
                                   flex: 3,
                                   child: Image.asset(
-                                    'assets/images/class2/seta_img_soal_no_6a.png',
+                                    'assets/images/class2/seta_img_soal_no_10a.png',
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -179,7 +162,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6b.png',
+                                      'assets/images/class2/seta_img_soal_no_10b.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -248,7 +231,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6c.png',
+                                      'assets/images/class2/seta_img_soal_no_10c.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -309,7 +292,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6d.png',
+                                      'assets/images/class2/seta_img_soal_no_10d.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),

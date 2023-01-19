@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Question6Class2 extends StatefulWidget {
-  const Question6Class2({super.key});
+class Question29Class2 extends StatefulWidget {
+  const Question29Class2({super.key});
 
   @override
-  State<Question6Class2> createState() => _Question6Class2State();
+  State<Question29Class2> createState() => _Question29Class2State();
 }
 
-class _Question6Class2State extends State<Question6Class2> {
+class _Question29Class2State extends State<Question29Class2> {
   List<bool> isPressedList = [false, false, false, false];
   bool isVisibleIconSound = true;
   @override
@@ -16,7 +16,7 @@ class _Question6Class2State extends State<Question6Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 6',
+            'SOAL 29',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -44,24 +44,7 @@ class _Question6Class2State extends State<Question6Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Sintia memiliki sebatang coklat sebagaimana tampak pada gambar berikut!',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Color(0xff006699),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Image.asset('assets/images/class2/seta_img_soal_no_6.png'),
-            const SizedBox(
-              height: 5,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Apabila Sintia memberikan sebagian coklatnya kepada Novia sehingga kedua bagian coklat mereka sama besar, maka gambar yang menunjukkan pola pembagian coklat tersebut adalah. ...',
+                'Gambar kegiatan yang membutuhkan waktu lebih lama dibandingkan dengan yang kegiatan lainnya adalah. ...',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -119,7 +102,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                 Expanded(
                                   flex: 3,
                                   child: Image.asset(
-                                    'assets/images/class2/seta_img_soal_no_6a.png',
+                                    'assets/images/class2/seta_img_soal_no_29a.png',
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -179,7 +162,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6b.png',
+                                      'assets/images/class2/seta_img_soal_no_29b.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -248,7 +231,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6c.png',
+                                      'assets/images/class2/seta_img_soal_no_29c.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -309,7 +292,7 @@ class _Question6Class2State extends State<Question6Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6d.png',
+                                      'assets/images/class2/seta_img_soal_no_29d.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),

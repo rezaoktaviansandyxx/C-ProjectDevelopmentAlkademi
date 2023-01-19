@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Question6Class2 extends StatefulWidget {
-  const Question6Class2({super.key});
+class Question33Class2 extends StatefulWidget {
+  const Question33Class2({super.key});
 
   @override
-  State<Question6Class2> createState() => _Question6Class2State();
+  State<Question33Class2> createState() => _Question33Class2State();
 }
 
-class _Question6Class2State extends State<Question6Class2> {
+class _Question33Class2State extends State<Question33Class2> {
   List<bool> isPressedList = [false, false, false, false];
   bool isVisibleIconSound = true;
   @override
@@ -16,7 +16,7 @@ class _Question6Class2State extends State<Question6Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 6',
+            'SOAL 33',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -44,7 +44,7 @@ class _Question6Class2State extends State<Question6Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Sintia memiliki sebatang coklat sebagaimana tampak pada gambar berikut!',
+                'Perhatikan gambar tiga bangun datar segitiga berikut ini!',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -54,14 +54,14 @@ class _Question6Class2State extends State<Question6Class2> {
             const SizedBox(
               height: 5,
             ),
-            Image.asset('assets/images/class2/seta_img_soal_no_6.png'),
+            Image.asset('assets/images/class2/seta_img_soal_no_33.png'),
             const SizedBox(
               height: 5,
             ),
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Apabila Sintia memberikan sebagian coklatnya kepada Novia sehingga kedua bagian coklat mereka sama besar, maka gambar yang menunjukkan pola pembagian coklat tersebut adalah. ...',
+                'Yang merupakan ciri-ciri segitiga adalah. ...',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -103,27 +103,12 @@ class _Question6Class2State extends State<Question6Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    'A.',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Color(0xff006699),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 3,
-                                  child: Image.asset(
-                                    'assets/images/class2/seta_img_soal_no_6a.png',
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ],
+                            child: const Text(
+                              'A. Memiliki 2 buah sisi dan 2 buah titik sudut',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
@@ -163,27 +148,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'B.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6b.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'B. Memiliki 3 buah sisi dan 3 buah titik sudut',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -232,27 +202,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'C.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6c.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'C. Memiliki 3 buah sisi dan 2 buah titik sudut',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -293,27 +248,12 @@ class _Question6Class2State extends State<Question6Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'D.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_6d.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'D. Memiliki 2 buah sisi dan 3 buah titik sudut',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),

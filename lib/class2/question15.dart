@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:quiz_app/class2/question16.dart';
 
 class Question15Class2 extends StatefulWidget {
   const Question15Class2({super.key});
@@ -282,7 +284,7 @@ class _Question15Class2State extends State<Question15Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/kelas2/question2');
+                      Get.to(const Question16Class2());
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

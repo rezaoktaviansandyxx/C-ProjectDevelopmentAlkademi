@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:quiz_app/class2/question3.dart';
 
 class Question2Class2 extends StatefulWidget {
   const Question2Class2({super.key});
@@ -10,6 +12,10 @@ class Question2Class2 extends StatefulWidget {
 class _Question2Class2State extends State<Question2Class2> {
   List<bool> isPressedList = [false, false, false, false];
   bool isVisibleIconSound = true;
+  bool isVisibleAnswerA = false;
+  bool isVisibleAnswerB = false;
+  bool isVisibleAnswerC = false;
+  bool isVisibleAnswerD = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +82,7 @@ class _Question2Class2State extends State<Question2Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      // visible: isVisibleAnswerA,
+                      visible: isVisibleAnswerA,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -114,7 +120,7 @@ class _Question2Class2State extends State<Question2Class2> {
                       ),
                     ),
                     Visibility(
-                      // visible: isVisibleAnswerB,
+                      visible: isVisibleAnswerB,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -167,7 +173,7 @@ class _Question2Class2State extends State<Question2Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      // visible: isVisibleAnswerC,
+                      visible: isVisibleAnswerC,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -212,7 +218,7 @@ class _Question2Class2State extends State<Question2Class2> {
                       ),
                     ),
                     Visibility(
-                      // visible: isVisibleAnswerD,
+                      visible: isVisibleAnswerD,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -271,7 +277,7 @@ class _Question2Class2State extends State<Question2Class2> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        // isVisibleIconSound = false;
+                        isVisibleIconSound = false;
                       });
                       // openPlayer();
                     },
@@ -282,7 +288,7 @@ class _Question2Class2State extends State<Question2Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/kelas2/question2');
+                      Get.to(const Question3Class2());
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

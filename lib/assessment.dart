@@ -1,5 +1,6 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Assessment extends StatefulWidget {
   const Assessment({super.key});
@@ -26,7 +27,7 @@ class _AssessmentState extends State<Assessment> {
         leading: BackButton(
           color: Colors.black,
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
             _assetsAudioPlayer.stop();
           },
         ),

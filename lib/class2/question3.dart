@@ -1,29 +1,22 @@
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-class Question1Class2 extends StatefulWidget {
-  const Question1Class2({super.key});
+class Question3Class2 extends StatefulWidget {
+  const Question3Class2({super.key});
 
   @override
-  State<Question1Class2> createState() => _Question1Class2State();
+  State<Question3Class2> createState() => _Question3Class2State();
 }
 
-class _Question1Class2State extends State<Question1Class2> {
+class _Question3Class2State extends State<Question3Class2> {
   List<bool> isPressedList = [false, false, false, false];
-  final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
-  bool isVisibleAnswerA = false;
-  bool isVisibleAnswerB = false;
-  bool isVisibleAnswerC = false;
-  bool isVisibleAnswerD = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 1',
+            'SOAL 2',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -51,7 +44,7 @@ class _Question1Class2State extends State<Question1Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Perhatikan kumpulan gambar buah jeruk berikut!',
+                'Perhatikan gambar kartu-kartu berbentuk bangun geometri yang berisi bilangan berikut!',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -61,14 +54,14 @@ class _Question1Class2State extends State<Question1Class2> {
             const SizedBox(
               height: 5,
             ),
-            Image.asset('assets/images/class2/seta_img_soal_no_1.png'),
+            Image.asset('assets/images/class2/seta_img_soal_no_3.png'),
             const SizedBox(
               height: 5,
             ),
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Di antara 4 pilihan kumpulan gambar buah jeruk yang tersedia, kumpulan gambar jeruk yang paling banyak jumlahnya dibandingkan dengan kumpulan gambar jeruk pada gambar diatas adalah. ...',
+                'Melina diminta untuk mengambil kartu bilangan yang nilai satuannya lebih dari 5. Kartu yang dapat diambil Melina adalah kartu berbentuk. ...',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -83,7 +76,7 @@ class _Question1Class2State extends State<Question1Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      visible: isVisibleAnswerA,
+                      // visible: isVisibleAnswerA,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -95,7 +88,6 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -110,34 +102,19 @@ class _Question1Class2State extends State<Question1Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    'A.',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Color(0xff006699),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 3,
-                                  child: Image.asset(
-                                    'assets/images/class2/seta_img_soal_no_1a.png',
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ],
+                            child: const Text(
+                              'A. Persegi Panjang',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Visibility(
-                      visible: isVisibleAnswerB,
+                      // visible: isVisibleAnswerB,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -149,7 +126,6 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -170,27 +146,12 @@ class _Question1Class2State extends State<Question1Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'B.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_1b.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'B. Segitiga',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -206,7 +167,7 @@ class _Question1Class2State extends State<Question1Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      visible: isVisibleAnswerC,
+                      // visible: isVisibleAnswerC,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -218,7 +179,6 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -239,27 +199,12 @@ class _Question1Class2State extends State<Question1Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'C.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_1c.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'C. Lingkaran',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -267,7 +212,7 @@ class _Question1Class2State extends State<Question1Class2> {
                       ),
                     ),
                     Visibility(
-                      visible: isVisibleAnswerD,
+                      // visible: isVisibleAnswerD,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -279,7 +224,6 @@ class _Question1Class2State extends State<Question1Class2> {
                             });
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -300,27 +244,12 @@ class _Question1Class2State extends State<Question1Class2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'D.',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff006699),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 3,
-                                    child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_1d.png',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                              child: const Text(
+                                'D. Jajar Genjang',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -342,9 +271,9 @@ class _Question1Class2State extends State<Question1Class2> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        isVisibleIconSound = false;
+                        // isVisibleIconSound = false;
                       });
-                      openPlayer();
+                      // openPlayer();
                     },
                     icon: const Icon(Icons.volume_up),
                   ),
@@ -353,7 +282,7 @@ class _Question1Class2State extends State<Question1Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/');
+                      Navigator.pushNamed(context, '/kelas2/question4');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
@@ -373,34 +302,5 @@ class _Question1Class2State extends State<Question1Class2> {
         ),
       ),
     );
-  }
-
-  openPlayer() async {
-    await _assetAudioPlayer.open(
-      Audio('assets/audios/class2/item1.mp3'),
-      volume: 1.0,
-      autoStart: true,
-    );
-    _assetAudioPlayer.playlistAudioFinished.listen((event) {
-      setState(() {
-        isVisibleIconSound = false;
-      });
-    });
-    _assetAudioPlayer.currentPosition.listen((event) {
-      setState(() {
-        if (26835 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
-          isVisibleAnswerA = true;
-        } else if (29081 <= event.inMilliseconds &&
-            event.inMilliseconds <= 31000) {
-          isVisibleAnswerB = true;
-        } else if (31416 <= event.inMilliseconds &&
-            event.inMilliseconds <= 33000) {
-          isVisibleAnswerC = true;
-        } else if (33564 <= event.inMilliseconds &&
-            event.inMilliseconds <= 35000) {
-          isVisibleAnswerD = true;
-        }
-      });
-    });
   }
 }

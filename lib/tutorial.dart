@@ -310,26 +310,26 @@ class _TutorialState extends State<Tutorial> {
 
   openPlayer2() async {
     await _assetsAudioPlayer.open(
-      Audio('assets/audios/tutorial2.m4a'),
+        Audio('assets/audios/tutorial2.m4a', playSpeed: 0.75),
       autoStart: true,
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {
       setState(() {
-        isVisibleIconSound = false;
+        isVisibleIconSound = true;
       });
     });
     _assetsAudioPlayer.currentPosition.listen((event) {
       setState(() {
         if (3154 <= event.inMilliseconds && event.inMilliseconds <= 3600) {
           isVisibleAnswerA = true;
-        } else if (3757 <= event.inMilliseconds &&
-            event.inMilliseconds <= 3990) {
+        } else if (3437 <= event.inMilliseconds &&
+            event.inMilliseconds <= 4010) {
           isVisibleAnswerB = true;
         } else if (4051 <= event.inMilliseconds &&
             event.inMilliseconds <= 4500) {
           isVisibleAnswerC = true;
         } else if (4658 <= event.inMilliseconds &&
-            event.inMilliseconds <= 4999) {
+            event.inMilliseconds <= 5000) {
           isVisibleAnswerD = true;
         }
       });

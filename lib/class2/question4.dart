@@ -1,29 +1,22 @@
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-class Question1Class2 extends StatefulWidget {
-  const Question1Class2({super.key});
+class Question4Class2 extends StatefulWidget {
+  const Question4Class2({super.key});
 
   @override
-  State<Question1Class2> createState() => _Question1Class2State();
+  State<Question4Class2> createState() => _Question4Class2State();
 }
 
-class _Question1Class2State extends State<Question1Class2> {
+class _Question4Class2State extends State<Question4Class2> {
   List<bool> isPressedList = [false, false, false, false];
-  final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
-  bool isVisibleAnswerA = false;
-  bool isVisibleAnswerB = false;
-  bool isVisibleAnswerC = false;
-  bool isVisibleAnswerD = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 1',
+            'SOAL 4',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -51,7 +44,7 @@ class _Question1Class2State extends State<Question1Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Perhatikan kumpulan gambar buah jeruk berikut!',
+                'Perhatikan gambar kartu-kartu berbentuk bangun geometri yang berisi bilangan berikut!',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -61,14 +54,14 @@ class _Question1Class2State extends State<Question1Class2> {
             const SizedBox(
               height: 5,
             ),
-            Image.asset('assets/images/class2/seta_img_soal_no_1.png'),
+            Image.asset('assets/images/class2/seta_img_soal_no_4.png'),
             const SizedBox(
               height: 5,
             ),
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Di antara 4 pilihan kumpulan gambar buah jeruk yang tersedia, kumpulan gambar jeruk yang paling banyak jumlahnya dibandingkan dengan kumpulan gambar jeruk pada gambar diatas adalah. ...',
+                'Urutan kartu-kartu bilangan dari nilai bilangannya yang terkecil ke terbesar adalah. ...',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -83,7 +76,7 @@ class _Question1Class2State extends State<Question1Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      visible: isVisibleAnswerA,
+                      // visible: isVisibleAnswerA,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -126,7 +119,7 @@ class _Question1Class2State extends State<Question1Class2> {
                                 Expanded(
                                   flex: 3,
                                   child: Image.asset(
-                                    'assets/images/class2/seta_img_soal_no_1a.png',
+                                    'assets/images/class2/seta_img_soal_no_4a.png',
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -137,7 +130,7 @@ class _Question1Class2State extends State<Question1Class2> {
                       ),
                     ),
                     Visibility(
-                      visible: isVisibleAnswerB,
+                      // visible: isVisibleAnswerB,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -186,7 +179,7 @@ class _Question1Class2State extends State<Question1Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_1b.png',
+                                      'assets/images/class2/seta_img_soal_no_4b.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -206,7 +199,7 @@ class _Question1Class2State extends State<Question1Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      visible: isVisibleAnswerC,
+                      // visible: isVisibleAnswerC,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -255,7 +248,7 @@ class _Question1Class2State extends State<Question1Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_1c.png',
+                                      'assets/images/class2/seta_img_soal_no_4c.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -267,7 +260,7 @@ class _Question1Class2State extends State<Question1Class2> {
                       ),
                     ),
                     Visibility(
-                      visible: isVisibleAnswerD,
+                      // visible: isVisibleAnswerD,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -316,7 +309,7 @@ class _Question1Class2State extends State<Question1Class2> {
                                   Expanded(
                                     flex: 3,
                                     child: Image.asset(
-                                      'assets/images/class2/seta_img_soal_no_1d.png',
+                                      'assets/images/class2/seta_img_soal_no_4d.png',
                                       fit: BoxFit.contain,
                                     ),
                                   ),
@@ -344,7 +337,7 @@ class _Question1Class2State extends State<Question1Class2> {
                       setState(() {
                         isVisibleIconSound = false;
                       });
-                      openPlayer();
+                      // openPlayer();
                     },
                     icon: const Icon(Icons.volume_up),
                   ),
@@ -373,34 +366,5 @@ class _Question1Class2State extends State<Question1Class2> {
         ),
       ),
     );
-  }
-
-  openPlayer() async {
-    await _assetAudioPlayer.open(
-      Audio('assets/audios/class2/item1.mp3'),
-      volume: 1.0,
-      autoStart: true,
-    );
-    _assetAudioPlayer.playlistAudioFinished.listen((event) {
-      setState(() {
-        isVisibleIconSound = false;
-      });
-    });
-    _assetAudioPlayer.currentPosition.listen((event) {
-      setState(() {
-        if (26835 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
-          isVisibleAnswerA = true;
-        } else if (29081 <= event.inMilliseconds &&
-            event.inMilliseconds <= 31000) {
-          isVisibleAnswerB = true;
-        } else if (31416 <= event.inMilliseconds &&
-            event.inMilliseconds <= 33000) {
-          isVisibleAnswerC = true;
-        } else if (33564 <= event.inMilliseconds &&
-            event.inMilliseconds <= 35000) {
-          isVisibleAnswerD = true;
-        }
-      });
-    });
   }
 }

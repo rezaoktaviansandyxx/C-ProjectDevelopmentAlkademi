@@ -23,8 +23,12 @@ class _AssessmentState extends State<Assessment> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: const BackButton(
+        leading: BackButton(
           color: Colors.black,
+          onPressed: () {
+            Navigator.pop(context);
+            _assetsAudioPlayer.stop();
+          },
         ),
         elevation: 0,
       ),

@@ -56,13 +56,7 @@ class _Question35Class2State extends State<Question35Class2> {
             const SizedBox(
               height: 5,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset('assets/images/class2/seta_img_soal_no_35a.png'),
-                Image.asset('assets/images/class2/seta_img_soal_no_35b.png'),
-              ],
-            ),
+            Image.asset('assets/images/class2/seta_img_soal_no_35.png'),
             const SizedBox(
               height: 5,
             ),

@@ -1,6 +1,7 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/class2/question2.dart';
+import 'package:quiz_app/endscreen.dart';
 
 class Question1Class2 extends StatefulWidget {
   const Question1Class2({super.key});
@@ -35,7 +36,57 @@ class _Question1Class2State extends State<Question1Class2> {
         elevation: 0,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  content:
+                      const Text('Apakah anda yakin ingin mengakhiri kuis?'),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text(
+                        'Tidak',
+                        style: TextStyle(color: Colors.deepPurple),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () async {
+                        await _assetAudioPlayer.stop();
+                        // ignore: use_build_context_synchronously
+                        Navigator.pop(context);
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: const Text('End'),
+                            content: const Text('Selesai'),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pushAndRemoveUntil(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const EndScreen()),
+                                      (route) => false);
+                                },
+                                child: const Text('Ok'),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Ya',
+                        style: TextStyle(color: Colors.deepPurple),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
             icon: Image.asset('assets/images/close_cross.png'),
           ),
           const SizedBox(
@@ -382,7 +433,6 @@ class _Question1Class2State extends State<Question1Class2> {
   openPlayer() async {
     await _assetAudioPlayer.open(
       Audio('assets/audios/class2/item1.mp3'),
-      volume: 1.0,
       autoStart: true,
     );
     _assetAudioPlayer.playlistAudioFinished.listen((event) {
@@ -392,7 +442,7 @@ class _Question1Class2State extends State<Question1Class2> {
     });
     _assetAudioPlayer.currentPosition.listen((event) {
       setState(() {
-        if (26835 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
+        if (26600 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
           isVisibleAnswerA = true;
         } else if (29081 <= event.inMilliseconds &&
             event.inMilliseconds <= 31000) {

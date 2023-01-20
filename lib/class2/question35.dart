@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
 class Question35Class2 extends StatefulWidget {
@@ -9,7 +10,12 @@ class Question35Class2 extends StatefulWidget {
 
 class _Question35Class2State extends State<Question35Class2> {
   List<bool> isPressedList = [false, false, false, false];
+  final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
+  bool isVisibleAnswerA = false;
+  bool isVisibleAnswerB = false;
+  bool isVisibleAnswerC = false;
+  bool isVisibleAnswerD = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +82,7 @@ class _Question35Class2State extends State<Question35Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      // visible: isVisibleAnswerA,
+                      visible: isVisibleAnswerA,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -115,7 +121,7 @@ class _Question35Class2State extends State<Question35Class2> {
                       ),
                     ),
                     Visibility(
-                      // visible: isVisibleAnswerB,
+                      visible: isVisibleAnswerB,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -169,7 +175,7 @@ class _Question35Class2State extends State<Question35Class2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Visibility(
-                      // visible: isVisibleAnswerC,
+                      visible: isVisibleAnswerC,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -215,7 +221,7 @@ class _Question35Class2State extends State<Question35Class2> {
                       ),
                     ),
                     Visibility(
-                      // visible: isVisibleAnswerD,
+                      visible: isVisibleAnswerD,
                       child: Flexible(
                         child: GestureDetector(
                           onTap: () {
@@ -277,7 +283,7 @@ class _Question35Class2State extends State<Question35Class2> {
                       setState(() {
                         isVisibleIconSound = false;
                       });
-                      // openPlayer();
+                      openPlayer();
                     },
                     icon: const Icon(Icons.volume_up),
                   ),
@@ -307,5 +313,34 @@ class _Question35Class2State extends State<Question35Class2> {
         ),
       ),
     );
+  }
+
+  openPlayer() async {
+    await _assetAudioPlayer.open(
+      Audio('assets/audios/class2/item35.mp3'),
+      autoStart: true,
+    );
+    _assetAudioPlayer.playlistAudioFinished.listen((event) {
+      setState(() {
+        isVisibleIconSound = false;
+      });
+    });
+    _assetAudioPlayer.currentPosition.listen((event) {
+      print(event.inMilliseconds);
+      setState(() {
+        if (27587 <= event.inMilliseconds && event.inMilliseconds <= 28500) {
+          isVisibleAnswerA = true;
+        } else if (29693 <= event.inMilliseconds &&
+            event.inMilliseconds <= 30500) {
+          isVisibleAnswerB = true;
+        } else if (31500 <= event.inMilliseconds &&
+            event.inMilliseconds <= 32500) {
+          isVisibleAnswerC = true;
+        } else if (33500 <= event.inMilliseconds &&
+            event.inMilliseconds <= 34500) {
+          isVisibleAnswerD = true;
+        }
+      });
+    });
   }
 }

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:quiz_app/class2/question29.dart';
 
-class Quesstion28Class2 extends StatefulWidget {
-  const Quesstion28Class2({super.key});
+class Question28Class2 extends StatefulWidget {
+  const Question28Class2({super.key});
 
   @override
-  State<Quesstion28Class2> createState() => _Quesstion28Class2State();
+  State<Question28Class2> createState() => _Question28Class2State();
 }
 
-class _Quesstion28Class2State extends State<Quesstion28Class2> {
+class _Question28Class2State extends State<Question28Class2> {
   List<bool> isPressedList = [false, false, false, false];
   bool isVisibleIconSound = true;
   @override
@@ -288,7 +287,10 @@ class _Quesstion28Class2State extends State<Quesstion28Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Get.to(const Question29Class2());
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Question29Class2()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

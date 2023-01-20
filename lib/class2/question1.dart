@@ -1,6 +1,5 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:quiz_app/class2/question2.dart';
 
 class Question1Class2 extends StatefulWidget {
@@ -35,9 +34,9 @@ class _Question1Class2State extends State<Question1Class2> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          CloseButton(
-            color: Colors.red,
+          IconButton(
             onPressed: () {},
+            icon: Image.asset('assets/images/close_cross.png'),
           ),
           const SizedBox(
             width: 10,
@@ -355,7 +354,10 @@ class _Question1Class2State extends State<Question1Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Get.to(const Question2Class2());
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Question2Class2()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

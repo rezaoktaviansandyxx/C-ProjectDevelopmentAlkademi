@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:quiz_app/class2/question11.dart';
 
 class Question10Class2 extends StatefulWidget {
@@ -331,7 +330,10 @@ class _Question10Class2State extends State<Question10Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Get.to(const Question11Class2());
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Question11Class2()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

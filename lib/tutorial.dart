@@ -315,7 +315,7 @@ class _TutorialState extends State<Tutorial> {
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {
       setState(() {
-        isVisibleIconSound = true;
+        isVisibleIconSound = false;
       });
     });
     _assetsAudioPlayer.currentPosition.listen((event) {

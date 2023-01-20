@@ -1,5 +1,6 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz_app/class2/question1.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
@@ -24,8 +25,11 @@ class _StartScreenState extends State<StartScreen> {
         child: ElevatedButton(
           onPressed: isEnableButton
               ? () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/kelas2/question1', (route) => false);
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Question1Class2()),
+                      (route) => false);
                 }
               : null,
           style: ElevatedButton.styleFrom(

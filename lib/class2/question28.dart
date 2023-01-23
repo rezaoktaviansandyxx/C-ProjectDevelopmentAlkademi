@@ -23,7 +23,7 @@ class _Question28Class2State extends State<Question28Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 30',
+            'SOAL 28',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -329,18 +329,17 @@ class _Question28Class2State extends State<Question28Class2> {
       });
     });
     _assetAudioPlayer.currentPosition.listen((event) {
-      print(event.inMilliseconds);
       setState(() {
-        if (27587 <= event.inMilliseconds && event.inMilliseconds <= 28500) {
+        if (18464 <= event.inMilliseconds && event.inMilliseconds <= 19500) {
           isVisibleAnswerA = true;
-        } else if (29693 <= event.inMilliseconds &&
-            event.inMilliseconds <= 30500) {
+        } else if (20946 <= event.inMilliseconds &&
+            event.inMilliseconds <= 21500) {
           isVisibleAnswerB = true;
-        } else if (31500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 32500) {
+        } else if (23895 <= event.inMilliseconds &&
+            event.inMilliseconds <= 24500) {
           isVisibleAnswerC = true;
-        } else if (33500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 34500) {
+        } else if (26300 <= event.inMilliseconds &&
+            event.inMilliseconds <= 27500) {
           isVisibleAnswerD = true;
         }
       });

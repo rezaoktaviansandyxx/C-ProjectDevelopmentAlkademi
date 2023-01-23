@@ -325,18 +325,17 @@ class _Question11Class2State extends State<Question11Class2> {
       });
     });
     _assetAudioPlayer.currentPosition.listen((event) {
-      print(event.inMilliseconds);
       setState(() {
-        if (27587 <= event.inMilliseconds && event.inMilliseconds <= 28500) {
+        if (16193 <= event.inMilliseconds && event.inMilliseconds <= 17500) {
           isVisibleAnswerA = true;
-        } else if (29693 <= event.inMilliseconds &&
-            event.inMilliseconds <= 30500) {
+        } else if (18562 <= event.inMilliseconds &&
+            event.inMilliseconds <= 19500) {
           isVisibleAnswerB = true;
-        } else if (31500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 32500) {
+        } else if (20663 <= event.inMilliseconds &&
+            event.inMilliseconds <= 21500) {
           isVisibleAnswerC = true;
-        } else if (33500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 34500) {
+        } else if (22499 <= event.inMilliseconds &&
+            event.inMilliseconds <= 23500) {
           isVisibleAnswerD = true;
         }
       });

@@ -278,9 +278,9 @@ class _Question24Class2State extends State<Question24Class2> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        // isVisibleIconSound = false;
+                        isVisibleIconSound = false;
                       });
-                      // openPlayer();
+                      openPlayer();
                     },
                     icon: const Icon(Icons.volume_up),
                   ),
@@ -325,18 +325,17 @@ class _Question24Class2State extends State<Question24Class2> {
       });
     });
     _assetAudioPlayer.currentPosition.listen((event) {
-      print(event.inMilliseconds);
       setState(() {
-        if (27587 <= event.inMilliseconds && event.inMilliseconds <= 28500) {
+        if (20597 <= event.inMilliseconds && event.inMilliseconds <= 21500) {
           isVisibleAnswerA = true;
-        } else if (29693 <= event.inMilliseconds &&
-            event.inMilliseconds <= 30500) {
+        } else if (22719 <= event.inMilliseconds &&
+            event.inMilliseconds <= 23500) {
           isVisibleAnswerB = true;
-        } else if (31500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 32500) {
+        } else if (24809 <= event.inMilliseconds &&
+            event.inMilliseconds <= 25500) {
           isVisibleAnswerC = true;
-        } else if (33500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 34500) {
+        } else if (26645 <= event.inMilliseconds &&
+            event.inMilliseconds <= 27500) {
           isVisibleAnswerD = true;
         }
       });

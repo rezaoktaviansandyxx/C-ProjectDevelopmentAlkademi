@@ -109,11 +109,18 @@ class _Question16Class2State extends State<Question16Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Text(
-                              'A. Banyak permen merah menjadi sama banyak dengan permen kuning yang tersisa',
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Color(0xff006699),
+                            child: Card(
+                              color: Colors.transparent,
+                              shadowColor: Colors.transparent.withOpacity(0.1),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: const Text(
+                                'A. Banyak permen merah menjadi sama banyak dengan permen kuning yang tersisa',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff006699),
+                                ),
                               ),
                             ),
                           ),
@@ -325,18 +332,17 @@ class _Question16Class2State extends State<Question16Class2> {
       });
     });
     _assetAudioPlayer.currentPosition.listen((event) {
-      print(event.inMilliseconds);
       setState(() {
-        if (27587 <= event.inMilliseconds && event.inMilliseconds <= 28500) {
+        if (29970 <= event.inMilliseconds && event.inMilliseconds <= 30500) {
           isVisibleAnswerA = true;
-        } else if (29693 <= event.inMilliseconds &&
-            event.inMilliseconds <= 30500) {
+        } else if (38443 <= event.inMilliseconds &&
+            event.inMilliseconds <= 39500) {
           isVisibleAnswerB = true;
-        } else if (31500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 32500) {
+        } else if (46540 <= event.inMilliseconds &&
+            event.inMilliseconds <= 47500) {
           isVisibleAnswerC = true;
-        } else if (33500 <= event.inMilliseconds &&
-            event.inMilliseconds <= 34500) {
+        } else if (54699 <= event.inMilliseconds &&
+            event.inMilliseconds <= 55500) {
           isVisibleAnswerD = true;
         }
       });

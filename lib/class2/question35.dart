@@ -1,5 +1,6 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz_app/endscreen.dart';
 
 class Question35Class2 extends StatefulWidget {
   const Question35Class2({super.key});
@@ -32,9 +33,49 @@ class _Question35Class2State extends State<Question35Class2> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          CloseButton(
-            color: Colors.red,
-            onPressed: () {},
+          IconButton(
+            onPressed: () {
+              AlertDialog(
+                content: const Text('Apakah anda yakin ingin mengakhiri kuis?'),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text(
+                      'Tidak',
+                      style: TextStyle(color: Colors.deepPurple),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () async {
+                      await _assetAudioPlayer.stop();
+                      AlertDialog(
+                        title: const Text('End'),
+                        content: const Text('Selesai'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const EndScreen()),
+                                  (route) => false);
+                            },
+                            child: const Text('Ok'),
+                          ),
+                        ],
+                      );
+                    },
+                    child: const Text(
+                      'Ya',
+                      style: TextStyle(color: Colors.deepPurple),
+                    ),
+                  ),
+                ],
+              );
+            },
+            icon: Image.asset('assets/images/close_cross.png'),
           ),
           const SizedBox(
             width: 10,

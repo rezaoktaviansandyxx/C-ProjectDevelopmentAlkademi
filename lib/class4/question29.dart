@@ -1,16 +1,16 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz_app/class2/question22.dart';
+import 'package:quiz_app/class2/question2.dart';
 import 'package:quiz_app/endscreen.dart';
 
-class Question21Class2 extends StatefulWidget {
-  const Question21Class2({super.key});
+class Question29Class4 extends StatefulWidget {
+  const Question29Class4({super.key});
 
   @override
-  State<Question21Class2> createState() => _Question21Class2State();
+  State<Question29Class4> createState() => _Question29Class4State();
 }
 
-class _Question21Class2State extends State<Question21Class2> {
+class _Question29Class4State extends State<Question29Class4> {
   List<bool> isPressedList = [false, false, false, false];
   final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
@@ -18,13 +18,14 @@ class _Question21Class2State extends State<Question21Class2> {
   bool isVisibleAnswerB = false;
   bool isVisibleAnswerC = false;
   bool isVisibleAnswerD = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 21',
+            'SOAL 29',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -36,44 +37,54 @@ class _Question21Class2State extends State<Question21Class2> {
         actions: [
           IconButton(
             onPressed: () {
-              AlertDialog(
-                content: const Text('Apakah anda yakin ingin mengakhiri kuis?'),
-                actions: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text(
-                      'Tidak',
-                      style: TextStyle(color: Colors.deepPurple),
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  content:
+                      const Text('Apakah anda yakin ingin mengakhiri kuis?'),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text(
+                        'Tidak',
+                        style: TextStyle(color: Colors.deepPurple),
+                      ),
                     ),
-                  ),
-                  TextButton(
-                    onPressed: () async {
-                      await _assetAudioPlayer.stop();
-                      AlertDialog(
-                        title: const Text('End'),
-                        content: const Text('Selesai'),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const EndScreen()),
-                                  (route) => false);
-                            },
-                            child: const Text('Ok'),
+                    TextButton(
+                      onPressed: () async {
+                        await _assetAudioPlayer.stop();
+                        // ignore: use_build_context_synchronously
+                        Navigator.pop(context);
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: const Text('End'),
+                            content: const Text('Selesai'),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pushAndRemoveUntil(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const EndScreen()),
+                                      (route) => false);
+                                },
+                                child: const Text('Ok'),
+                              ),
+                            ],
                           ),
-                        ],
-                      );
-                    },
-                    child: const Text(
-                      'Ya',
-                      style: TextStyle(color: Colors.deepPurple),
+                        );
+                      },
+                      child: const Text(
+                        'Ya',
+                        style: TextStyle(color: Colors.deepPurple),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               );
             },
             icon: Image.asset('assets/images/close_cross.png'),
@@ -92,24 +103,7 @@ class _Question21Class2State extends State<Question21Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Perhatikan gambar 4 buah-buahan yang berbeda pada masing-masing timbangannya di bawah ini!',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Color(0xff006699),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Image.asset('assets/images/class2/seta_img_soal_no_21.png'),
-            const SizedBox(
-              height: 5,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Di antara 4 pernyataan di bawah ini, pernyataan yang paling tepat adalah. ...',
+                'Terdapat sebuah bangun datar dengan ciri-ciri sebagai berikut:\n- Memiliki empat buah sisi yang sama panjang\n- Salah satu besar sudutnya adalah 50 derajat.\n\nMenurut kalian bangun apakah yang dimaksud?',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -136,6 +130,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -150,14 +145,27 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'A. Jeruk lebih berat dibandingkan apel',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'A.',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Color(0xff006699),
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                Expanded(
+                                  flex: 3,
+                                  child: Image.asset(
+                                    'assets/images/class4/setb_img_soal_no_29a.png',
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -176,6 +184,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -190,13 +199,33 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'B. Apel lebih berat dibandingkan semangka',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
+                            child: Card(
+                              color: Colors.transparent,
+                              shadowColor: Colors.transparent.withOpacity(0.1),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'B.',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xff006699),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Image.asset(
+                                      'assets/images/class4/setb_img_soal_no_29b.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -224,6 +253,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -238,13 +268,33 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'C. Semangka lebih berat dibandingkan anggur',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
+                            child: Card(
+                              color: Colors.transparent,
+                              shadowColor: Colors.transparent.withOpacity(0.1),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'C.',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xff006699),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Image.asset(
+                                      'assets/images/class4/setb_img_soal_no_29c.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -264,6 +314,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -278,13 +329,33 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'D. Anggur lebih ringan dibandingkan apel',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
+                            child: Card(
+                              color: Colors.transparent,
+                              shadowColor: Colors.transparent.withOpacity(0.1),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'D.',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xff006699),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Image.asset(
+                                      'assets/images/class4/setb_img_soal_no_29d.png',
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -320,7 +391,7 @@ class _Question21Class2State extends State<Question21Class2> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Question22Class2()));
+                              builder: (context) => const Question2Class2()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
@@ -344,7 +415,7 @@ class _Question21Class2State extends State<Question21Class2> {
 
   openPlayer() async {
     await _assetAudioPlayer.open(
-      Audio('assets/audios/class2/item21.mp3'),
+      Audio('assets/audios/class4/item1.mp3'),
       autoStart: true,
     );
     _assetAudioPlayer.playlistAudioFinished.listen((event) {
@@ -354,16 +425,16 @@ class _Question21Class2State extends State<Question21Class2> {
     });
     _assetAudioPlayer.currentPosition.listen((event) {
       setState(() {
-        if (19122 <= event.inMilliseconds && event.inMilliseconds <= 20500) {
+        if (26600 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
           isVisibleAnswerA = true;
-        } else if (24514 <= event.inMilliseconds &&
-            event.inMilliseconds <= 25500) {
+        } else if (29081 <= event.inMilliseconds &&
+            event.inMilliseconds <= 31000) {
           isVisibleAnswerB = true;
-        } else if (30256 <= event.inMilliseconds &&
-            event.inMilliseconds <= 31500) {
+        } else if (31416 <= event.inMilliseconds &&
+            event.inMilliseconds <= 33000) {
           isVisibleAnswerC = true;
-        } else if (35994 <= event.inMilliseconds &&
-            event.inMilliseconds <= 36500) {
+        } else if (33564 <= event.inMilliseconds &&
+            event.inMilliseconds <= 35000) {
           isVisibleAnswerD = true;
         }
       });

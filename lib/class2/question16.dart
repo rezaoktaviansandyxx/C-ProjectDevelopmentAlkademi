@@ -150,13 +150,8 @@ class _Question16Class2State extends State<Question16Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
+                            child: const Expanded(
+                              child: Text(
                                 'A. Banyak permen merah menjadi sama banyak dengan permen kuning yang tersisa',
                                 style: TextStyle(
                                   fontSize: 14,
@@ -195,13 +190,8 @@ class _Question16Class2State extends State<Question16Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
+                            child: const Expanded(
+                              child: Text(
                                 'B. Banyak permen biru lebih banyak daripada banyak permen merah',
                                 style: TextStyle(
                                   fontSize: 14,
@@ -248,13 +238,8 @@ class _Question16Class2State extends State<Question16Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
+                            child: const Expanded(
+                              child: Text(
                                 'C. Banyak permen merah lebih sedikit daripada banyak permen biru',
                                 style: TextStyle(
                                   fontSize: 14,
@@ -293,13 +278,8 @@ class _Question16Class2State extends State<Question16Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
+                            child: const Expanded(
+                              child: Text(
                                 'D. Banyak permen biru menjadi sama banyak dengan permen kuning yang tersisa',
                                 style: TextStyle(
                                   fontSize: 14,

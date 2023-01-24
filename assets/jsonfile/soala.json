@@ -1,0 +1,1387 @@
+﻿{
+  "status": true,
+  "message": "",
+  "data": {
+    "owner": "62b02dfc363cb8d6287d0ba1",
+    "userId": 5303,
+    "title": "Asesmen Matematika",
+    "description": "Selamat datang di dunia matematika, hari ini kamu memiliki misi untuk menjawab pertanyaan-pertanyaan seputar dunia matematika.",
+    "loginRequired": false,
+    "questions": [
+      {
+        "question": "Perhatikan kumpulan  gambar buah jeruk berikut! Di antara 4 pilihan kumpulan gambar buah jeruk yang tersedia, kumpulan gambar jeruk yang paling banyak jumlahnya dibandingkan dengan kumpulan gambar jeruk pada gambar di atas adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_1.png",
+        "video": null,
+        "audio": "seta_item1",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_1a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5e8"
+          },
+          {
+            "image": "seta_img_soal_no_1b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5e9"
+          },
+          {
+            "image": "seta_img_soal_no_1c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5ea"
+          },
+          {
+            "image": "seta_img_soal_no_1d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5eb"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d5e7"
+      },
+      {
+        "question": "Perhatikan bilangan-bilangan berikut! Di antara 4 pilihan bilangan yang tersedia, bilangan yang paling kecil nilainya dibandingkan dengan bilangan pada gambar di atas adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_2.png",
+        "video": null,
+        "audio": "seta_item2",
+        "choices": [
+          {
+            "image": null,
+            "value": "121",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5ed"
+          },
+          {
+            "image": null,
+            "value": "111",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5ee"
+          },
+          {
+            "image": null,
+            "value": "120",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5ef"
+          },
+          {
+            "image": null,
+            "value": "122",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f0"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d5ec"
+      },
+      {
+        "question": "Perhatikan gambar kartu-kartu berbentuk bangun geometri yang berisi bilangan berikut! Melina diminta untuk mengambil kartu bilangan yang nilai satuannya lebih dari 5. Kartu yang dapat diambil Melina adalah kartu berbentuk. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_3.png",
+        "video": null,
+        "audio": "seta_item3",
+        "choices": [
+          {
+            "image": null,
+            "value": "Persegi Panjang",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f2"
+          },
+          {
+            "image": null,
+            "value": "Segitiga",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f3"
+          },
+          {
+            "image": null,
+            "value": "Lingkaran",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f4"
+          },
+          {
+            "image": null,
+            "value": "Jajar Genjang",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f5"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d5f1"
+      },
+      {
+        "question": "Perhatikan gambar kartu-kartu berbentuk bangun geometri yang berisi bilangan berikut! Urutan kartu-kartu bilangan dari nilai bilangannya yang terkecil ke terbesar adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_4.png",
+        "video": null,
+        "audio": "seta_item4",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_4a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f7"
+          },
+          {
+            "image": "seta_img_soal_no_4b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f8"
+          },
+          {
+            "image": "seta_img_soal_no_4c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5f9"
+          },
+          {
+            "image": "seta_img_soal_no_4d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5fa"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d5f6"
+      },
+      {
+        "question": "Perhatikan gambar kartu-kartu berbentuk bangun geometri yang berisi bilangan berikut! Urutan kartu-kartu bilangan dari nilai bilangannya yang terbesar ke terkecil adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_5.png",
+        "video": null,
+        "audio": "seta_item5",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_5a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5fc"
+          },
+          {
+            "image": "seta_img_soal_no_5b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5fd"
+          },
+          {
+            "image": "seta_img_soal_no_5c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5fe"
+          },
+          {
+            "image": "seta_img_soal_no_5d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d5ff"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d5fb"
+      },
+      {
+        "question": "Sintia memiliki sebatang coklat sebagaimana tampak pada gambar berikut! Apabila Sintia memberikan sebagian coklatnya kepada Novia sehingga kedua bagian coklat mereka sama besar, maka gambar yang menunjukkan pola pembagian coklat tersebut adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_6.png",
+        "video": null,
+        "audio": "seta_item6",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_6a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d601"
+          },
+          {
+            "image": "seta_img_soal_no_6b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d602"
+          },
+          {
+            "image": "seta_img_soal_no_6c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d603"
+          },
+          {
+            "image": "seta_img_soal_no_6d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d604"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d600"
+      },
+      {
+        "question": "Hari ini Hana berulang tahun. Ia akan memotong kue ulang tahunnya menjadi 4 bagian sama besar. Gambar yang menunjukkan cerita memotong kue tersebut agar keempat bagiannya sama besar adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "seta_item7",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_7a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d606"
+          },
+          {
+            "image": "seta_img_soal_no_7b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d607"
+          },
+          {
+            "image": "seta_img_soal_no_7c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d608"
+          },
+          {
+            "image": "seta_img_soal_no_7d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d609"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d605"
+      },
+      {
+        "question": "Perhatikan keempat gambar yang berwarna merah dan putih pada pilihan di bawah ini! Apabila bagian yang berwarna merah dibandingkan dengan keseluruhan pada setiap gambar, maka gambar yang menunjukkan nilai bilangan pecahan setengah adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "seta_item8",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_8a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d60b"
+          },
+          {
+            "image": "seta_img_soal_no_8b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d60c"
+          },
+          {
+            "image": "seta_img_soal_no_8c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d60d"
+          },
+          {
+            "image": "seta_img_soal_no_8d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d60e"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d60a"
+      },
+      {
+        "question": "Perhatikan keempat gambar yang berwarna merah dan putih pada pilihan di bawah ini! Apabila bagian yang berwarna merah dibandingkan dengan keseluruhan pada setiap gambar, maka gambar yang menunjukkan nilai bilangan pecahan seperempat adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "seta_item9",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_9a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d610"
+          },
+          {
+            "image": "seta_img_soal_no_9b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d611"
+          },
+          {
+            "image": "seta_img_soal_no_9c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d612"
+          },
+          {
+            "image": "seta_img_soal_no_9d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d613"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d60f"
+      },
+      {
+        "question": "Perhatikan keempat gambar yang berwarna merah dan putih pada pilihan di bawah ini! Apabila bagian yang berwarna merah dibandingkan dengan keseluruhan pada setiap gambar, maka gambar yang menunjukkan nilai bilangan pecahan seperdelapan adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "seta_item10",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_10a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d615"
+          },
+          {
+            "image": "seta_img_soal_no_10b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d616"
+          },
+          {
+            "image": "seta_img_soal_no_10c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d617"
+          },
+          {
+            "image": "seta_img_soal_no_10d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d618"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d614"
+      },
+      {
+        "question": "Perhatikan gambar garis bilangan berikut ini! Persegi kosong diberi kode A. Bilangan yang tepat untuk mengisi A  adalah...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_11.png",
+        "video": null,
+        "audio": "seta_item11",
+        "choices": [
+          {
+            "image": null,
+            "value": "14",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d61a"
+          },
+          {
+            "image": null,
+            "value": "20",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d61b"
+          },
+          {
+            "image": null,
+            "value": "6",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d61c"
+          },
+          {
+            "image": null,
+            "value": "10",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d61d"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d619"
+      },
+      {
+        "question": "Sebuah toko buku memberikan hadiah berupa poin belanja kepada setiap pembeli yang berbelanja dengan ketentuan 1 poin untuk pembelanjaan minimal Rp.10.000,00. Sejumlah poin dari pembelanjaan di toko buku tersebut dapat ditukar dengan hadiah sebagai berikut: Sofia telah menukarkan semua poin belanja yang ia miliki sehingga mendapatkan  2 pensil, 1 pulpen, 1 penggaris dan 2 penghapus sehingga poinnya habis. Jumlah poin milik Sofia sebelum ditukar adalah sebanyak. ... poin",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_12.png",
+        "video": null,
+        "audio": "seta_item12",
+        "choices": [
+          {
+            "image": null,
+            "value": "25",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d61f"
+          },
+          {
+            "image": null,
+            "value": "27",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d620"
+          },
+          {
+            "image": null,
+            "value": "23",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d621"
+          },
+          {
+            "image": null,
+            "value": "22",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d622"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d61e"
+      },
+      {
+        "question": "Sebuah toko buku memberikan hadiah berupa poin belanja pada setiap pembeli yang berbelanja dengan ketentuan 1 poin untuk pembelanjaan minimal Rp.20.000,00. Sejumlah poin dari pembelanjaan tersebut dapat ditukar dengan hadiah sebagai berikut: Dika memiliki 17 poin. Ia telah menukarnya dengan 1 pensil, 1 pulpen dan 1 penghapus. Sisa poinnya agar habis dapat ditukar dengan. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_13.png",
+        "video": null,
+        "audio": "seta_item13",
+        "choices": [
+          {
+            "image": null,
+            "value": "1 Pulpen",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d624"
+          },
+          {
+            "image": null,
+            "value": "3 Pensil",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d625"
+          },
+          {
+            "image": null,
+            "value": "4 Penghapus",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d626"
+          },
+          {
+            "image": null,
+            "value": "1 Penggaris",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d627"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d623"
+      },
+      {
+        "question": "Perhatikan gambar garis bilangan berikut ini! Dua persegi kosong diberi kode A dan B. Bilangan yang tepat untuk mengisi A dan B berturut-turut adalah ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_14.png",
+        "video": null,
+        "audio": "seta_item14",
+        "choices": [
+          {
+            "image": null,
+            "value": "60 dan 90",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d629"
+          },
+          {
+            "image": null,
+            "value": "65 dan 90",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d62a"
+          },
+          {
+            "image": null,
+            "value": "90 dan 95",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d62b"
+          },
+          {
+            "image": null,
+            "value": "65 dan 95",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d62c"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d628"
+      },
+      {
+        "question": "Perhatikan gambar berikut ini! Agar timbangan menjadi seimbang maka banyak apel yang perlu ditambahkan ke kelompok apel adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_15.png",
+        "video": null,
+        "audio": "seta_item15",
+        "choices": [
+          {
+            "image": null,
+            "value": "2",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d62e"
+          },
+          {
+            "image": null,
+            "value": "3",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d62f"
+          },
+          {
+            "image": null,
+            "value": "7",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d630"
+          },
+          {
+            "image": null,
+            "value": "8",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d631"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d62d"
+      },
+      {
+        "question": "Perhatikan gambar permen loli pop berwarna merah, kuning dan biru milik Safira berikut ini! Apabila Safira  memberikan 6 permen berwarna kuning kepada beberapa temannya, maka pernyataan yang paling tepat di antara pernyataan-pernyataan di bawah ini adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_16.png",
+        "video": null,
+        "audio": "seta_item16",
+        "choices": [
+          {
+            "image": null,
+            "value": "Banyak permen merah menjadi sama banyak dengan permen kuning yang tersisa",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d633"
+          },
+          {
+            "image": null,
+            "value": "Banyak permen biru lebih banyak daripada banyak permen merah",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d634"
+          },
+          {
+            "image": null,
+            "value": "Banyak permen merah lebih sedikit daripada banyak permen biru",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d635"
+          },
+          {
+            "image": null,
+            "value": "Banyak permen biru menjadi sama banyak dengan permen kuning yang tersisa",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d636"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d632"
+      },
+      {
+        "question": "Zeana akan menghias kamarnya dengan ronce kepingan bangun-bangun datar. Pemasangan kepingan bangun datar tersebut terdiri dari bangun datar lingkaran, segitiga dan persegi yang akan disusun secara berurutan dan berulang sebagaimana tampak pada gambar berikut: Jika Zeana akan meronce bangun-bangun datar tersebut sehingga semua menjadi 15 keping, maka banyak bangun datar segitiga yang dibutuhkannya adalah... keping",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_17.png",
+        "video": null,
+        "audio": "seta_item17",
+        "choices": [
+          {
+            "image": null,
+            "value": "12 ",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d638"
+          },
+          {
+            "image": null,
+            "value": "4",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d639"
+          },
+          {
+            "image": null,
+            "value": "5 ",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d63a"
+          },
+          {
+            "image": null,
+            "value": "14",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d63b"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d637"
+      },
+      {
+        "question": "Hafia akan meronce dengan menggunakan kepingan bangun-bangun datar. Pemasangan kepingan bangun-bangun datar tersebut terdiri atas bangun datar lingkaran, segitiga dan persegi yang akan disusun secara berurutan dan berulang sebagaimana tampak pada gambar sebagai berikut: Bangun datar pada urutan ke-11 adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_18.png",
+        "video": null,
+        "audio": "seta_item18",
+        "choices": [
+          {
+            "image": null,
+            "value": "Lingkaran",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d63d"
+          },
+          {
+            "image": null,
+            "value": "Segitiga",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d63e"
+          },
+          {
+            "image": null,
+            "value": "Persegi",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d63f"
+          },
+          {
+            "image": null,
+            "value": "Trapesium",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d640"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d63c"
+      },
+      {
+        "question": "Gambar di bawah ini menunjukkan 4 tempat yang berada pada sebuah jalan yang lurus sepanjang 4.000 meter dengan jarak antar tempat yang berbeda-beda. Jarak dari SD Harapan ke Rumah Sakit Sentosa adalah sejauh. ...  meter",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_19.png",
+        "video": null,
+        "audio": "seta_item19",
+        "choices": [
+          {
+            "image": null,
+            "value": "1",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d642"
+          },
+          {
+            "image": null,
+            "value": "10",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d643"
+          },
+          {
+            "image": null,
+            "value": "1000",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d644"
+          },
+          {
+            "image": null,
+            "value": "3988",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d645"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d641"
+      },
+      {
+        "question": "Gambar di bawah ini menunjukkan 4 tempat yang berada pada sebuah jalan yang lurus sepanjang 4.000 meter dengan jarak antar tempat yang berbeda-beda. Jarak dari Rumah Ami ke Rumah Sakit Sentosa adalah sejauh ...  kilometer",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_20.png",
+        "video": null,
+        "audio": "seta_item20",
+        "choices": [
+          {
+            "image": null,
+            "value": "4000",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d647"
+          },
+          {
+            "image": null,
+            "value": "40",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d648"
+          },
+          {
+            "image": null,
+            "value": "400",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d649"
+          },
+          {
+            "image": null,
+            "value": "4",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d64a"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d646"
+      },
+      {
+        "question": "Perhatikan gambar 4 buah-buahan yang berbeda pada masing-masing timbangannya di bawah ini! Di antara 4 pernyataan di bawah ini, pernyataan yang paling tepat adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_21.png",
+        "video": null,
+        "audio": "seta_item21",
+        "choices": [
+          {
+            "image": null,
+            "value": "Jeruk lebih berat dibandingkan apel",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d64c"
+          },
+          {
+            "image": null,
+            "value": "Apel lebih berat dibandingkan semangka",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d64d"
+          },
+          {
+            "image": null,
+            "value": "Semangka lebih berat dibandingkan anggur",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d64e"
+          },
+          {
+            "image": null,
+            "value": "Anggur lebih ringan dibandingkan apel",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d64f"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d64b"
+      },
+      {
+        "question": "Perhatikan gambar 4 buah-buahan yang berbeda pada masing-masing timbangannya di bawah ini! Selisih antara berat anggur dan berat apel adalah. ... gram",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_22.png",
+        "video": null,
+        "audio": "seta_item22",
+        "choices": [
+          {
+            "image": null,
+            "value": "949",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d651"
+          },
+          {
+            "image": null,
+            "value": "5",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d652"
+          },
+          {
+            "image": null,
+            "value": "50",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d653"
+          },
+          {
+            "image": null,
+            "value": "951",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d654"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d650"
+      },
+      {
+        "question": "Perhatikan gambar botol dan kemasan air mineral berikut ini! Apabila air mineral dalam botol dan kemasan sebagaimana tampak pada gambar di atas digabungkan dalam satu wadah, keseluruhan volumenya. ... mililiter (ml)",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_23.png",
+        "video": null,
+        "audio": "seta_item23",
+        "choices": [
+          {
+            "image": null,
+            "value": "3.000",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d656"
+          },
+          {
+            "image": null,
+            "value": "3.500",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d657"
+          },
+          {
+            "image": null,
+            "value": "3.005",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d658"
+          },
+          {
+            "image": null,
+            "value": "3.050",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d659"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d655"
+      },
+      {
+        "question": "Perhatikan gambar botol dan kemasan air mineral berikut ini! Berdasarkan gambar di atas, selisih antara volume air dalam botol paling besar dan volume air dalam gelas adalah. ... mililiter (ml)",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_24.png",
+        "video": null,
+        "audio": "seta_item24",
+        "choices": [
+          {
+            "image": null,
+            "value": "3.050",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d65b"
+          },
+          {
+            "image": null,
+            "value": "1.260",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d65c"
+          },
+          {
+            "image": null,
+            "value": "1.830",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d65d"
+          },
+          {
+            "image": null,
+            "value": "1.740",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d65e"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d65a"
+      },
+      {
+        "question": "Anisa berangkat ke sekolah pada pukul 06.30 dengan menggunakan angkutan umum. Ia membutuhkan waktu 30 menit untuk tiba di sekolahnya. Gambar jam yang menunjukkan waktu tiba Anisa di sekolah adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "seta_item25",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_25a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d660"
+          },
+          {
+            "image": "seta_img_soal_no_25b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d661"
+          },
+          {
+            "image": "seta_img_soal_no_25c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d662"
+          },
+          {
+            "image": "seta_img_soal_no_25d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d663"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d65f"
+      },
+      {
+        "question": "Perhatikan kedua gambar berikut ini! Anisa pulang dari sekolah pada pukul 13.00. Karena ditempuh dengan berjalan kaki, ia membutuhkan waktu lebih lama dibandingkan dengan menggunakan angkutan umum. Jika ia tiba di rumah pada jam 14.00, maka perjalanan yang ditempuh Anisa adalah selama. ... menit",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_26.png",
+        "video": null,
+        "audio": "seta_item26",
+        "choices": [
+          {
+            "image": null,
+            "value": "1",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d665"
+          },
+          {
+            "image": null,
+            "value": "3",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d666"
+          },
+          {
+            "image": null,
+            "value": "60",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d667"
+          },
+          {
+            "image": null,
+            "value": "180",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d668"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d664"
+      },
+      {
+        "question": "Coba perhatikan gambar di bawah ini. Dari keempat gambar pensil di bawah ini, gambar pensil yang lebih panjang dibandingkan dengan gambar pensil di atas adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_27",
+        "video": null,
+        "audio": "seta_item27",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_27a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d66a"
+          },
+          {
+            "image": "seta_img_soal_no_27b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d66b"
+          },
+          {
+            "image": "seta_img_soal_no_27c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d66c"
+          },
+          {
+            "image": "seta_img_soal_no_27d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d66d"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d669"
+      },
+      {
+        "question": "Coba perhatikan gambar 5 orang anak berikut ini! Berdasarkan gambar di atas, nama anak laki-laki yang berat badannya lebih berat dari Ali adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_28.png",
+        "video": null,
+        "audio": "seta_item28",
+        "choices": [
+          {
+            "image": null,
+            "value": "Edo",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d66f"
+          },
+          {
+            "image": null,
+            "value": "Rian",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d670"
+          },
+          {
+            "image": null,
+            "value": "Dimas",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d671"
+          },
+          {
+            "image": null,
+            "value": "Feri",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d672"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d66e"
+      },
+      {
+        "question": "Gambar kegiatan yang membutuhkan waktu lebih lama dibandingkan dengan yang kegiatan lainnya adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "seta_item29",
+        "choices": [
+          {
+            "image": "seta_img_soal_no_29a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d674"
+          },
+          {
+            "image": "seta_img_soal_no_29b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d675"
+          },
+          {
+            "image": "seta_img_soal_no_29c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d676"
+          },
+          {
+            "image": "seta_img_soal_no_29d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d677"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d673"
+      },
+      {
+        "question": "Perhatikan gambar empat benda berikut ini! Urutan panjang benda dari yang terpendek sampai dengan yang terpanjang adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_30.png",
+        "video": null,
+        "audio": "seta_item30",
+        "choices": [
+          {
+            "image": null,
+            "value": "Pensil, penghapus, penggaris, pulpen",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d679"
+          },
+          {
+            "image": null,
+            "value": "Pensil, pulpen, penggaris, penghapus",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d67a"
+          },
+          {
+            "image": null,
+            "value": "Penghapus, pensil, penggaris, pulpen",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d67b"
+          },
+          {
+            "image": null,
+            "value": "Penghapus, pensil, pulpen, penggaris",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d67c"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d678"
+      },
+      {
+        "question": "Perhatikan gambar empat buah berikut ini! Urutan berat buah dari yang paling ringan sampai dengan yang paling berat adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_31.png",
+        "video": null,
+        "audio": "seta_item31",
+        "choices": [
+          {
+            "image": null,
+            "value": "Anggur, semangka, jeruk, apel",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d67e"
+          },
+          {
+            "image": null,
+            "value": "Anggur, jeruk, semangka, apel",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d67f"
+          },
+          {
+            "image": null,
+            "value": "Jeruk, apel, anggur, semangka",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d680"
+          },
+          {
+            "image": null,
+            "value": "Jeruk, anggur, apel, semangka",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d681"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d67d"
+      },
+      {
+        "question": "Perhatikan gambar empat kegiatan yang Arsya lakukan berikut ini! Urutan kegiatan Arsya dari yang paling sebentar sampai dengan yang paling lama adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_32.png",
+        "video": null,
+        "audio": "seta_item32",
+        "choices": [
+          {
+            "image": null,
+            "value": "Belajar, makan, tidur, bermain bola",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d683"
+          },
+          {
+            "image": null,
+            "value": "Makan, belajar, bermain bola, tidur",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d684"
+          },
+          {
+            "image": null,
+            "value": "Belajar, tidur, bermain bola, makan",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d685"
+          },
+          {
+            "image": null,
+            "value": "Makan, bermain bola, belajar, tidur",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d686"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d682"
+      },
+      {
+        "question": "Perhatikan gambar tiga bangun datar segitiga berikut ini! Yang merupakan ciri-ciri segitiga adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_33.png",
+        "video": null,
+        "audio": "seta_item33",
+        "choices": [
+          {
+            "image": null,
+            "value": "Memiliki 2 buah sisi dan 2 buah titik sudut",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d688"
+          },
+          {
+            "image": null,
+            "value": "Memiliki 3 buah sisi dan 3 buah titik sudut",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d689"
+          },
+          {
+            "image": null,
+            "value": "Memiliki 3 buah sisi dan 2 buah titik sudut",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d68a"
+          },
+          {
+            "image": null,
+            "value": "Memiliki 2 buah sisi dan 3 buah titik sudut",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d68b"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d687"
+      },
+      {
+        "question": "Perhatikan gambar tangram milik Fani dan Ilaya berikut ini! Dengan menggunakan tangram, Fani dan Ilaya masing-masing menyusun sebuah bangun datar yang menyerupai ikan dan rumah. Jumlah keping bangun datar segitiga pada tangram milik Fani dan Ilaya adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_34.png",
+        "video": null,
+        "audio": "seta_item34",
+        "choices": [
+          {
+            "image": null,
+            "value": "7",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d68d"
+          },
+          {
+            "image": null,
+            "value": "8",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d68e"
+          },
+          {
+            "image": null,
+            "value": "10",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d68f"
+          },
+          {
+            "image": null,
+            "value": "11",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d690"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d68c"
+      },
+      {
+        "question": "Berdasarkan hasil wawancara dengan siswa kelas 2 SD Pelita Bangsa tentang kesukaan mereka pada olahraga, terdapat 5 orang siswa yang menyukai olahraga badminton, 10 orang siswa menyukai bola basket, 15 orang siswa menyukai renang dan 20 orang siswa menyukai senam. Data tentang kesukaan siswa pada olahraga tersebut disajikan dalam diagram gambar dengan ketentuan sebagai berikut: Urutan olahraga kesukaan siswa dari yang paling banyak peminatnya sampai dengan yang paling sedikit peminatnya adalah. ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "seta_img_soal_no_35.png",
+        "video": null,
+        "audio": "seta_item35",
+        "choices": [
+          {
+            "image": null,
+            "value": "Senam, basket, badminton, renang",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d692"
+          },
+          {
+            "image": null,
+            "value": "Badminton, basket, senam, renang",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d693"
+          },
+          {
+            "image": null,
+            "value": "Badminton, basket, renang, senam",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d694"
+          },
+          {
+            "image": null,
+            "value": "Senam, renang, basket, badminton",
+            "correct": false,
+            "_id": "62c5474c3af334fa5028d695"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62c5474c3af334fa5028d691"
+      }
+    ],
+    "cover": null,
+    "scoring": false,
+    "release": true,
+    "timer": 120,
+    "formType": "basic",
+    "created_at": "2022-07-06T15:26:52+07:00",
+    "updated_at": "2022-07-06T15:26:52+07:00",
+    "_id": "62c5474c3af334fa5028d5e6",
+    "__v": 0
+  }
+}

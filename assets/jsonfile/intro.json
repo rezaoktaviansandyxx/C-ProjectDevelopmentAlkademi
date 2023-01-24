@@ -1,0 +1,54 @@
+﻿{
+    "status": true,
+    "message": "",
+    "data": {
+        "_id": "62bd403d3af334fa50287d9c",
+        "owner": "62b02dfc363cb8d6287d0ba1",
+        "userId": 5303,
+        "title": "Kuis Asesmen Matematika",
+        "description": "Adik-adik sekalian, terimakasih sudah bersedia mengikuti asesmen matematika kali ini. Dalam asesmen ini, Adik-adik akan mengerjakan beberapa soal matematika dalam bentuk pilihan berganda.",
+        "loginRequired": false,
+        "questions": [
+          {
+            "question": "Berapakah hasil 2 ditambah 2?",
+            "type": "choice",
+            "file": null,
+            "image": null,
+            "video": null,
+            "audio": "tutorial",
+            "choices": [
+              {
+                "image": null,
+                "value": "3",
+                "_id": "62bd403d3af334fa50287d9e"
+              },
+              {
+                "image": null,
+                "value": "4",
+                "_id": "62bd403d3af334fa50287d9f"
+              },
+              {
+                "image": null,
+                "value": "5",
+                "_id": "62bd403d3af334fa50287da0"
+              },
+              {
+                "image": null,
+                "value": "6",
+                "_id": "62bd403d3af334fa50287da1"
+              }
+            ],
+            "fileExtension": "",
+            "defaultValue": "",
+            "required": false,
+            "_id": "62bd403d3af334fa50287d9d"
+          }
+        ],
+        "cover": "https://drive.google.com/file/d/1oOACJyaZonVgdvyFe9g6rFVJ-rowtGNn/view?usp=sharing",
+        "scoring": false,
+        "release": true,
+        "timer": 120,
+        "formType": "basic",
+        "__v": 0
+    }
+}

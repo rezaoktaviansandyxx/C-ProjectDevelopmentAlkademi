@@ -1,0 +1,1210 @@
+﻿{
+  "status": true,
+  "message": "",
+  "data": {
+      "_id": "62bbe9dc3af334fa50285829",
+      "owner": "62b02dfc363cb8d6287d0ba1",
+      "userId": 5303,
+      "title": "Asesmen Matematika",
+      "description": "Selamat datang di dunia matematika, hari ini kamu memiliki misi untuk menjawab pertanyaan-pertanyaan seputar dunia matematika.",
+      "loginRequired": false,
+      "questions": [
+          {
+              "question": "Perhatikan penjumlahan dua bilangan berikut ini! Bilangan yang tepat untuk mengganti nilai A dan B berturut-turut pada operasi penjumlahan tersebut adalah bilangan. ...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_1.png",
+              "video": null,
+              "audio": "setb_item1",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "3 dan 10",
+                      "_id": "62bbe9dc3af334fa5028582b"
+                  },
+                  {
+                      "image": null,
+                      "value": "3 dan 9",
+                      "_id": "62bbe9dc3af334fa5028582c"
+                  },
+                  {
+                      "image": null,
+                      "value": "3 dan 0",
+                      "_id": "62bbe9dc3af334fa5028582d"
+                  },
+                  {
+                      "image": null,
+                      "value": "3 dan 1",
+                      "_id": "62bbe9dc3af334fa5028582e"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028582a"
+          },
+          {
+              "question": "Perhatikan gambar berikut ini! Pak Adi, Bu Rini dan Edo akan masuk ke dalam sebuah lift, sementara di dalam lift sudah ada 5 orang penumpang dengan jumlah berat badan kelimanya 420 Kilogram. Agar kapasitas lift masih memenuhi syarat, yang memungkinkan untuk masuk ke dalam lift tersebut adalah. ...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_2.png",
+              "video": null,
+              "audio": "setb_item2",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "Pak Adi dan Bu Rini",
+                      "_id": "62bbe9dc3af334fa50285830"
+                  },
+                  {
+                      "image": null,
+                      "value": "Pak Adi dan Edo",
+                      "_id": "62bbe9dc3af334fa50285831"
+                  },
+                  {
+                      "image": null,
+                      "value": "Edo dan Bu Rini",
+                      "_id": "62bbe9dc3af334fa50285832"
+                  },
+                  {
+                      "image": null,
+                      "value": "Pak Adi, Bu Rini, dan Edo",
+                      "_id": "62bbe9dc3af334fa50285833"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028582f"
+          },
+          {
+              "question": "Perhatikan gambar berikut ini! Pak Adi, Bu Rini dan Edo dengan barang bawaan masing-masing akan masuk ke dalam sebuah lift, sementara di dalam lift sudah ada 4 orang penumpang dengan jumlah berat badan 300 Kilogram. Berat maksimum barang bawaan mereka bertiga agar kapasitas lift memenuhi syarat adalah. ... Kilogram.",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_3.png",
+              "video": null,
+              "audio": "setb_item3",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "250",
+                      "_id": "62bbe9dc3af334fa50285835"
+                  },
+                  {
+                      "image": null,
+                      "value": "145",
+                      "_id": "62bbe9dc3af334fa50285836"
+                  },
+                  {
+                      "image": null,
+                      "value": "70",
+                      "_id": "62bbe9dc3af334fa50285837"
+                  },
+                  {
+                      "image": null,
+                      "value": "28",
+                      "_id": "62bbe9dc3af334fa50285838"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285834"
+          },
+          {
+              "question": "Diva mempunyai banyak buku bekas. Ia akan memasukkannya ke dalam 5 buah dus besar berukuran sama. Jika kelima dus tersebut diisi buku bekas dengan berat masing-masing 75 Kilogram, maka total berat seluruh buku bekas adalah. ... Kilogram.",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_4.png",
+              "video": null,
+              "audio": "setb_item4",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "80",
+                      "_id": "62bbe9dc3af334fa5028583a"
+                  },
+                  {
+                      "image": null,
+                      "value": "375",
+                      "_id": "62bbe9dc3af334fa5028583b"
+                  },
+                  {
+                      "image": null,
+                      "value": "70",
+                      "_id": "62bbe9dc3af334fa5028583c"
+                  },
+                  {
+                      "image": null,
+                      "value": "25",
+                      "_id": "62bbe9dc3af334fa5028583d"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285839"
+          },
+          {
+              "question": "Perhatikan gambar berikut ini! Arina secara rutin menabung di dua celengan miliknya sebagaimana tampak pada gambar di atas. Jika Arina sejak awal menabung Rp.5.000,00 setiap hari tanpa henti, maka dalam 4 minggu jumlah tabungan pada kedua celengannya adalah. ...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_5.png",
+              "video": null,
+              "audio": "setb_item5",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "Rp. 20.000",
+                      "_id": "62bbe9dc3af334fa5028583f"
+                  },
+                  {
+                      "image": null,
+                      "value": "Rp. 40.000",
+                      "_id": "62bbe9dc3af334fa50285840"
+                  },
+                  {
+                      "image": null,
+                      "value": "Rp. 280.000",
+                      "_id": "62bbe9dc3af334fa50285841"
+                  },
+                  {
+                      "image": null,
+                      "value": "Rp. 140.000",
+                      "_id": "62bbe9dc3af334fa50285842"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028583e"
+          },
+          {
+              "question": "Perhatikan gambar berikut ini! Arina secara rutin menabung di dua celengan miliknya yang berbentuk tabung sebagaimana tampak pada gambar di atas. Arina sejak awal memasukkan 5.000 rupiah ke setiap celengan, setiap hari tanpa henti. Ketika kedua celengannya dibuka ternyata uang tabungannya berjumlah Rp.520.000,00. Dapat kita simpulkan bahwa Arina telah menabung selama. ...hari.",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_6.png",
+              "video": null,
+              "audio": "setb_item6",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "52",
+                      "_id": "62bbe9dc3af334fa50285844"
+                  },
+                  {
+                      "image": null,
+                      "value": "104",
+                      "_id": "62bbe9dc3af334fa50285845"
+                  },
+                  {
+                      "image": null,
+                      "value": "208",
+                      "_id": "62bbe9dc3af334fa50285846"
+                  },
+                  {
+                      "image": null,
+                      "value": "26",
+                      "_id": "62bbe9dc3af334fa50285847"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285843"
+          },
+          {
+              "question": "Bu Ana mempunyai 10 buah apel, 6 buah jeruk dan 8 buah salak sebagaimana tampak pada gambar. Jika Bu Ana akan membagikannya sampai habis ketiga jenis buah-buahan tersebut kepada semua anaknya sama banyak, maka jumlah anak Bu Ana adalah. ... orang.",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_7.png",
+              "video": null,
+              "audio": "setb_item7",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "2",
+                      "_id": "62bbe9dc3af334fa50285849"
+                  },
+                  {
+                      "image": null,
+                      "value": "4",
+                      "_id": "62bbe9dc3af334fa5028584a"
+                  },
+                  {
+                      "image": null,
+                      "value": "6",
+                      "_id": "62bbe9dc3af334fa5028584b"
+                  },
+                  {
+                      "image": null,
+                      "value": "8",
+                      "_id": "62bbe9dc3af334fa5028584c"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285848"
+          },
+          {
+              "question": "Sebuah toko sembako secara rutin dikunjungi oleh pemasok beras setiap 4 hari sekali, pemasok telur setiap 6 hari sekali dan pemasok gula putih setiap 8 hari sekali. Jika ketiga pemasok bahan pokok datang secara bersamaan pada tanggal 1 Maret 2022, maka selanjutnya mereka akan bertemu secara bersamaan lagi pada tanggal...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_8.png",
+              "video": null,
+              "audio": "setb_item8",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "22 Maret 2022",
+                      "_id": "62bbe9dc3af334fa5028584e"
+                  },
+                  {
+                      "image": null,
+                      "value": "23 Maret 2022",
+                      "_id": "62bbe9dc3af334fa5028584f"
+                  },
+                  {
+                      "image": null,
+                      "value": "24 Maret 2022",
+                      "_id": "62bbe9dc3af334fa50285850"
+                  },
+                  {
+                      "image": null,
+                      "value": "25 Maret 2022",
+                      "_id": "62bbe9dc3af334fa50285851"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028584d"
+          },
+          {
+              "question": "Perhatikan gambar garis bilangan berikut ini! Bilangan pecahan yang tepat untuk mengisi kotak adalah. ...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_9.png",
+              "video": null,
+              "audio": "setb_item9",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "2/5",
+                      "_id": "62bbe9dc3af334fa50285853"
+                  },
+                  {
+                      "image": null,
+                      "value": "1 1/5",
+                      "_id": "62bbe9dc3af334fa50285854"
+                  },
+                  {
+                      "image": null,
+                      "value": "1 4/5",
+                      "_id": "62bbe9dc3af334fa50285855"
+                  },
+                  {
+                      "image": null,
+                      "value": "8/5",
+                      "_id": "62bbe9dc3af334fa50285856"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285852"
+          },
+          {
+              "question": "Hari ini Ibu berulang tahun. Ia akan membagikan kue ulang tahunnya kepada Alfi dan Alfian dengan pola potongan sebagaimana tampak pada gambar berikut! Alfi mendapatkan 3/8 bagian, sedangkan Alfian mendapatkan 1/4 bagian. Pernyataan yang tepat terkait dengan pembagian kue tersebut adalah. ...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_10.png",
+              "video": null,
+              "audio": "setb_item10",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "Potongan kue milik Alfi lebih besar dibandingkan dengan potongan kue milik Alfian",
+                      "_id": "62bbe9dc3af334fa50285858"
+                  },
+                  {
+                      "image": null,
+                      "value": "Potongan kue milik Alfian lebih besar dibandingkan dengan potongan kue milik Alfi",
+                      "_id": "62bbe9dc3af334fa50285859"
+                  },
+                  {
+                      "image": null,
+                      "value": "Potongan kue milik Alfi lebih kecil dibandingkan dengan potongan kue milik Alfian",
+                      "_id": "62bbe9dc3af334fa5028585a"
+                  },
+                  {
+                      "image": null,
+                      "value": "Potongan kue milik Alfi dan Alfian sama besar",
+                      "_id": "62bbe9dc3af334fa5028585b"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285857"
+          },
+          {
+              "question": "Perhatikan gambar bilangan pecahan berikut ini! Di antara keempat pilihan jawaban di bawah ini, bilangan yang nilainya lebih besar dari bilangan pecahan pada gambar di atas adalah. ...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_11.png",
+              "video": null,
+              "audio": "setb_item11",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "0,07 ",
+                      "_id": "62bbe9dc3af334fa5028585d"
+                  },
+                  {
+                      "image": null,
+                      "value": "0,7",
+                      "_id": "62bbe9dc3af334fa5028585e"
+                  },
+                  {
+                      "image": null,
+                      "value": "70%",
+                      "_id": "62bbe9dc3af334fa5028585f"
+                  },
+                  {
+                      "image": null,
+                      "value": "0,72",
+                      "_id": "62bbe9dc3af334fa50285860"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028585c"
+          },
+          {
+              "question": "Perhatikan gambar berikut ini! Mereka diminta berbaris sesuai dengan urutan nilai bilangan yang mereka pegang. Jika mereka berlima berdiri dari depan ke belakang, dengan urutan dari nilai bilangan yang terbesar ke terkecil, maka siswa yang berada tepat di belakang Edo adalah. ...",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_12.png",
+              "video": null,
+              "audio": "setb_item12",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "Meli",
+                      "_id": "62bbe9dc3af334fa50285862"
+                  },
+                  {
+                      "image": null,
+                      "value": "Beni",
+                      "_id": "62bbe9dc3af334fa50285863"
+                  },
+                  {
+                      "image": null,
+                      "value": "Udin",
+                      "_id": "62bbe9dc3af334fa50285864"
+                  },
+                  {
+                      "image": null,
+                      "value": "Lani",
+                      "_id": "62bbe9dc3af334fa50285865"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285861"
+          },
+          {
+              "question": "Perhatikan data pengunjung perpustakaan berikut ini! Jika banyak pengunjung perpustakaan selama 6 hari berturut-turut adalah 100 orang, maka banyak pengunjung perpustakaan pada hari Jumat adalah...orang.",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_13.png",
+              "video": null,
+              "audio": "setb_item13",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "17",
+                      "_id": "62bbe9dc3af334fa50285867"
+                  },
+                  {
+                      "image": null,
+                      "value": "18",
+                      "_id": "62bbe9dc3af334fa50285868"
+                  },
+                  {
+                      "image": null,
+                      "value": "19",
+                      "_id": "62bbe9dc3af334fa50285869"
+                  },
+                  {
+                      "image": null,
+                      "value": "20",
+                      "_id": "62bbe9dc3af334fa5028586a"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285866"
+          },
+          {
+              "question": "Perhatikan data pengunjung perpustakaan berikut ini! Selisih banyak pengunjung perpustakan pada hari Jumat dan Sabtu adalah 1 orang. Jika banyak pengunjung perpustakaan selama 6 hari berturut-turut adalah 100 orang, maka kemungkinan banyak pengunjung perpustakaan pada hari Jumat dan Sabtu berturut-turut adalah ... orang.",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_14.png",
+              "video": null,
+              "audio": "setb_item14",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "10 dan 5",
+                      "_id": "62bbe9dc3af334fa5028586c"
+                  },
+                  {
+                      "image": null,
+                      "value": "12 dan 3",
+                      "_id": "62bbe9dc3af334fa5028586d"
+                  },
+                  {
+                      "image": null,
+                      "value": "7 dan 8",
+                      "_id": "62bbe9dc3af334fa5028586e"
+                  },
+                  {
+                      "image": null,
+                      "value": "6 dan 9",
+                      "_id": "62bbe9dc3af334fa5028586f"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028586b"
+          },
+        {
+          "question": "Perhatikan gambar seorang ibu berikut ini! Ibu tersebut memasukkan 19 telur di keranjang. Setelah dihitung semuanya, ternyata jumlah telur menjadi 37 buah. Berapakah telur yang dimasukkan sebelumnya?",
+          "type": "choice",
+          "file": null,
+          "image": "setb_img_soal_no_15.png",
+          "video": null,
+          "audio": "setb_item15",
+          "choices": [
+            {
+              "image": null,
+              "value": "16",
+              "_id": "62bbe9dc3af334fa50285871"
+            },
+            {
+              "image": null,
+              "value": "17",
+              "_id": "62bbe9dc3af334fa50285872"
+            },
+            {
+              "image": null,
+              "value": "18",
+              "_id": "62bbe9dc3af334fa50285873"
+            },
+            {
+              "image": null,
+              "value": "19",
+              "_id": "62bbe9dc3af334fa50285874"
+            }
+          ],
+          "fileExtension": "",
+          "defaultValue": "",
+          "required": false,
+          "_id": "62bbe9dc3af334fa50285870"
+        },
+          {
+              "question": "Iqbal dan Fahmi 2 orang yang bersahabat dan mereka memiliki kegemaran yang sama, yaitu bermain kelereng. Jumlah kelereng mereka masing-masing sama banyak, sedangkan Iqbal menyimpan kelerengnya pada 2 kantong dan sama banyak. Berapa isi masing-masing kantong kelereng milik Iqbal?",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_16.png",
+              "video": null,
+              "audio": "setb_item16",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "6",
+                      "_id": "62bbe9dc3af334fa50285876"
+                  },
+                  {
+                      "image": null,
+                      "value": "8",
+                      "_id": "62bbe9dc3af334fa50285877"
+                  },
+                  {
+                      "image": null,
+                      "value": "9",
+                      "_id": "62bbe9dc3af334fa50285878"
+                  },
+                  {
+                      "image": null,
+                      "value": "18",
+                      "_id": "62bbe9dc3af334fa50285879"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285875"
+          },
+          {
+              "question": "Misalkan terdapat teka-teki seperti berikut. ☼   +    ♣   -  2 = 38\n\nApabila ☼ dan ♣ digantikan dengan bilangan tertentu, dan ☼ lebih besar daripada ♣.  Dari pilihan jawaban berikut ini, pilihan jawaban yang tepat adalah",
+              "type": "choice",
+              "file": null,
+              "image": "",
+              "video": null,
+              "audio": "setb_item17",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "☼ = 22 dan ♣ = 21 ",
+                      "_id": "62bbe9dc3af334fa5028587b"
+                  },
+                  {
+                      "image": null,
+                      "value": "☼ = 19 dan ♣ = 21",
+                      "_id": "62bbe9dc3af334fa5028587c"
+                  },
+                  {
+                      "image": null,
+                      "value": "☼ = 20 dan ♣ = 19 ",
+                      "_id": "62bbe9dc3af334fa5028587d"
+                  },
+                  {
+                      "image": null,
+                      "value": "☼ = 21 dan ♣ = 19",
+                      "_id": "62bbe9dc3af334fa5028587e"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028587a"
+          },
+          {
+              "question": "Diketahui ☼ dan ♣ adalah dua buah bilangan yang berbeda, dan nilai ☼ lebih besar daripada nilai ♣. \n\nApabila (3x☼) : (2x♣) = 3, maka ☼ dan ♣ adalah bilangan … dan ….",
+              "type": "choice",
+              "file": null,
+              "image": "",
+              "video": null,
+              "audio": "setb_item18",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "☼ = 6 dan ♣ = 3",
+                      "_id": "62bbe9dc3af334fa50285880"
+                  },
+                  {
+                      "image": null,
+                      "value": "☼ = 9 dan ♣ = 3",
+                      "_id": "62bbe9dc3af334fa50285881"
+                  },
+                  {
+                      "image": null,
+                      "value": "☼ = 3 dan ♣ = 9 ",
+                      "_id": "62bbe9dc3af334fa50285882"
+                  },
+                  {
+                      "image": null,
+                      "value": "☼ = 4 dan ♣ = 3",
+                      "_id": "62bbe9dc3af334fa50285883"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028587f"
+          },
+          {
+              "question": "Perhatikan barisan bilangan di bawah ini yang selisih antara dua bilangan yang berurutan adalah sama! Apabila bilangan pada kotak kosong dikurangi 19 maka hasilnya adalah ….",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_19.png",
+              "video": null,
+              "audio": "setb_item19",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "29",
+                      "_id": "62bbe9dc3af334fa50285885"
+                  },
+                  {
+                      "image": null,
+                      "value": "19",
+                      "_id": "62bbe9dc3af334fa50285886"
+                  },
+                  {
+                      "image": null,
+                      "value": "28",
+                      "_id": "62bbe9dc3af334fa50285887"
+                  },
+                  {
+                      "image": null,
+                      "value": "18",
+                      "_id": "62bbe9dc3af334fa50285888"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285884"
+          },
+          {
+              "question": "Misalkan terdapat barisan bilangan dengan hasil bagi antara dua bilangan adalah sama, seperti barisan berikut ini. Apabila bilangan pada kotak kosong dibagi 9 maka hasilnya adalah ….",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_20.png",
+              "video": null,
+              "audio": "setb_item20",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "8",
+                      "_id": "62bbe9dc3af334fa5028588a"
+                  },
+                  {
+                      "image": null,
+                      "value": "14",
+                      "_id": "62bbe9dc3af334fa5028588b"
+                  },
+                  {
+                      "image": null,
+                      "value": "10",
+                      "_id": "62bbe9dc3af334fa5028588c"
+                  },
+                  {
+                      "image": null,
+                      "value": "12",
+                      "_id": "62bbe9dc3af334fa5028588d"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285889"
+          },
+          {
+              "question": "Seorang ibu sedang berbelanja dan membeli 2 kantong kentang dan 3 kantong telur. Berat keseluruhan belanjaan ibu tersebut adalah …. ",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_21.png",
+              "video": null,
+              "audio": "setb_item21",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "34 kg",
+                      "_id": "62bbe9dc3af334fa5028588f"
+                  },
+                  {
+                      "image": null,
+                      "value": "36 kg",
+                      "_id": "62bbe9dc3af334fa50285890"
+                  },
+                  {
+                      "image": null,
+                      "value": "14 kg",
+                      "_id": "62bbe9dc3af334fa50285891"
+                  },
+                  {
+                      "image": null,
+                      "value": "28 kg",
+                      "_id": "62bbe9dc3af334fa50285892"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028588e"
+          },
+          {
+              "question": "Seorang ibu hendak membuat 5 potong baju anak sebagaimana pada gambar berikut. Setiap baju membutuhkan 50 centimeter kain putih, 25 centimeter kain biru, dan 25 centimeter kain hitam. Apabila lebar kain 100 centimeter, Berapa meterkah panjang seluruh kain yang dibutuhkan?",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_22.png",
+              "video": null,
+              "audio": "setb_item22",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "4 meter",
+                      "_id": "62bbe9dc3af334fa50285894"
+                  },
+                  {
+                      "image": null,
+                      "value": "5 meter",
+                      "_id": "62bbe9dc3af334fa50285895"
+                  },
+                  {
+                      "image": null,
+                      "value": "6 meter",
+                      "_id": "62bbe9dc3af334fa50285896"
+                  },
+                  {
+                      "image": null,
+                      "value": "7 meter",
+                      "_id": "62bbe9dc3af334fa50285897"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285893"
+          },
+          {
+              "question": "Untuk menghias sebuah kado, seorang anak ingin membuat sebuah pita seperti pada gambar. Untuk membuat pita tersebut, dibutuhkan 35 cm pita ungu dan 220mm pita putih. Apabila akan dibuat 4 kado sehingga dibutuhkan 4 pita, berapa meter total panjang pita yang dibutuhkan?",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_23.png",
+              "video": null,
+              "audio": "setb_item23",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "0,57",
+                      "_id": "62bbe9dc3af334fa50285899"
+                  },
+                  {
+                      "image": null,
+                      "value": "57",
+                      "_id": "62bbe9dc3af334fa5028589a"
+                  },
+                  {
+                      "image": null,
+                      "value": "2,28",
+                      "_id": "62bbe9dc3af334fa5028589b"
+                  },
+                  {
+                      "image": null,
+                      "value": "228",
+                      "_id": "62bbe9dc3af334fa5028589c"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa50285898"
+          },
+          {
+              "question": "Agar taman depan rumah lebih menarik, ibu ingin membuat taman seperti pada gambar berikut. Untuk membuat taman berbentuk segitiga, setiap 1 meter memerlukan 5 pot tanaman. Apabila ukuran taman segitiga ibu adalah 3 meter, 4 meter, dan a meter dan tanaman yang dibutuhkan ibu adalah 60 pot, maka nilai a adalah ….",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_24.png",
+              "video": null,
+              "audio": "setb_item24",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "4",
+                      "_id": "62bbe9dc3af334fa5028589e"
+                  },
+                  {
+                      "image": null,
+                      "value": "5",
+                      "_id": "62bbe9dc3af334fa5028589f"
+                  },
+                  {
+                      "image": null,
+                      "value": "7",
+                      "_id": "62bbe9dc3af334fa502858a0"
+                  },
+                  {
+                      "image": null,
+                      "value": "8",
+                      "_id": "62bbe9dc3af334fa502858a1"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa5028589d"
+          },
+          {
+              "question": "Seorang penjahit akan membuat taplak meja yang serupa dengan gambar. Taplak meja berbentuk segi empat tersebut akan dipasang renda. Apabila renda yang dibutuhkan untuk menghiasi taplak tersebut adalah 4,2 meter, dan lebar taplak sebelum dipasang renda adalah adalah 90 centimeter, maka panjang taplak sebelum dipasang renda adalah … centimeter",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_25.png",
+              "video": null,
+              "audio": "setb_item25",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "120",
+                      "_id": "62bbe9dc3af334fa502858a3"
+                  },
+                  {
+                      "image": null,
+                      "value": "170",
+                      "_id": "62bbe9dc3af334fa502858a4"
+                  },
+                  {
+                      "image": null,
+                      "value": "240",
+                      "_id": "62bbe9dc3af334fa502858a5"
+                  },
+                  {
+                      "image": null,
+                      "value": "330",
+                      "_id": "62bbe9dc3af334fa502858a6"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858a2"
+          },
+          {
+              "question": "Terdapat sebuah cermin berbentuk bidang lingkaran yang dibingkai dengan kayu sebagaimana tampak pada gambar berikut ini. Apabila keliling bingkai kayu bagian tepi dalam adalah 2,2 meter, maka jari-jari kaca cermin adalah … centimeter",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_26.png",
+              "video": null,
+              "audio": "setb_item26",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "30",
+                      "_id": "62bbe9dc3af334fa502858a8"
+                  },
+                  {
+                      "image": null,
+                      "value": "35",
+                      "_id": "62bbe9dc3af334fa502858a9"
+                  },
+                  {
+                      "image": null,
+                      "value": "70",
+                      "_id": "62bbe9dc3af334fa502858aa"
+                  },
+                  {
+                      "image": null,
+                      "value": "60",
+                      "_id": "62bbe9dc3af334fa502858ab"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858a7"
+          },
+          {
+              "question": "Sebuah ruangan akan dipasang ubin dengan ukuran 30 x 30 centimeter sebagaimana tampak pada gambar berikut ini. Apabila untuk menutupi penuh seluruh lantai ruangan tersebut diperlukan 150 keping ubin, berapakah kemungkinan ukuran panjang dan lebar ruangan tersebut?",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_27.png",
+              "video": null,
+              "audio": "setb_item27",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "4 meter x 3,5 meter",
+                      "_id": "62bbe9dc3af334fa502858ad"
+                  },
+                  {
+                      "image": null,
+                      "value": "4 meter x 3,75 meter ",
+                      "_id": "62bbe9dc3af334fa502858ae"
+                  },
+                  {
+                      "image": null,
+                      "value": "4,5 meter x 3,5 meter ",
+                      "_id": "62bbe9dc3af334fa502858af"
+                  },
+                  {
+                      "image": null,
+                      "value": "4,5 meter x 3 meter ",
+                      "_id": "62bbe9dc3af334fa502858b0"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858ac"
+          },
+          {
+              "question": "Sehelai taplak menutupi penuh sebuah meja seperti pada gambar di bawah ini. Apabila keliling taplak meja adalah 240 cm, maka luas meja tersebut adalah ….",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_28.png",
+              "video": null,
+              "audio": "setb_item28",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "0,36 meter quadrat",
+                      "_id": "62bbe9dc3af334fa502858b2"
+                  },
+                  {
+                      "image": null,
+                      "value": "3,6 meter quadrat",
+                      "_id": "62bbe9dc3af334fa502858b3"
+                  },
+                  {
+                      "image": null,
+                      "value": "0,576 meter quadrat",
+                      "_id": "62bbe9dc3af334fa502858b4"
+                  },
+                  {
+                      "image": null,
+                      "value": "5,76 meter quadrat",
+                      "_id": "62bbe9dc3af334fa502858b5"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858b1"
+          },
+          {
+              "question": "Terdapat sebuah bangun datar dengan ciri-ciri sebagai berikut:\n- Memiliki empat buah sisi yang sama panjang\n- Salah satu besar sudutnya adalah 50 derajat.\n\nMenurut kalian bangun apakah yang dimaksud?",
+              "type": "choice",
+              "file": null,
+              "image": "",
+              "video": null,
+              "audio": "setb_item29",
+              "choices": [
+                  {
+                      "image": "setb_img_soal_no_29a.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858b7"
+                  },
+                  {
+                      "image": "setb_img_soal_no_29b.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858b8"
+                  },
+                  {
+                      "image": "setb_img_soal_no_29c.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858b9"
+                  },
+                  {
+                      "image": "setb_img_soal_no_29d.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858ba"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858b6"
+          },
+          {
+              "question": "Terdapat dua buah bangun datar dengan ciri-ciri sebagai berikut:\n- Kedua benda tersebut memiliki tiga buah sisi.\n- Bangun datar pertama memiliki besar sudut masing-masing 60 derajat.\n- Bangun datar kedua, besar masing-masing sudut berbeda.\n\nBangun datar apakah yang dimaksud?",
+              "type": "choice",
+              "file": null,
+              "image": "",
+              "video": null,
+              "audio": "setb_item30",
+              "choices": [
+                  {
+                      "image": "setb_img_soal_no_30a.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858bc"
+                  },
+                  {
+                      "image": "setb_img_soal_no_30b.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858bd"
+                  },
+                  {
+                      "image": "setb_img_soal_no_30c.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858be"
+                  },
+                  {
+                      "image": "setb_img_soal_no_30d.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858bf"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858bb"
+          },
+          {
+              "question": "Apabila kita memiliki empat buah bangun segitiga seperti pada gambar berikut dan kemudian kita akan menyusun keempat bangun tersebut menjadi bangun yang baru. Menurut kalian bangun apa yang mungkin dapat disusun?",
+              "type": "choice",
+              "file": null,
+              "image": "setb_img_soal_no_31.png",
+              "video": null,
+              "audio": "setb_item31",
+              "choices": [
+                  {
+                      "image": "setb_img_soal_no_31a.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858c1"
+                  },
+                  {
+                      "image": "setb_img_soal_no_31b.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858c2"
+                  },
+                  {
+                      "image": "setb_img_soal_no_31c.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858c3"
+                  },
+                  {
+                      "image": "setb_img_soal_no_31d.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858c4"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858c0"
+          },
+        {
+          "question": "Diilustrasikan seorang anak sedang bermain puzzle. Anak tersebut menemukan enam potongan puzzle yang berbentuk segitiga sama sisi. Keenam segitiga tersebut dirangkai dan manjadi bangun datar yang baru.\n\nMenurut kalian bangun apakah yang dapat terbentuk?",
+          "type": "choice",
+          "file": null,
+          "image": "setb_img_soal_no_32.png",
+          "video": null,
+          "audio": "setb_item32",
+          "choices": [
+            {
+              "image": null,
+              "value": "Trapezium",
+              "_id": "62bbe9dc3af334fa502858c6"
+            },
+            {
+              "image": null,
+              "value": "Persegi",
+              "_id": "62bbe9dc3af334fa502858c7"
+            },
+            {
+              "image": null,
+              "value": "Layang-layang",
+              "_id": "62bbe9dc3af334fa502858c8"
+            },
+            {
+              "image": null,
+              "value": "Segi Enam",
+              "_id": "62bbe9dc3af334fa502858c9"
+            }
+          ],
+          "fileExtension": "",
+          "defaultValue": "",
+          "required": false,
+          "_id": "62bbe9dc3af334fa502858c5"
+        },
+          {
+              "question": "Seorang anak sedang membantu melipat kardus. Kardus tersebut memiliki ciri-ciri:\n- Memiliki dua pasang persegi panjang yang sama persis ukurannya yaitu berukuran 30 cm x 10 cm dan 20 cm x 10 cm\n- Memiliki dua bangun yang sama dengan ukuran 30 cm x 20 cm.\n\nMenurut kalian kardus tersebut berbentuk bangun … ",
+              "type": "choice",
+              "file": null,
+              "image": "",
+              "video": null,
+              "audio": "setb_item33",
+              "choices": [
+                  {
+                      "image": "setb_img_soal_no_33a.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858cb"
+                  },
+                  {
+                      "image": "setb_img_soal_no_33b.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858cc"
+                  },
+                  {
+                      "image": "setb_img_soal_no_33c.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858cd"
+                  },
+                  {
+                      "image": "setb_img_soal_no_33d.png",
+                      "value": "",
+                      "_id": "62bbe9dc3af334fa502858ce"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858ca"
+          },
+          {
+              "question": "Terdapat sebuah bangun dengan ciri-ciri:\n- Memiliki lima buah sisi\n- Memiliki sembilan buah rusuk.\n\nManakah di antara bangun berikut yang sesuai dengan ciri-ciri tersebut?",
+              "type": "choice",
+              "file": null,
+              "image": "",
+              "video": null,
+              "audio": "setb_item34",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "Prisma segi tiga",
+                      "_id": "62bbe9dc3af334fa502858d0"
+                  },
+                  {
+                      "image": null,
+                      "value": "Prisma segi empat",
+                      "_id": "62bbe9dc3af334fa502858d1"
+                  },
+                  {
+                      "image": null,
+                      "value": "Kubus",
+                      "_id": "62bbe9dc3af334fa502858d2"
+                  },
+                  {
+                      "image": null,
+                      "value": "Balok",
+                      "_id": "62bbe9dc3af334fa502858d3"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858cf"
+          },
+          {
+              "question": "Terdapat sebuah bangun dengan ciri-ciri sebagai berikut:\n- Memiliki dua buah sisi berbentuk lingkaran\n- Satu sisi yang lain berbentuk persegi panjang.\n\nManakah di antara bangun berikut yang sesuai dengan ciri-ciri tersebut? ",
+              "type": "choice",
+              "file": null,
+              "image": "",
+              "video": null,
+              "audio": "setb_item35",
+              "choices": [
+                  {
+                      "image": null,
+                      "value": "Kerucut",
+                      "_id": "62bbe9dc3af334fa502858d5"
+                  },
+                  {
+                      "image": null,
+                      "value": "Bola",
+                      "_id": "62bbe9dc3af334fa502858d6"
+                  },
+                  {
+                      "image": null,
+                      "value": "Kubus",
+                      "_id": "62bbe9dc3af334fa502858d7"
+                  },
+                  {
+                      "image": null,
+                      "value": "Tabung",
+                      "_id": "62bbe9dc3af334fa502858d8"
+                  }
+              ],
+              "fileExtension": "",
+              "defaultValue": "",
+              "required": false,
+              "_id": "62bbe9dc3af334fa502858d4"
+          }
+      ],
+      "cover": null,
+      "scoring": false,
+      "release": true,
+      "timer": 120,
+      "formType": "basic",
+      "__v": 0
+  }
+}

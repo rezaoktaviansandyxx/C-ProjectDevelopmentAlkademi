@@ -1,0 +1,1597 @@
+﻿{
+  "status": true,
+  "message": "",
+  "data": {
+    "owner": "62b02dfc363cb8d6287d0ba1",
+    "userId": 5303,
+    "title": "Asesmen Matematika",
+    "description": "Selamat datang di dunia matematika, hari ini kamu memiliki misi untuk menjawab pertanyaan-pertanyaan seputar dunia matematika.",
+    "loginRequired": false,
+    "questions": [
+      {
+        "question": "Terdapat 10 kardus coklat, dimana setiap kardus coklat memuat 3 kemasan coklat (setiap kemasan berisi 10 coklat satuan) dan 7 coklat satuan yang sama. Perhatikan gambar kardus coklat tersebut! Apabila dari setiap kardus akan diambil 15 coklat satuan, sisa semua coklat pada semua kardus adalah",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_1.png",
+        "video": null,
+        "audio": "setc_item1",
+        "choices": [
+          {
+            "image": null,
+            "value": "220",
+            "correct": false,
+            "_id": "62e737495c6543546ac948bc"
+          },
+          {
+            "image": null,
+            "value": "225",
+            "correct": false,
+            "_id": "62e737495c6543546ac948bd"
+          },
+          {
+            "image": null,
+            "value": "200",
+            "correct": false,
+            "_id": "62e737495c6543546ac948be"
+          },
+          {
+            "image": null,
+            "value": "540",
+            "correct": false,
+            "_id": "62e737495c6543546ac948bf"
+          },
+          {
+            "image": null,
+            "value": "555",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c0"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948bb"
+      },
+      {
+        "question": "Ibu memiliki satu loyang kue dan akan membagi kue tersebut menjadi 4 sama rata, agar dapat dibagikan untuk 4 anak (3 anak perempuan (Ani, Cindy, Dewi) dan 1 anak laki-laki (Budi)). Karena Budi tidak menyukai kue tersebut, dia membagi kue miliknya untuk Ani dan Cindy sama rata)\nBerapa bagian kue yang diterima masih-masing oleh Ani dan Cindy?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_2.png",
+        "video": null,
+        "audio": "setc_item2",
+        "choices": [
+          {
+            "image": null,
+            "value": "3/8",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c2"
+          },
+          {
+            "image": null,
+            "value": "6/8",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c3"
+          },
+          {
+            "image": null,
+            "value": "1/3",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c4"
+          },
+          {
+            "image": null,
+            "value": "1/4",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c5"
+          },
+          {
+            "image": null,
+            "value": "4/8",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c6"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948c1"
+      },
+      {
+        "question": "Ibu membeli baju untuk anaknya, harga yang tertera adalah Rp. 150.000. Saat membayar ke kasir, ibu menyerahkan 2 lembar uang Rp. 100.000, dan ibu menerima kembalian Rp. 87.500, Berapa diskon yang diterima ibu untuk pembelian baju anaknya?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_3.png",
+        "video": null,
+        "audio": "setc_item3",
+        "choices": [
+          {
+            "image": null,
+            "value": "15%",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c8"
+          },
+          {
+            "image": null,
+            "value": "20%",
+            "correct": false,
+            "_id": "62e737495c6543546ac948c9"
+          },
+          {
+            "image": null,
+            "value": "22,5%",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ca"
+          },
+          {
+            "image": null,
+            "value": "30%",
+            "correct": false,
+            "_id": "62e737495c6543546ac948cb"
+          },
+          {
+            "image": null,
+            "value": "25%",
+            "correct": false,
+            "_id": "62e737495c6543546ac948cc"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948c7"
+      },
+      {
+        "question": "Perhatikan ilustrasi ini: Mobil bergerak ke arah kanan merepresentasikan bilangan bulat positif, mobil bergerak ke arah kiri merepresentasikan bilangan bulat negative, mobil maju merepresentasikan operasi penjumlahan, dan mobil mundur merepresentasikan operasi pengurangan.\n\nMobil berwarna kuning bergerak ke arah kiri dari titik awal sepanjang 5 meter, kemudian mobil berputar menghadap ke kanan dan maju 3 meter.Gerak mobil apabila kita tuliskan menjadi bentuk operasi matematis adalah…",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_4.png",
+        "video": null,
+        "audio": "setc_item4",
+        "choices": [
+          {
+            "image": null,
+            "value": "5 + 3 = 8",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ce"
+          },
+          {
+            "image": null,
+            "value": "-5 + 3 = 2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948cf"
+          },
+          {
+            "image": null,
+            "value": "5 - 3 = 2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d0"
+          },
+          {
+            "image": null,
+            "value": "-5 - 3 = -8",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d1"
+          },
+          {
+            "image": null,
+            "value": "-5 - (-3) = -2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d2"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948cd"
+      },
+      {
+        "question": "Pada suatu hari, pengantar koran mengantarkan koran di rumah Nomor 31. Pengantar koran akan mengantarkan 6 koran lagi, dimana rumah pelanggannya selalu berjarak satu rumah dari pelanggan yang lain (dengan nomor rumah yang semakin kecil dan berurutan). Selesai mengantar koran semua pelanggannya salah satu penghuni rumah yang berada dengan jarak 5 rumah dari rumah terakhir yang diantarnya memanggil untuk membeli koran tersebut. Berada di nomor rumah berapakah penghuni yang memanggil pengantar koran tersebut?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_5.png",
+        "video": null,
+        "audio": "setc_item5",
+        "choices": [
+          {
+            "image": null,
+            "value": "34",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d4"
+          },
+          {
+            "image": null,
+            "value": "24",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d5"
+          },
+          {
+            "image": null,
+            "value": "14",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d6"
+          },
+          {
+            "image": null,
+            "value": "5",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d7"
+          },
+          {
+            "image": null,
+            "value": "1",
+            "correct": false,
+            "_id": "62e737495c6543546ac948d8"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948d3"
+      },
+      {
+        "question": "Cermati instruksi garis bilangan berikut ini. Di antara kedua bilangan tersebut ada sebuah bilangan. Bilangan berapakah yang terletak di antara dua bilangan pecahan tersebut?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_6.png",
+        "video": null,
+        "audio": "setc_item6",
+        "choices": [
+          {
+            "image": null,
+            "value": "Tidak ada",
+            "correct": false,
+            "_id": "62e737495c6543546ac948da"
+          },
+          {
+            "image": null,
+            "value": "35/42",
+            "correct": false,
+            "_id": "62e737495c6543546ac948db"
+          },
+          {
+            "image": null,
+            "value": "36/42",
+            "correct": false,
+            "_id": "62e737495c6543546ac948dc"
+          },
+          {
+            "image": null,
+            "value": "70/84",
+            "correct": false,
+            "_id": "62e737495c6543546ac948dd"
+          },
+          {
+            "image": null,
+            "value": "71/84",
+            "correct": false,
+            "_id": "62e737495c6543546ac948de"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948d9"
+      },
+      {
+        "question": "Berikut adalah 3 (tiga) buah persegi dengan panjang sisi berturut-turut 0,7 satuan panjang, 2,4 satuan panjang, dan 2,5 satuan panjang. Apabila masing-masing sisi ketiga persegi tersebut dikuadratkan, hubungan yang paling tepat di antara ketiganya adalah ...",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_7.png",
+        "video": null,
+        "audio": "setc_item7",
+        "choices": [
+          {
+            "image": null,
+            "value": "0,7^2 + 2,4^2 > 2,5^2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e0"
+          },
+          {
+            "image": null,
+            "value": "0,7^2 + 2,4^2 = 2,5^2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e1"
+          },
+          {
+            "image": null,
+            "value": "0,7^2 + 2,4^2 < 2,5^2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e2"
+          },
+          {
+            "image": null,
+            "value": "0,7^2 + 2,5^2 < 2,4^2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e3"
+          },
+          {
+            "image": null,
+            "value": "0,2^2 + 2,5^2 - 2,4^2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e4"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948df"
+      },
+      {
+        "question": "(diilustrasikan ada sekelompok kartu kemudian salah satu memunculkan angka, angka yang muncul adalah 2,744.) Pasangkanlah angka pada kartu tersebut, dengan nilai akar pangkat tiga bilangan tersebut",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_8.png",
+        "video": null,
+        "audio": "setc_item8",
+        "choices": [
+          {
+            "image": null,
+            "value": "1.4",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e6"
+          },
+          {
+            "image": null,
+            "value": "1.2",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e7"
+          },
+          {
+            "image": null,
+            "value": "1.6",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e8"
+          },
+          {
+            "image": null,
+            "value": "1.8",
+            "correct": false,
+            "_id": "62e737495c6543546ac948e9"
+          },
+          {
+            "image": null,
+            "value": "0.8",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ea"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948e5"
+      },
+      {
+        "question": "Sebuah kapal selam menyelam hingga kedalaman 50 meter dibawah permukaan laut. Kemudian setiap 15 menit kapal selam akan turun kembali per 10 meter. Pada kedalaman berapakah posisi kapal selam setelah 2 jam?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_9.png",
+        "video": null,
+        "audio": "setc_item9",
+        "choices": [
+          {
+            "image": null,
+            "value": "42",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ec"
+          },
+          {
+            "image": null,
+            "value": "56",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ed"
+          },
+          {
+            "image": null,
+            "value": "130",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ee"
+          },
+          {
+            "image": null,
+            "value": "118",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ef"
+          },
+          {
+            "image": null,
+            "value": "145",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f0"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948eb"
+      },
+      {
+        "question": "Ada seorang anak diminta ibunya pergi berbelanja dengan membawa selembar uang Rp. 100.000. Anak tersebut akan membeli 1 ekor ayam seharga Rp. 45.000 dan 1 bungkus bumbu dapur Rp. 15.000. Sisa uang seluruhnya yang dimiliki anak tersebut akan dibelikan telur. Apabila harga telur adalah Rp. 25.000, berapa banyak telur yang didapat?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_10.png",
+        "video": null,
+        "audio": "setc_item10",
+        "choices": [
+          {
+            "image": null,
+            "value": "1,5 kg",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f2"
+          },
+          {
+            "image": null,
+            "value": "1,6 kg",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f3"
+          },
+          {
+            "image": null,
+            "value": "1,75 kg",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f4"
+          },
+          {
+            "image": null,
+            "value": "1,8 kg",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f5"
+          },
+          {
+            "image": null,
+            "value": "2 kg",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f6"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948f1"
+      },
+      {
+        "question": "Diketahui ☼ dan ♣ adalah dua buah bilangan yang berbeda, dan nilai ☼ lebih besar daripada nilai ♣.\nApabila ☼ + ♣ = 8 dan (2x☼) + (3x♣) = 19, maka ☼ dan ♣ adalah bilangan … dan ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "setc_item11",
+        "choices": [
+          {
+            "image": null,
+            "value": "☼ = 4 dan ♣ = 4",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f8"
+          },
+          {
+            "image": null,
+            "value": "☼ = 3 dan ♣ = 5",
+            "correct": false,
+            "_id": "62e737495c6543546ac948f9"
+          },
+          {
+            "image": null,
+            "value": "☼ = 4,5 dan ♣ = 3,5",
+            "correct": false,
+            "_id": "62e737495c6543546ac948fa"
+          },
+          {
+            "image": null,
+            "value": "☼ = 3,5 dan ♣ = 4,5",
+            "correct": false,
+            "_id": "62e737495c6543546ac948fb"
+          },
+          {
+            "image": null,
+            "value": "☼ = 5 dan ♣ = 3",
+            "correct": false,
+            "_id": "62e737495c6543546ac948fc"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948f7"
+      },
+      {
+        "question": "Diketahui sebuah timbangan dalam keadaan seimbang sebagaimana tampak pada gambar berikut ini. Semua bola merah yang mengisi baki timbangan kiri dan kanan ukuran dan beratnya sama. Apabila timbangan menjadi berat ke kanan, maka isi kantong Y adalah bola merah dengan jumlah …",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_12.png",
+        "video": null,
+        "audio": "setc_item12",
+        "choices": [
+          {
+            "image": null,
+            "value": "5",
+            "correct": false,
+            "_id": "62e737495c6543546ac948fe"
+          },
+          {
+            "image": null,
+            "value": "Kurang dari 5",
+            "correct": false,
+            "_id": "62e737495c6543546ac948ff"
+          },
+          {
+            "image": null,
+            "value": "Lebih dari 5",
+            "correct": false,
+            "_id": "62e737495c6543546ac94900"
+          },
+          {
+            "image": null,
+            "value": "5 atau lebih",
+            "correct": false,
+            "_id": "62e737495c6543546ac94901"
+          },
+          {
+            "image": null,
+            "value": "5 atau kurang",
+            "correct": false,
+            "_id": "62e737495c6543546ac94902"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac948fd"
+      },
+      {
+        "question": "Pada suatu kandang terdapat 15 ekor ayam, dan menghabiskan satu kantong makanan ayam dengan berat 3 kilogram. Apabila terdapat 4 kilogram makanan ayam, maka banyak ayam agar makanan tersebut habis adalah … ekor ayam",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_13.png",
+        "video": null,
+        "audio": "setc_item13",
+        "choices": [
+          {
+            "image": null,
+            "value": "15",
+            "correct": false,
+            "_id": "62e737495c6543546ac94904"
+          },
+          {
+            "image": null,
+            "value": "10",
+            "correct": false,
+            "_id": "62e737495c6543546ac94905"
+          },
+          {
+            "image": null,
+            "value": "18",
+            "correct": false,
+            "_id": "62e737495c6543546ac94906"
+          },
+          {
+            "image": null,
+            "value": "20",
+            "correct": false,
+            "_id": "62e737495c6543546ac94907"
+          },
+          {
+            "image": null,
+            "value": "25",
+            "correct": false,
+            "_id": "62e737495c6543546ac94908"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94903"
+      },
+      {
+        "question": "Pak Iwan akan membangun sebuh rumah. Agar lebih mudah, Pak Iwan meminta seorang mandor untuk mengawasi pembangunan rumah tersebut. Menurut perhitungan mandor, rumah tersebut akan selesai dalam waktu 5 bulan apabila dikerjakan oleh 60 pekerja. Karena Pak Iwan ingin segera menempati rumah tersebut, ia meminta mandor dapat menyelesaikan rumahnya dalam waktu 4 bulan. Apabila pilihan mandor menambah jumlah pekerja, maka jumlah pekerja yang perlu ditambahkan adalah … orang.",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_14.png",
+        "video": null,
+        "audio": "setc_item14",
+        "choices": [
+          {
+            "image": null,
+            "value": "4",
+            "correct": false,
+            "_id": "62e737495c6543546ac9490a"
+          },
+          {
+            "image": null,
+            "value": "15",
+            "correct": false,
+            "_id": "62e737495c6543546ac9490b"
+          },
+          {
+            "image": null,
+            "value": "16",
+            "correct": false,
+            "_id": "62e737495c6543546ac9490c"
+          },
+          {
+            "image": null,
+            "value": "20",
+            "correct": false,
+            "_id": "62e737495c6543546ac9490d"
+          },
+          {
+            "image": null,
+            "value": "25",
+            "correct": false,
+            "_id": "62e737495c6543546ac9490e"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94909"
+      },
+      {
+        "question": "Ada seorang anak memasuki toko souvenir, dan melihat beberapa taplak meja, dengan berbagai bentuk dan ukuran. Dari beberapa bangun berikut ini, yang memiliki luas terbesar adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_15.png",
+        "video": null,
+        "audio": "setc_item15",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_15a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94910"
+          },
+          {
+            "image": "setc_img_soal_no_15b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94911"
+          },
+          {
+            "image": "setc_img_soal_no_15c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94912"
+          },
+          {
+            "image": "setc_img_soal_no_15d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94913"
+          },
+          {
+            "image": "setc_img_soal_no_15e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94914"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9490f"
+      },
+      {
+        "question": "Jarak dari titik pusat lingkaran ke garis luar lingkaran kedua sama dengan setengah dari jari-jari lingkaran besar. Berapakah luas daerah yang bertuliskan angka 70 apabila jari jari lingkaran besar adalah 7 cm?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_16.png",
+        "video": null,
+        "audio": "setc_item16",
+        "choices": [
+          {
+            "image": null,
+            "value": "3,2",
+            "correct": false,
+            "_id": "62e737495c6543546ac94916"
+          },
+          {
+            "image": null,
+            "value": "9,6",
+            "correct": false,
+            "_id": "62e737495c6543546ac94917"
+          },
+          {
+            "image": null,
+            "value": "12,8",
+            "correct": false,
+            "_id": "62e737495c6543546ac94918"
+          },
+          {
+            "image": null,
+            "value": "16",
+            "correct": false,
+            "_id": "62e737495c6543546ac94919"
+          },
+          {
+            "image": null,
+            "value": "38,5",
+            "correct": false,
+            "_id": "62e737495c6543546ac9491a"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94915"
+      },
+      {
+        "question": "Ada seorang anak memasuki toko souvenir dan memilih beberapa celengan dengan berbagai bentuk dari tanah liat. Apabila terdapat 5 jenis celengan dari berbagai bentuk, manakah diantara kelima celengan berikut ini yang menghabiskan cat lebih banyak?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_17.png",
+        "video": null,
+        "audio": "setc_item17",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_17a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9491c"
+          },
+          {
+            "image": "setc_img_soal_no_17b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9491d"
+          },
+          {
+            "image": "setc_img_soal_no_17c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9491e"
+          },
+          {
+            "image": "setc_img_soal_no_17d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9491f"
+          },
+          {
+            "image": "setc_img_soal_no_17e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94920"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9491b"
+      },
+      {
+        "question": "Seorang anak akan membentuk persegi dari beberapa puzzle yang memiliki bentuk dan ukuran yang sama. Puzzle yang dibutuhkan anak tersebut adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_18.png",
+        "video": null,
+        "audio": "setc_item18",
+        "choices": [
+          {
+            "image": null,
+            "value": "6",
+            "correct": false,
+            "_id": "62e737495c6543546ac94922"
+          },
+          {
+            "image": null,
+            "value": "8",
+            "correct": false,
+            "_id": "62e737495c6543546ac94923"
+          },
+          {
+            "image": null,
+            "value": "12",
+            "correct": false,
+            "_id": "62e737495c6543546ac94924"
+          },
+          {
+            "image": null,
+            "value": "20",
+            "correct": false,
+            "_id": "62e737495c6543546ac94925"
+          },
+          {
+            "image": null,
+            "value": "36",
+            "correct": false,
+            "_id": "62e737495c6543546ac94926"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94921"
+      },
+      {
+        "question": "Untuk kegiatan perkemahan pramuka bulan depan, sekelompok anggota pramuka memesan sebuah tenda berbahan kain anti-air dengan desain sebagaimana gambar berikut ini. Apabila lantai tenda yang akan dipesan mengunakan bahan yang sama, berapakah luas bahan minimal yang dibutuhkan?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_19.png",
+        "video": null,
+        "audio": "setc_item19",
+        "choices": [
+          {
+            "image": null,
+            "value": "57 meter kuadrat",
+            "correct": false,
+            "_id": "62e737495c6543546ac94928"
+          },
+          {
+            "image": null,
+            "value": "63 meter kuadrat",
+            "correct": false,
+            "_id": "62e737495c6543546ac94929"
+          },
+          {
+            "image": null,
+            "value": "72 meter kuadrat",
+            "correct": false,
+            "_id": "62e737495c6543546ac9492a"
+          },
+          {
+            "image": null,
+            "value": "84 meter kuadrat",
+            "correct": false,
+            "_id": "62e737495c6543546ac9492b"
+          },
+          {
+            "image": null,
+            "value": "96 meter kuadrat",
+            "correct": false,
+            "_id": "62e737495c6543546ac9492c"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94927"
+      },
+      {
+        "question": "Seorang pembuat kue mendapatkan pesanan kue dengan desain dan ukuran sebagaimana tampak pada gambar berikut. Pembuat kue sedang menghitung kebutuhan adonan yang harus disiapkan. Adonan yang dibutuhkan untuk membuat kue tersebut adalah ... liter.",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_20.png",
+        "video": null,
+        "audio": "setc_item20",
+        "choices": [
+          {
+            "image": null,
+            "value": "12.000",
+            "correct": false,
+            "_id": "62e737495c6543546ac9492e"
+          },
+          {
+            "image": null,
+            "value": "16.000",
+            "correct": false,
+            "_id": "62e737495c6543546ac9492f"
+          },
+          {
+            "image": null,
+            "value": "30.000",
+            "correct": false,
+            "_id": "62e737495c6543546ac94930"
+          },
+          {
+            "image": null,
+            "value": "15.000",
+            "correct": false,
+            "_id": "62e737495c6543546ac94931"
+          },
+          {
+            "image": null,
+            "value": "18.000",
+            "correct": false,
+            "_id": "62e737495c6543546ac94932"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9492d"
+      },
+      {
+        "question": "Seorang pengendara melakukan perjalanan sejauh 120 kilometer dengan kecepatan 60 km/jam untuk 30 kilometer pertama. Karena lalu lintas semakin padat, kendaraan melambat sehingga kecepatannya menjadi 40 km/jam untuk jarak tempuh 90 kilometer berikutnya hingga tiba di tujuan. Kecepatan rata-rata kendaraan sejak keberangkatan hingga tiba di tujuan akhir adalah ....",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_21.png",
+        "video": null,
+        "audio": "setc_item21",
+        "choices": [
+          {
+            "image": null,
+            "value": "45 km/jam",
+            "correct": false,
+            "_id": "62e737495c6543546ac94934"
+          },
+          {
+            "image": null,
+            "value": "50 km/jam",
+            "correct": false,
+            "_id": "62e737495c6543546ac94935"
+          },
+          {
+            "image": null,
+            "value": "36 km/jam",
+            "correct": false,
+            "_id": "62e737495c6543546ac94936"
+          },
+          {
+            "image": null,
+            "value": "55 km/jam",
+            "correct": false,
+            "_id": "62e737495c6543546ac94937"
+          },
+          {
+            "image": null,
+            "value": "52 km/jam",
+            "correct": false,
+            "_id": "62e737495c6543546ac94938"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94933"
+      },
+      {
+        "question": "Sebuah mobil tangki air dengan kapasitas penuh 3000 liter memindahkan isinya ke dalam 240 buah jerigen berukuran sama dalam waktu 2 jam sebagaimana tampak pada gambar berikut.\nApabila durasi waktu memindahkan selang air dari satu jerigen ke jerigen lainnya diabaikan, maka debit air yang dipindahkan dari mobil tangki ke dalam 240 buah jerigen adalah … liter/menit",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_22.png",
+        "video": null,
+        "audio": "setc_item22",
+        "choices": [
+          {
+            "image": null,
+            "value": "6.25 liter/menit",
+            "correct": false,
+            "_id": "62e737495c6543546ac9493a"
+          },
+          {
+            "image": null,
+            "value": "12,5 liter/menit",
+            "correct": false,
+            "_id": "62e737495c6543546ac9493b"
+          },
+          {
+            "image": null,
+            "value": "25 liter/menit",
+            "correct": false,
+            "_id": "62e737495c6543546ac9493c"
+          },
+          {
+            "image": null,
+            "value": "37,5 liter/menit",
+            "correct": false,
+            "_id": "62e737495c6543546ac9493d"
+          },
+          {
+            "image": null,
+            "value": "50 liter/menit",
+            "correct": false,
+            "_id": "62e737495c6543546ac9493e"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94939"
+      },
+      {
+        "question": "Apabila terdapat bangun dengan ciri-ciri sebagai berikut:\n- Sudut yang berhadapan sama besar\n- Memiliki dua pasang sisi yang sejajar dan berhadapan sama panjang.\nDiantara bangun segi empat berikut, yang tidak memiliki ciri-ciri tersebut adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "setc_item23",
+        "choices": [
+          {
+            "image": null,
+            "value": "Layang-layang",
+            "correct": false,
+            "_id": "62e737495c6543546ac94940"
+          },
+          {
+            "image": null,
+            "value": "Belah ketupat",
+            "correct": false,
+            "_id": "62e737495c6543546ac94941"
+          },
+          {
+            "image": null,
+            "value": "Jajargenjang",
+            "correct": false,
+            "_id": "62e737495c6543546ac94942"
+          },
+          {
+            "image": null,
+            "value": "Persegi panjang",
+            "correct": false,
+            "_id": "62e737495c6543546ac94943"
+          },
+          {
+            "image": null,
+            "value": "Persegi",
+            "correct": false,
+            "_id": "62e737495c6543546ac94944"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9493f"
+      },
+      {
+        "question": "Apabila terdapat kue yang berbentuk kubus, dan dipotong pada salah satu pojoknya menurut diagonal sisinya (ada tiga diagonal sisi yang akan dipotong oleh anak tersebut.\nBentuk potongan yang terbentuk adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_24.png",
+        "video": null,
+        "audio": "setc_item24",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_24a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94946"
+          },
+          {
+            "image": "setc_img_soal_no_24b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94947"
+          },
+          {
+            "image": "setc_img_soal_no_24c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94948"
+          },
+          {
+            "image": "setc_img_soal_no_24d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94949"
+          },
+          {
+            "image": "setc_img_soal_no_24e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9494a"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94945"
+      },
+      {
+        "question": "Ada enam limas dengan ukuran seperti gambar di atas. Apabila keenam limas tersebut akan disusun sehingga membentuk sebuah prisma, ukuran prisma yang mungkin adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_25.png",
+        "video": null,
+        "audio": "setc_item25",
+        "choices": [
+          {
+            "image": null,
+            "value": "Prisma dengan ukuran (18x18x12) cm",
+            "correct": false,
+            "_id": "62e737495c6543546ac9494c"
+          },
+          {
+            "image": null,
+            "value": "Prisma dengan ukuran (36x18x12) cm",
+            "correct": false,
+            "_id": "62e737495c6543546ac9494d"
+          },
+          {
+            "image": null,
+            "value": "Prisma dengan ukuran (18x36x12) cm",
+            "correct": false,
+            "_id": "62e737495c6543546ac9494e"
+          },
+          {
+            "image": null,
+            "value": "Prisma dengan ukuran (36x18x24) cm",
+            "correct": false,
+            "_id": "62e737495c6543546ac9494f"
+          },
+          {
+            "image": null,
+            "value": "Prisma dengan ukuran (18x18x12) cm",
+            "correct": false,
+            "_id": "62e737495c6543546ac94950"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9494b"
+      },
+      {
+        "question": "Perhatikan kedua bangun di atas.\nSeseorang menuang air dengan menggunakan wadah berbentuk kerucut ke wadah berbentuk bola. Berapa kali air harus dituangkan agar bola terisi penuh?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_26.png",
+        "video": null,
+        "audio": "setc_item26",
+        "choices": [
+          {
+            "image": null,
+            "value": "2 kali",
+            "correct": false,
+            "_id": "62e737495c6543546ac94952"
+          },
+          {
+            "image": null,
+            "value": "3 kali",
+            "correct": false,
+            "_id": "62e737495c6543546ac94953"
+          },
+          {
+            "image": null,
+            "value": "4 kali",
+            "correct": false,
+            "_id": "62e737495c6543546ac94954"
+          },
+          {
+            "image": null,
+            "value": "5 kali",
+            "correct": false,
+            "_id": "62e737495c6543546ac94955"
+          },
+          {
+            "image": null,
+            "value": "6 kali",
+            "correct": false,
+            "_id": "62e737495c6543546ac94956"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94951"
+      },
+      {
+        "question": "Seorang anak akan melipat jaring-jaring dengan bentuk seperti pada gambar di atas.\nApabila sisi bernomor 3 sebagai alas kubus, maka tutup kubus adalah sisi bernomor ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_27.png",
+        "video": null,
+        "audio": "setc_item27",
+        "choices": [
+          {
+            "image": null,
+            "value": "1",
+            "correct": false,
+            "_id": "62e737495c6543546ac94958"
+          },
+          {
+            "image": null,
+            "value": "2",
+            "correct": false,
+            "_id": "62e737495c6543546ac94959"
+          },
+          {
+            "image": null,
+            "value": "4",
+            "correct": false,
+            "_id": "62e737495c6543546ac9495a"
+          },
+          {
+            "image": null,
+            "value": "5",
+            "correct": false,
+            "_id": "62e737495c6543546ac9495b"
+          },
+          {
+            "image": null,
+            "value": "6",
+            "correct": false,
+            "_id": "62e737495c6543546ac9495c"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94957"
+      },
+      {
+        "question": "Diilustrasikan ada yang sedang merancang beberapa kotak tanpa tutup untuk suatu kemasan bingkisan. Diantara ukuran balok berikut ini, yang memiliki luas kertas terbesar adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_28.png",
+        "video": null,
+        "audio": "setc_item28",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_28a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9495e"
+          },
+          {
+            "image": "setc_img_soal_no_28b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9495f"
+          },
+          {
+            "image": "setc_img_soal_no_28c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94960"
+          },
+          {
+            "image": "setc_img_soal_no_28d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94961"
+          },
+          {
+            "image": "setc_img_soal_no_28e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94962"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9495d"
+      },
+      {
+        "question": "Apabila saat usia 7 tahun berat badannya adalah 35 kg, usia 8 tahun berat badannya adalah 36 kg, usia 9 tahun berat badannya adalah 37 kg, dan pada usia 10 tahun berat badannya adalah 38 kg. Grafik manakah yang paling tepat dalam menggambarkan data pertumbuhan berat badan anak tersebut?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "setc_item29",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_29a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94964"
+          },
+          {
+            "image": "setc_img_soal_no_29b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94965"
+          },
+          {
+            "image": "setc_img_soal_no_29c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94966"
+          },
+          {
+            "image": "setc_img_soal_no_29d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94967"
+          },
+          {
+            "image": "setc_img_soal_no_29e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94968"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94963"
+      },
+      {
+        "question": "Perhatikan data hobi sekelompok anak berikut ini. Futsal disukai 40 anak, panahan disukai 30 anak, basket disukai 50 anak, renang disukai 60 anak, dan senam disukai oleh a anak. Apabila banyak anak seluruhnya adalah 200, diagram yang menggambarkan data tersebut adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "setc_item30",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_30a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9496a"
+          },
+          {
+            "image": "setc_img_soal_no_30b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9496b"
+          },
+          {
+            "image": "setc_img_soal_no_30c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9496c"
+          },
+          {
+            "image": "setc_img_soal_no_30d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9496d"
+          },
+          {
+            "image": "setc_img_soal_no_30e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9496e"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94969"
+      },
+      {
+        "question": "Setelah kegiatan selesai, ternyata 4 anak memiliki berat badan 35 kg, 5 anak berat badan 36 kg, 6 anak berat badan 37 kg, dan 3 anak berat badannya 38 kg.\nDiagram yang lebih tepat untuk menggambarkan data tersebut adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "",
+        "video": null,
+        "audio": "setc_item31",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_31a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94970"
+          },
+          {
+            "image": "setc_img_soal_no_31b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94971"
+          },
+          {
+            "image": "setc_img_soal_no_31c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94972"
+          },
+          {
+            "image": "setc_img_soal_no_31d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94973"
+          },
+          {
+            "image": "setc_img_soal_no_31e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94974"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9496f"
+      },
+      {
+        "question": "Perhatikan data nilai siswa pada gambar berikut ini. Berapakah rata-rata dari data tersebut?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_32.png",
+        "video": null,
+        "audio": "setc_item32",
+        "choices": [
+          {
+            "image": null,
+            "value": "90",
+            "correct": false,
+            "_id": "62e737495c6543546ac94976"
+          },
+          {
+            "image": null,
+            "value": "91",
+            "correct": false,
+            "_id": "62e737495c6543546ac94977"
+          },
+          {
+            "image": null,
+            "value": "92",
+            "correct": false,
+            "_id": "62e737495c6543546ac94978"
+          },
+          {
+            "image": null,
+            "value": "93",
+            "correct": false,
+            "_id": "62e737495c6543546ac94979"
+          },
+          {
+            "image": null,
+            "value": "94",
+            "correct": false,
+            "_id": "62e737495c6543546ac9497a"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94975"
+      },
+      {
+        "question": "Masih ingat jawaban kalian di nomor sebelumnya?\nApabila data yang paling jauh dari rata-rata dihapus, bagaimana rata-ratanya?",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_33.png",
+        "video": null,
+        "audio": "setc_item33",
+        "choices": [
+          {
+            "image": null,
+            "value": "Tetap",
+            "correct": false,
+            "_id": "62e737495c6543546ac9497c"
+          },
+          {
+            "image": null,
+            "value": "Turun 2",
+            "correct": false,
+            "_id": "62e737495c6543546ac9497d"
+          },
+          {
+            "image": null,
+            "value": "Naik 2",
+            "correct": false,
+            "_id": "62e737495c6543546ac9497e"
+          },
+          {
+            "image": null,
+            "value": "Turun 3",
+            "correct": false,
+            "_id": "62e737495c6543546ac9497f"
+          },
+          {
+            "image": null,
+            "value": "Naik 3",
+            "correct": false,
+            "_id": "62e737495c6543546ac9497g"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac9497b"
+      },
+      {
+        "question": "Jika anak tersebut menginginkan keluar mata dadu 3 agar dapat memenangkan permainan, maka peluang munculnya mata dadu 3 adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_34.png",
+        "video": null,
+        "audio": "setc_item34",
+        "choices": [
+          {
+            "image": null,
+            "value": "1/2",
+            "correct": false,
+            "_id": "62e737495c6543546ac94981"
+          },
+          {
+            "image": null,
+            "value": "1/3",
+            "correct": false,
+            "_id": "62e737495c6543546ac94982"
+          },
+          {
+            "image": null,
+            "value": "1/6",
+            "correct": false,
+            "_id": "62e737495c6543546ac94983"
+          },
+          {
+            "image": null,
+            "value": "0,3",
+            "correct": false,
+            "_id": "62e737495c6543546ac94984"
+          },
+          {
+            "image": null,
+            "value": "0,6",
+            "correct": false,
+            "_id": "62e737495c6543546ac94985"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94980"
+      },
+      {
+        "question": "Seorang anak menghitung jabat tangan yang dilakukan sekelompok anak tersebut ada 6 kali jabat tangan. Banyak anak pada kelompok tersebut adalah ….",
+        "type": "choice",
+        "correct": null,
+        "file": null,
+        "image": "setc_img_soal_no_35.png",
+        "video": null,
+        "audio": "setc_item35",
+        "choices": [
+          {
+            "image": "setc_img_soal_no_35a.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94987"
+          },
+          {
+            "image": "setc_img_soal_no_35b.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94988"
+          },
+          {
+            "image": "setc_img_soal_no_35c.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac94989"
+          },
+          {
+            "image": "setc_img_soal_no_35d.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9498a"
+          },
+          {
+            "image": "setc_img_soal_no_35e.png",
+            "value": "",
+            "correct": false,
+            "_id": "62e737495c6543546ac9498b"
+          }
+        ],
+        "fileExtension": "",
+        "defaultValue": "",
+        "required": false,
+        "_id": "62e737495c6543546ac94986"
+      }
+    ],
+    "cover": null,
+    "scoring": false,
+    "release": true,
+    "timer": 120,
+    "formType": "basic",
+    "created_at": "2022-08-01T09:15:37+07:00",
+    "updated_at": "2022-08-01T09:15:37+07:00",
+    "_id": "62e737495c6543546ac948ba",
+    "__v": 0
+  }
+}

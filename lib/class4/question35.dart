@@ -1,16 +1,15 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz_app/class2/question22.dart';
 import 'package:quiz_app/endscreen.dart';
 
-class Question21Class2 extends StatefulWidget {
-  const Question21Class2({super.key});
+class Question35Class4 extends StatefulWidget {
+  const Question35Class4({super.key});
 
   @override
-  State<Question21Class2> createState() => _Question21Class2State();
+  State<Question35Class4> createState() => _Question35Class4State();
 }
 
-class _Question21Class2State extends State<Question21Class2> {
+class _Question35Class4State extends State<Question35Class4> {
   List<bool> isPressedList = [false, false, false, false];
   final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
@@ -24,7 +23,7 @@ class _Question21Class2State extends State<Question21Class2> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'SOAL 21',
+            'SOAL 35',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -92,24 +91,7 @@ class _Question21Class2State extends State<Question21Class2> {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Perhatikan gambar 4 buah-buahan yang berbeda pada masing-masing timbangannya di bawah ini!',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Color(0xff006699),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Image.asset('assets/images/class2/seta_img_soal_no_21.png'),
-            const SizedBox(
-              height: 5,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Di antara 4 pernyataan di bawah ini, pernyataan yang paling tepat adalah. ...',
+                'Terdapat sebuah bangun dengan ciri-ciri sebagai berikut:\n- Memiliki dua buah sisi berbentuk lingkaran\n- Satu sisi yang lain berbentuk persegi panjang.\n\nManakah di antara bangun berikut yang sesuai dengan ciri-ciri tersebut?',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xff006699),
@@ -136,6 +118,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -150,13 +133,11 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'A. Jeruk lebih berat dibandingkan apel',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
+                            child: const Text(
+                              'A. Kerucut',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
                               ),
                             ),
                           ),
@@ -176,6 +157,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -190,9 +172,14 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'B. Apel lebih berat dibandingkan semangka',
+                            child: Card(
+                              color: Colors.transparent,
+                              shadowColor: Colors.transparent.withOpacity(0.1),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: const Text(
+                                'B. Bola',
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Color(0xff006699),
@@ -224,6 +211,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -238,9 +226,14 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'C. Semangka lebih berat dibandingkan anggur',
+                            child: Card(
+                              color: Colors.transparent,
+                              shadowColor: Colors.transparent.withOpacity(0.1),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: const Text(
+                                'C. Kubus',
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Color(0xff006699),
@@ -264,6 +257,7 @@ class _Question21Class2State extends State<Question21Class2> {
                             });
                           },
                           child: Container(
+                            height: MediaQuery.of(context).size.height / 5,
                             padding: EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
@@ -278,9 +272,14 @@ class _Question21Class2State extends State<Question21Class2> {
                                       ? Colors.green
                                       : Colors.black),
                             ),
-                            child: const Expanded(
-                              child: Text(
-                                'D. Anggur lebih ringan dibandingkan apel',
+                            child: Card(
+                              color: Colors.transparent,
+                              shadowColor: Colors.transparent.withOpacity(0.1),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: const Text(
+                                'D. Tabung',
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Color(0xff006699),
@@ -317,10 +316,8 @@ class _Question21Class2State extends State<Question21Class2> {
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Question22Class2()));
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/endscreen', (route) => false);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
@@ -330,7 +327,7 @@ class _Question21Class2State extends State<Question21Class2> {
                     ),
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                      child: Text('Next'),
+                      child: Text('Finish'),
                     ),
                   ),
                 ),
@@ -344,7 +341,7 @@ class _Question21Class2State extends State<Question21Class2> {
 
   openPlayer() async {
     await _assetAudioPlayer.open(
-      Audio('assets/audios/class2/item21.mp3'),
+      Audio('assets/audios/class2/item35.mp3'),
       autoStart: true,
     );
     _assetAudioPlayer.playlistAudioFinished.listen((event) {
@@ -354,16 +351,16 @@ class _Question21Class2State extends State<Question21Class2> {
     });
     _assetAudioPlayer.currentPosition.listen((event) {
       setState(() {
-        if (19122 <= event.inMilliseconds && event.inMilliseconds <= 20500) {
+        if (52543 <= event.inMilliseconds && event.inMilliseconds <= 53500) {
           isVisibleAnswerA = true;
-        } else if (24514 <= event.inMilliseconds &&
-            event.inMilliseconds <= 25500) {
+        } else if (58651 <= event.inMilliseconds &&
+            event.inMilliseconds <= 59500) {
           isVisibleAnswerB = true;
-        } else if (30256 <= event.inMilliseconds &&
-            event.inMilliseconds <= 31500) {
+        } else if (64968 <= event.inMilliseconds &&
+            event.inMilliseconds <= 65500) {
           isVisibleAnswerC = true;
-        } else if (35994 <= event.inMilliseconds &&
-            event.inMilliseconds <= 36500) {
+        } else if (71263 <= event.inMilliseconds &&
+            event.inMilliseconds <= 72500) {
           isVisibleAnswerD = true;
         }
       });

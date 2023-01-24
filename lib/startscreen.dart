@@ -54,7 +54,7 @@ class _StartScreenState extends State<StartScreen> {
 
   openPlayer() async {
     await _assetsAudioPlayer.open(
-      Audio('assets/audios/startscreen.m4a'),
+      Audio('assets/audios/misc_start.mpeg'),
       autoStart: true,
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {

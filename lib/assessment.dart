@@ -79,7 +79,7 @@ class _AssessmentState extends State<Assessment> {
 
   openPlayer() async {
     await _assetsAudioPlayer.open(
-      Audio('assets/audios/assesment.m4a'),
+      Audio('assets/audios/misc_opening.mpeg'),
       autoStart: true,
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {

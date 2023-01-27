@@ -1,6 +1,5 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz_app/class2/question2.dart';
 import 'package:quiz_app/endscreen.dart';
 
 class Question1Class4 extends StatefulWidget {
@@ -349,12 +348,7 @@ class _Question1Class4State extends State<Question1Class4> {
                 Visibility(
                   visible: isPressedList.contains(true),
                   child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Question2Class2()));
-                    },
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
                       shape: RoundedRectangleBorder(

@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/class2/question2.dart';
 import 'package:quiz_app/endscreen.dart';
 import 'package:quiz_app/model/api_soal_a.dart';
 
@@ -435,13 +434,7 @@ class _QuestionAState extends State<QuestionA> {
                     Visibility(
                       visible: isPressedList.contains(true),
                       child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const Question2Class2()));
-                        },
+                        onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xff006699),
                           shape: RoundedRectangleBorder(

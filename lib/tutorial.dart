@@ -21,6 +21,7 @@ class _TutorialState extends State<Tutorial> {
   bool isVisibleIconSound = false;
   List isVisibleAnswer = [false, false, false, false];
 
+  //Load JSON
   Intro? result;
   Future _loadJson() async {
     String jsonString =

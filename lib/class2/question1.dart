@@ -432,7 +432,7 @@ class _Question1Class2State extends State<Question1Class2> {
 
   openPlayer() async {
     await _assetAudioPlayer.open(
-      Audio('assets/audios/class2/item1.mp3'),
+      Audio('assets/audios/class2/seta_Item1.mp3r'),
       autoStart: true,
     );
     _assetAudioPlayer.playlistAudioFinished.listen((event) {

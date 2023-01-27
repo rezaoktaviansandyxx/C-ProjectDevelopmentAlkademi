@@ -8,6 +8,8 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
+  var passData = 0;
+  var totData = 0;
   //controller
   TextEditingController nameController = TextEditingController();
   TextEditingController classController = TextEditingController();
@@ -24,6 +26,7 @@ class _RegistrationState extends State<Registration> {
 
   @override
   Widget build(BuildContext context) {
+    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -104,7 +107,9 @@ class _RegistrationState extends State<Registration> {
                         nameController.text;
                         classController.text;
                         schoolController.text;
-                        await Navigator.pushNamed(context, '/logoscreen');
+                        totData = passData;
+                        Navigator.pushNamed(context, '/logoscreen',
+                            arguments: totData);
                         nameController.clear();
                         classController.clear();
                         schoolController.clear();

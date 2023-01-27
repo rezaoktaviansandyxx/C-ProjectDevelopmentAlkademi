@@ -1,6 +1,5 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz_app/class2/question1.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
@@ -10,6 +9,7 @@ class StartScreen extends StatefulWidget {
 }
 
 class _StartScreenState extends State<StartScreen> {
+  var passData = 0;
   final _assetsAudioPlayer = AssetsAudioPlayer();
   bool isEnableButton = false;
   @override
@@ -20,16 +20,22 @@ class _StartScreenState extends State<StartScreen> {
 
   @override
   Widget build(BuildContext context) {
+    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       body: Center(
         child: ElevatedButton(
           onPressed: isEnableButton
               ? () {
-                  Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Question1Class2()),
-                      (route) => false);
+                  if (passData == 1) {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/class2', (route) => false);
+                  } else if (passData == 2) {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/class4', (route) => false);
+                  } else if (passData == 3) {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/class6', (route) => false);
+                  }
                 }
               : null,
           style: ElevatedButton.styleFrom(

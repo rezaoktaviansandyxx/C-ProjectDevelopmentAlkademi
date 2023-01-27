@@ -5,6 +5,8 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var passData = 0;
+    var totData = 0;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -20,7 +22,9 @@ class MainScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/registration');
+                    totData = passData + 1;
+                    Navigator.pushNamed(context, '/registration',
+                        arguments: totData);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff006699),
@@ -38,7 +42,9 @@ class MainScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/registration');
+                    totData = passData + 2;
+                    Navigator.pushNamed(context, '/registration',
+                        arguments: totData);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff006699),
@@ -56,7 +62,9 @@ class MainScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/registration');
+                    totData = passData + 3;
+                    Navigator.pushNamed(context, '/registration',
+                        arguments: totData);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff006699),

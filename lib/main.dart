@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/class2/question1.dart';
+import 'package:quiz_app/class4/question1.dart';
 import 'package:quiz_app/endscreen.dart';
 import 'package:quiz_app/logoscreen.dart';
 import 'package:quiz_app/mainscreen.dart';
@@ -29,6 +31,8 @@ class MyApp extends StatelessWidget {
         '/tutorial' :(context) => const Tutorial(),
         '/startscreen' :(context) => const StartScreen(),
         '/endscreen' :(context) => const EndScreen(),
+        '/class2' :(context) => const Question1Class2(),
+        '/class4' :(context) => const Question1Class4(),
       },
       home: const MainScreen(),
     );

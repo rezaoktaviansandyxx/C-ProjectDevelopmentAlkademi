@@ -9,6 +9,8 @@ class Assessment extends StatefulWidget {
 }
 
 class _AssessmentState extends State<Assessment> {
+  var passData = 0;
+  var totData = 0;
   final _assetsAudioPlayer = AssetsAudioPlayer();
   bool isEnable = false;
   @override
@@ -19,6 +21,7 @@ class _AssessmentState extends State<Assessment> {
 
   @override
   Widget build(BuildContext context) {
+    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -32,46 +35,50 @@ class _AssessmentState extends State<Assessment> {
         ),
         elevation: 0,
       ),
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        margin: const EdgeInsets.only(left: 25, top: 60),
-        child: Column(
-          children: [
-            const ListTile(
-              title: Text(
-                'Asesmen Matematika',
-                style: TextStyle(fontSize: 23),
-              ),
-              subtitle: Text(
-                'Selamat datang di dunia matematika, hari ini kamu memiliki misi untuk menjawab pertanyaan-pertanyaan seputar dunia matematika.',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Color(0xff006699),
+      body: SafeArea(
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: [
+              const ListTile(
+                title: Text(
+                  'Asesmen Matematika',
+                  style: TextStyle(fontSize: 23),
+                ),
+                subtitle: Text(
+                  'Selamat datang di dunia matematika, hari ini kamu memiliki misi untuk menjawab pertanyaan-pertanyaan seputar dunia matematika.',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Color(0xff006699),
+                  ),
                 ),
               ),
-            ),
-            const Spacer(),
-            ElevatedButton(
-              onPressed: isEnable
-                  ? () {
-                      Navigator.pushNamed(context, '/tutorial');
-                    }
-                  : null,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xff006699),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+              const Spacer(),
+              ElevatedButton(
+                onPressed: isEnable
+                    ? () {
+                        totData = passData;
+                        Navigator.pushNamed(context, '/tutorial',
+                            arguments: totData);
+                      }
+                    : null,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xff006699),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                  child: Text('Next'),
                 ),
               ),
-              child: const Padding(
-                padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                child: Text('Next'),
+              const SizedBox(
+                height: 10,
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

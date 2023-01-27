@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:quiz_app/model/api_intro.dart';
 
 class Tutorial extends StatefulWidget {
   const Tutorial({super.key});
@@ -9,23 +13,39 @@ class Tutorial extends StatefulWidget {
 }
 
 class _TutorialState extends State<Tutorial> {
-  List<bool> isPressedList = [false, false, false, false];
+  var passData = 0;
+  var totData = 0;
+  int selectedItem = -1;
+  List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. '];
   final _assetsAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = false;
-  bool isVisibleAnswerA = false;
-  bool isVisibleAnswerB = false;
-  bool isVisibleAnswerC = false;
-  bool isVisibleAnswerD = false;
+  List isVisibleAnswer = [false, false, false, false];
+
+  Intro? result;
+  Future _loadJson() async {
+    String jsonString =
+        await rootBundle.loadString('assets/jsonfile/intro.json');
+    final jsonData = jsonDecode(jsonString);
+    Intro intro = Intro.fromJson(jsonData);
+
+    setState(() {
+      result = intro;
+    });
+  }
+
   @override
   void initState() {
     openPlayer();
+    _loadJson();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       body: Container(
+        width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         margin: const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
         child: Column(
@@ -35,224 +55,82 @@ class _TutorialState extends State<Tutorial> {
                 alignment: Alignment.topCenter,
                 child: Text(
                   'Tutorial',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-            const Align(
+            Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Berapakah hasil 2 ditambah 2?',
-                style: TextStyle(
-                  fontSize: 14,
+                '${result?.data?.questions?[0].question}',
+                style: const TextStyle(
+                  fontSize: 16,
                   color: Color(0xff006699),
                 ),
               ),
             ),
             const Spacer(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Visibility(
-                      visible: isVisibleAnswerA,
-                      child: Flexible(
+            Builder(builder: (context) {
+              if (result == null) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              return Wrap(
+                  spacing: 20.0,
+                  runSpacing: 10.0,
+                  children: result!.data!.questions![0].choices!.map((e) {
+                    final index =
+                        result!.data!.questions![0].choices!.indexOf(e);
+                    return Visibility(
+                        visible: isVisibleAnswer[index],
                         child: GestureDetector(
                           onTap: () {
                             setState(() {
-                              isPressedList[0] = true;
-                              isPressedList[1] = false;
-                              isPressedList[2] = false;
-                              isPressedList[3] = false;
+                              selectedItem = index;
                             });
                           },
                           child: Container(
-                            padding: EdgeInsets.only(
+                              width: MediaQuery.of(context).size.width / 3,
+                              padding: const EdgeInsets.only(
                                 top: 20,
                                 bottom: 20,
-                                left: MediaQuery.of(context).size.width / 5,
-                                right: MediaQuery.of(context).size.width / 5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  width: 3.0,
-                                  color: isPressedList[0]
-                                      ? Colors.green
-                                      : Colors.black),
-                            ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
+                              ),
+                              decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
+                                color: Colors.transparent,
+                                border: Border.all(
+                                    width: 3.0,
+                                    color: selectedItem == index
+                                        ? Colors.green
+                                        : Colors.black),
                               ),
-                              child: const Text(
-                                'A. 3',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      answerAbcd[index],
+                                      style: const TextStyle(fontSize: 14),
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        '${e.value}',
+                                        style: const TextStyle(fontSize: 14),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Visibility(
-                      visible: isVisibleAnswerB,
-                      child: Flexible(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isPressedList[0] = false;
-                              isPressedList[1] = true;
-                              isPressedList[2] = false;
-                              isPressedList[3] = false;
-                            });
-                          },
-                          child: Container(
-                            padding: EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                                left: MediaQuery.of(context).size.width / 5,
-                                right: MediaQuery.of(context).size.width / 5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  width: 3.0,
-                                  color: isPressedList[1]
-                                      ? Colors.green
-                                      : Colors.black),
-                            ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
-                                'B. 4',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Visibility(
-                      visible: isVisibleAnswerC,
-                      child: Flexible(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isPressedList[0] = false;
-                              isPressedList[1] = false;
-                              isPressedList[2] = true;
-                              isPressedList[3] = false;
-                            });
-                          },
-                          child: Container(
-                            padding: EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                                left: MediaQuery.of(context).size.width / 5,
-                                right: MediaQuery.of(context).size.width / 5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  width: 3.0,
-                                  color: isPressedList[2]
-                                      ? Colors.green
-                                      : Colors.black),
-                            ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
-                                'C. 5',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Visibility(
-                      visible: isVisibleAnswerD,
-                      child: Flexible(
-                        child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isPressedList[0] = false;
-                              isPressedList[1] = false;
-                              isPressedList[2] = false;
-                              isPressedList[3] = true;
-                            });
-                          },
-                          child: Container(
-                            padding: EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                                left: MediaQuery.of(context).size.width / 5,
-                                right: MediaQuery.of(context).size.width / 5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  width: 3.0,
-                                  color: isPressedList[3]
-                                      ? Colors.green
-                                      : Colors.black),
-                            ),
-                            child: Card(
-                              color: Colors.transparent,
-                              shadowColor: Colors.transparent.withOpacity(0.1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: const Text(
-                                'D. 6',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color(0xff006699),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-              ],
+                              )),
+                        ));
+                  }).toList());
+            }),
+            const SizedBox(
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -270,11 +148,13 @@ class _TutorialState extends State<Tutorial> {
                   ),
                 ),
                 Visibility(
-                  visible: isPressedList.contains(true),
+                  visible: selectedItem >= 0,
                   child: ElevatedButton(
                     onPressed: () {
+                      totData = passData;
                       Navigator.pushNamedAndRemoveUntil(
-                          context, '/startscreen', (route) => false);
+                          context, '/startscreen', (route) => false,
+                          arguments: totData);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
@@ -298,7 +178,7 @@ class _TutorialState extends State<Tutorial> {
 
   openPlayer() async {
     await _assetsAudioPlayer.open(
-      Audio('assets/audios/tutorial.m4a'),
+      Audio('assets/audios/misc_aktivasi_suara.mpeg'),
       autoStart: true,
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {
@@ -310,7 +190,7 @@ class _TutorialState extends State<Tutorial> {
 
   openPlayer2() async {
     await _assetsAudioPlayer.open(
-        Audio('assets/audios/tutorial2.m4a', playSpeed: 0.75),
+      Audio('assets/audios/tutorial.mp3'),
       autoStart: true,
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {
@@ -321,16 +201,16 @@ class _TutorialState extends State<Tutorial> {
     _assetsAudioPlayer.currentPosition.listen((event) {
       setState(() {
         if (3154 <= event.inMilliseconds && event.inMilliseconds <= 3600) {
-          isVisibleAnswerA = true;
+          isVisibleAnswer[0] = true;
         } else if (3437 <= event.inMilliseconds &&
             event.inMilliseconds <= 4010) {
-          isVisibleAnswerB = true;
+          isVisibleAnswer[1] = true;
         } else if (4051 <= event.inMilliseconds &&
             event.inMilliseconds <= 4500) {
-          isVisibleAnswerC = true;
+          isVisibleAnswer[2] = true;
         } else if (4658 <= event.inMilliseconds &&
             event.inMilliseconds <= 5000) {
-          isVisibleAnswerD = true;
+          isVisibleAnswer[3] = true;
         }
       });
     });

@@ -14,14 +14,13 @@ class QuestionA extends StatefulWidget {
 }
 
 class _QuestionAState extends State<QuestionA> {
-  List<bool> isPressedList = [false, false, false, false];
+  int selectedItem = -1;
+  List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. '];
   final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
-  bool isVisibleAnswerA = false;
-  bool isVisibleAnswerB = false;
-  bool isVisibleAnswerC = false;
-  bool isVisibleAnswerD = false;
-
+  bool isVisibleAnswer = false;
+  int addSoal = 1;
+  int arrayIndex = 0;
   //Load JSON
   SoalA? result;
   Future _loadJson() async {
@@ -36,13 +35,19 @@ class _QuestionAState extends State<QuestionA> {
   }
 
   @override
+  void initState() {
+    _loadJson();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
+        title: Center(
           child: Text(
-            'SOAL 1',
-            style: TextStyle(
+            'SOAL $addSoal',
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 20,
             ),
@@ -73,6 +78,7 @@ class _QuestionAState extends State<QuestionA> {
                         await _assetAudioPlayer.stop();
                         // ignore: use_build_context_synchronously
                         Navigator.pop(context);
+                        // ignore: use_build_context_synchronously
                         showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
@@ -111,310 +117,119 @@ class _QuestionAState extends State<QuestionA> {
         ],
       ),
       body: SafeArea(
-        child: Builder(
-          builder: (context) {
-            if (result == null) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-            return Wrap(
-              children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Perhatikan kumpulan gambar buah jeruk berikut!',
-                    style: TextStyle(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          margin:
+              const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
+          child: Builder(
+            builder: (context) {
+              if (result == null) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              return Column(children: [
+                Builder(builder: (context) {
+                  if (result?.data?.questions?[arrayIndex].image?.isNotEmpty ==
+                      true) {
+                    final splitQuestion = result
+                        ?.data?.questions?[arrayIndex].question
+                        ?.split('berikut!');
+                    return Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            splitQuestion![0],
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/images/class2/${result!.data!.questions![arrayIndex].image}',
+                          errorBuilder: (context, error, stackTrace) =>
+                              Container(),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            splitQuestion[1],
+                          ),
+                        ),
+                      ],
+                    );
+                  }
+                  return Text(
+                    '${result?.data?.questions?[arrayIndex].question}',
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Color(0xff006699),
                     ),
-                  ),
-                ),
+                  );
+                }),
                 const SizedBox(
                   height: 5,
-                ),
-                Image.asset('assets/images/class2/seta_img_soal_no_1.png'),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Di antara 4 pilihan kumpulan gambar buah jeruk yang tersedia, kumpulan gambar jeruk yang paling banyak jumlahnya dibandingkan dengan kumpulan gambar jeruk pada gambar diatas adalah. ...',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Color(0xff006699),
-                    ),
-                  ),
                 ),
                 const Spacer(),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Visibility(
-                          visible: isVisibleAnswerA,
-                          child: Flexible(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPressedList[0] = true;
-                                  isPressedList[1] = false;
-                                  isPressedList[2] = false;
-                                  isPressedList[3] = false;
-                                });
-                              },
-                              child: Container(
-                                height: MediaQuery.of(context).size.height / 5,
-                                padding: EdgeInsets.only(
-                                    top: 20,
-                                    bottom: 20,
-                                    left: MediaQuery.of(context).size.width / 5,
-                                    right:
-                                        MediaQuery.of(context).size.width / 5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.transparent,
-                                  border: Border.all(
-                                      width: 3.0,
-                                      color: isPressedList[0]
-                                          ? Colors.green
-                                          : Colors.black),
+                Wrap(
+                  spacing: 20.0,
+                  runSpacing: 10.0,
+                  children: result!.data!.questions![arrayIndex].choices!
+                      .map((answer) {
+                    final index2 = result!.data!.questions![arrayIndex].choices!
+                        .indexOf(answer);
+                    return Visibility(
+                      visible: isVisibleAnswer,
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedItem = index2;
+                          });
+                        },
+                        child: Container(
+                          width: MediaQuery.of(context).size.width / 3,
+                          padding: const EdgeInsets.only(
+                            top: 20,
+                            bottom: 20,
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.transparent,
+                            border: Border.all(
+                                width: 3.0,
+                                color: selectedItem == index2
+                                    ? Colors.green
+                                    : Colors.black),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  answerAbcd[index2],
+                                  style: const TextStyle(fontSize: 14),
                                 ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        'A.',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                          color: Color(0xff006699),
+                                Expanded(
+                                  child: answer.image == null ||
+                                          answer.image!.isEmpty
+                                      ? Text(
+                                          '${answer.value}',
+                                          textAlign: TextAlign.center,
+                                        )
+                                      : Image.asset(
+                                          'assets/images/class2/${answer.image}',
+                                          height: 50,
                                         ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 3,
-                                      child: Image.asset(
-                                        'assets/images/class2/seta_img_soal_no_1a.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                  ],
                                 ),
-                              ),
+                              ],
                             ),
                           ),
                         ),
-                        Visibility(
-                          visible: isVisibleAnswerB,
-                          child: Flexible(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPressedList[0] = false;
-                                  isPressedList[1] = true;
-                                  isPressedList[2] = false;
-                                  isPressedList[3] = false;
-                                });
-                              },
-                              child: Container(
-                                height: MediaQuery.of(context).size.height / 5,
-                                padding: EdgeInsets.only(
-                                    top: 20,
-                                    bottom: 20,
-                                    left: MediaQuery.of(context).size.width / 5,
-                                    right:
-                                        MediaQuery.of(context).size.width / 5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.transparent,
-                                  border: Border.all(
-                                      width: 3.0,
-                                      color: isPressedList[1]
-                                          ? Colors.green
-                                          : Colors.black),
-                                ),
-                                child: Card(
-                                  color: Colors.transparent,
-                                  shadowColor:
-                                      Colors.transparent.withOpacity(0.1),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Text(
-                                          'B.',
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            color: Color(0xff006699),
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 3,
-                                        child: Image.asset(
-                                          'assets/images/class2/seta_img_soal_no_1b.png',
-                                          fit: BoxFit.contain,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Visibility(
-                          visible: isVisibleAnswerC,
-                          child: Flexible(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPressedList[0] = false;
-                                  isPressedList[1] = false;
-                                  isPressedList[2] = true;
-                                  isPressedList[3] = false;
-                                });
-                              },
-                              child: Container(
-                                height: MediaQuery.of(context).size.height / 5,
-                                padding: EdgeInsets.only(
-                                    top: 20,
-                                    bottom: 20,
-                                    left: MediaQuery.of(context).size.width / 5,
-                                    right:
-                                        MediaQuery.of(context).size.width / 5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.transparent,
-                                  border: Border.all(
-                                      width: 3.0,
-                                      color: isPressedList[2]
-                                          ? Colors.green
-                                          : Colors.black),
-                                ),
-                                child: Card(
-                                  color: Colors.transparent,
-                                  shadowColor:
-                                      Colors.transparent.withOpacity(0.1),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Text(
-                                          'C.',
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            color: Color(0xff006699),
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 3,
-                                        child: Image.asset(
-                                          'assets/images/class2/seta_img_soal_no_1c.png',
-                                          fit: BoxFit.contain,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Visibility(
-                          visible: isVisibleAnswerD,
-                          child: Flexible(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPressedList[0] = false;
-                                  isPressedList[1] = false;
-                                  isPressedList[2] = false;
-                                  isPressedList[3] = true;
-                                });
-                              },
-                              child: Container(
-                                height: MediaQuery.of(context).size.height / 5,
-                                padding: EdgeInsets.only(
-                                    top: 20,
-                                    bottom: 20,
-                                    left: MediaQuery.of(context).size.width / 5,
-                                    right:
-                                        MediaQuery.of(context).size.width / 5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.transparent,
-                                  border: Border.all(
-                                      width: 3.0,
-                                      color: isPressedList[3]
-                                          ? Colors.green
-                                          : Colors.black),
-                                ),
-                                child: Card(
-                                  color: Colors.transparent,
-                                  shadowColor:
-                                      Colors.transparent.withOpacity(0.1),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Text(
-                                          'D.',
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            color: Color(0xff006699),
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 3,
-                                        child: Image.asset(
-                                          'assets/images/class2/seta_img_soal_no_1d.png',
-                                          fit: BoxFit.contain,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                  ],
+                      ),
+                    );
+                  }).toList(),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -432,9 +247,17 @@ class _QuestionAState extends State<QuestionA> {
                       ),
                     ),
                     Visibility(
-                      visible: isPressedList.contains(true),
+                      visible: selectedItem >= 0,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            addSoal++;
+                            arrayIndex++;
+                            isVisibleAnswer = false;
+                            isVisibleIconSound = true;
+                            selectedItem = -1;
+                          });
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xff006699),
                           shape: RoundedRectangleBorder(
@@ -449,9 +272,9 @@ class _QuestionAState extends State<QuestionA> {
                     ),
                   ],
                 ),
-              ],
-            );
-          },
+              ]);
+            },
+          ),
         ),
       ),
     );
@@ -459,29 +282,31 @@ class _QuestionAState extends State<QuestionA> {
 
   openPlayer() async {
     await _assetAudioPlayer.open(
-      Audio('assets/audios/class2/seta_Item1.mp3r'),
+      Audio(
+          'assets/audios/class2/${result?.data?.questions?[arrayIndex].audio}.mp3'),
       autoStart: true,
     );
     _assetAudioPlayer.playlistAudioFinished.listen((event) {
       setState(() {
         isVisibleIconSound = false;
+        isVisibleAnswer = true;
       });
     });
-    _assetAudioPlayer.currentPosition.listen((event) {
-      setState(() {
-        if (26600 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
-          isVisibleAnswerA = true;
-        } else if (29081 <= event.inMilliseconds &&
-            event.inMilliseconds <= 31000) {
-          isVisibleAnswerB = true;
-        } else if (31416 <= event.inMilliseconds &&
-            event.inMilliseconds <= 33000) {
-          isVisibleAnswerC = true;
-        } else if (33564 <= event.inMilliseconds &&
-            event.inMilliseconds <= 35000) {
-          isVisibleAnswerD = true;
-        }
-      });
-    });
+    // _assetAudioPlayer.currentPosition.listen((event) {
+    //   setState(() {
+    //     if (26600 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
+    //       isVisibleAnswerA = true;
+    //     } else if (29081 <= event.inMilliseconds &&
+    //         event.inMilliseconds <= 31000) {
+    //       isVisibleAnswerB = true;
+    //     } else if (31416 <= event.inMilliseconds &&
+    //         event.inMilliseconds <= 33000) {
+    //       isVisibleAnswerC = true;
+    //     } else if (33564 <= event.inMilliseconds &&
+    //         event.inMilliseconds <= 35000) {
+    //       isVisibleAnswerD = true;
+    //     }
+    //   });
+    // });
   }
 }

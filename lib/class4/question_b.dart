@@ -2,14 +2,14 @@ import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/endscreen.dart';
 
-class Question1Class4 extends StatefulWidget {
-  const Question1Class4({super.key});
+class QuestionB extends StatefulWidget {
+  const QuestionB({super.key});
 
   @override
-  State<Question1Class4> createState() => _Question1Class4State();
+  State<QuestionB> createState() => _QuestionBState();
 }
 
-class _Question1Class4State extends State<Question1Class4> {
+class _QuestionBState extends State<QuestionB> {
   List<bool> isPressedList = [false, false, false, false];
   final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;

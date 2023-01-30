@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/class2/question_a.dart';
 import 'package:quiz_app/class4/question_b.dart';
+import 'package:quiz_app/class6/question_c.dart';
 import 'package:quiz_app/endscreen.dart';
 import 'package:quiz_app/logoscreen.dart';
 import 'package:quiz_app/mainscreen.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
+        '/mainscreen' :(context) => const MainScreen(),
         '/registration' :(context) => const Registration(),
         '/logoscreen' :(context) => const LogoScreen(),
         '/assesment' :(context) => const Assessment(),
@@ -32,9 +34,10 @@ class MyApp extends StatelessWidget {
         '/startscreen' :(context) => const StartScreen(),
         '/endscreen' :(context) => const EndScreen(),
         '/class2' :(context) => const QuestionA(),
-        '/class4' :(context) => const Question1Class4(),
+        '/class4' :(context) => const QuestionB(),
+        '/class6' :(context) => const QuestionC(),
       },
-      home: const MainScreen(),
+      home: const QuestionA(),
     );
   }
 }

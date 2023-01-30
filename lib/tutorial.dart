@@ -181,6 +181,7 @@ class _TutorialState extends State<Tutorial> {
     await _assetsAudioPlayer.open(
       Audio('assets/audios/misc_aktivasi_suara.mpeg'),
       autoStart: true,
+
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {
       setState(() {
@@ -201,16 +202,16 @@ class _TutorialState extends State<Tutorial> {
     });
     _assetsAudioPlayer.currentPosition.listen((event) {
       setState(() {
-        if (3154 <= event.inMilliseconds && event.inMilliseconds <= 3600) {
+        if (7058 <= event.inMilliseconds && event.inMilliseconds <= 8500) {
           isVisibleAnswer[0] = true;
-        } else if (3437 <= event.inMilliseconds &&
-            event.inMilliseconds <= 4010) {
+        } else if (8866 <= event.inMilliseconds &&
+            event.inMilliseconds <= 9500) {
           isVisibleAnswer[1] = true;
-        } else if (4051 <= event.inMilliseconds &&
-            event.inMilliseconds <= 4500) {
+        } else if (11020 <= event.inMilliseconds &&
+            event.inMilliseconds <= 11500) {
           isVisibleAnswer[2] = true;
-        } else if (4658 <= event.inMilliseconds &&
-            event.inMilliseconds <= 5000) {
+        } else if (13130 <= event.inMilliseconds &&
+            event.inMilliseconds <= 13500) {
           isVisibleAnswer[3] = true;
         }
       });

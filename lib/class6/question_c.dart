@@ -3,8 +3,7 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/endscreen.dart';
-import 'package:quiz_app/model/api_soal_a.dart';
+import 'package:quiz_app/model/api_soal_c.dart';
 
 class QuestionC extends StatefulWidget {
   const QuestionC({super.key});
@@ -14,20 +13,23 @@ class QuestionC extends StatefulWidget {
 }
 
 class _QuestionCState extends State<QuestionC> {
-  List<bool> isPressedList = [false, false, false, false];
+  List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. ', 'E. '];
   final _assetAudioPlayer = AssetsAudioPlayer();
-  // bool isVisibleIconSound = true;
-  // bool isVisibleAnswerA = false;
+  bool isVisibleIconSound = true;
+  bool isVisibleAnswer = false;
+  int selectedItem = -1;
+  int addSoal = 1;
+  int arrayIndex = 0;
   //Load JSON
-  SoalA? result;
+  SoalC? result;
   Future _loadJson() async {
     String jsonString =
-        await rootBundle.loadString('assets/jsonfile/soala.json');
+        await rootBundle.loadString('assets/jsonfile/soalc.json');
     final jsonData = jsonDecode(jsonString);
-    SoalA soala = SoalA.fromJson(jsonData);
+    SoalC soalb = SoalC.fromJson(jsonData);
 
     setState(() {
-      result = soala;
+      result = soalb;
     });
   }
 
@@ -41,10 +43,10 @@ class _QuestionCState extends State<QuestionC> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
+        title: Center(
           child: Text(
-            'SOAL 1',
-            style: TextStyle(
+            'SOAL $addSoal',
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 20,
             ),
@@ -75,6 +77,7 @@ class _QuestionCState extends State<QuestionC> {
                         await _assetAudioPlayer.stop();
                         // ignore: use_build_context_synchronously
                         Navigator.pop(context);
+                        // ignore: use_build_context_synchronously
                         showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
@@ -83,12 +86,8 @@ class _QuestionCState extends State<QuestionC> {
                             actions: [
                               TextButton(
                                 onPressed: () {
-                                  Navigator.pushAndRemoveUntil(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const EndScreen()),
-                                      (route) => false);
+                                  Navigator.pushNamedAndRemoveUntil(
+                                      context, '/endscreen', (route) => false);
                                 },
                                 child: const Text('Ok'),
                               ),
@@ -113,135 +112,262 @@ class _QuestionCState extends State<QuestionC> {
         ],
       ),
       body: SafeArea(
-        child: Builder(
-          builder: (context) {
-            if (result == null) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-            return Column(
-              children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Terdapat 10 kardus coklat, dimana setiap kardus coklat memuat 3 kemasan coklat (setiap kemasan berisi 10 coklat satuan) dan 7 coklat satuan yang sama.Perhatikan gambar kardus coklat tersebut! Apabila dari setiap kardus akan diambil 15 coklat satuan, sisa semua coklat pada semua kardus adalah',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Color(0xff006699),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Image.asset('assets/images/class6/setc_img_soal_no_1.png', width: 150),
-                const Spacer(),
-                Wrap(
-                  spacing: 20.0,
-                  runSpacing: 10.0,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Visibility(
-                          // // visible: isVisibleAnswerA,
-                          child: Flexible(
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPressedList[0] = true;
-                                  isPressedList[1] = false;
-                                  isPressedList[2] = false;
-                                  isPressedList[3] = false;
-                                });
-                              },
-                              child: Container(
-                                height: MediaQuery.of(context).size.height / 5,
-                                padding: EdgeInsets.only(
-                                    top: 20,
-                                    bottom: 20,
-                                    left: MediaQuery.of(context).size.width / 5,
-                                    right:
-                                        MediaQuery.of(context).size.width / 5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.transparent,
-                                  border: Border.all(
-                                      width: 3.0,
-                                      color: isPressedList[0]
-                                          ? Colors.green
-                                          : Colors.black),
-                                ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        'A.',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                          color: Color(0xff006699),
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 3,
-                                      child: Image.asset(
-                                        'assets/images/class2/seta_img_soal_no_1a.png',
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                  ],
-                                ),
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          margin:
+              const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
+          child: Builder(
+            builder: (context) {
+              if (result == null) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              return Column(children: [
+                Builder(builder: (context) {
+                  final checkedImage =
+                      result!.data!.questions![arrayIndex].image;
+                  final checkedQuestion =
+                      result?.data?.questions?[arrayIndex].question;
+                  String questionstring = checkedQuestion!;
+                  List<String> questionsplit = [];
+                  if (questionstring.contains("ini! ")) {
+                    questionsplit = questionstring.split("ini! ");
+                    questionsplit[0] += "ini!";
+                  } else if (questionstring.contains("ini. ")) {
+                    questionsplit = questionstring.split("ini. ");
+                    questionsplit[0] += "ini.";
+                  } else if (questionstring.contains("ini: ")) {
+                    questionsplit = questionstring.split("ini: ");
+                    questionsplit[0] += "ini:";
+                  } else if (questionstring.contains("berikut! ")) {
+                    questionsplit = questionstring.split("berikut! ");
+                    questionsplit[0] += "berikut!";
+                  } else if (questionstring.contains("satuan panjang. ")) {
+                    questionsplit = questionstring.split("satuan panjang. ");
+                    questionsplit[0] += "satuan panjang.";
+                  } else if (questionstring.contains("berikut. ")) {
+                    questionsplit = questionstring.split("berikut. ");
+                    questionsplit[0] += "berikut.";
+                  } else if (questionstring.contains("berikut: ")) {
+                    questionsplit = questionstring.split("berikut: ");
+                    questionsplit[0] += "berikut:";
+                  } else if (questionstring.contains("adalah sama! ")) {
+                    questionsplit = questionstring.split("adalah sama! ");
+                    questionsplit[0] += "adalah sama!";
+                  } else if (questionstring.contains("yang baru. ")) {
+                    questionsplit = questionstring.split("yang baru. ");
+                    questionsplit[0] += "yang baru.";
+                  } else if (questionstring.contains("yang berbeda-beda. ")) {
+                    questionsplit = questionstring.split("yang berbeda-beda. ");
+                    questionsplit[0] += "yang berbeda-beda.";
+                  } else if (questionstring
+                      .contains("sedang bermain puzzle. ")) {
+                    questionsplit =
+                        questionstring.split("sedang bermain puzzle. ");
+                    questionsplit[0] += "sedang bermain puzzle.";
+                  }
+                  if (checkedImage!.isNotEmpty == true) {
+                    if (questionsplit.length > 1) {
+                      return Column(
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              questionsplit[0],
+                              style: const TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
                               ),
+                            ),
+                          ),
+                          Image.asset(
+                            'images/class6/$checkedImage',
+                            errorBuilder: (context, error, stackTrace) =>
+                                Container(),
+                            height:
+                                MediaQuery.of(context).size.height * 20 / 100,
+                          ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              questionsplit[1],
+                              style: const TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    }
+                    return Column(
+                      children: [
+                        Image.asset(
+                          'images/class6/$checkedImage',
+                          height: MediaQuery.of(context).size.height * 20 / 100,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            checkedQuestion,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Color(0xff006699),
                             ),
                           ),
                         ),
                       ],
+                    );
+                  }
+                  return Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      checkedQuestion,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: Color(0xff006699),
+                      ),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                  ],
+                  );
+                }),
+                const SizedBox(
+                  height: 5,
+                ),
+                const Spacer(),
+                Wrap(
+                  spacing: 20.0,
+                  runSpacing: 10.0,
+                  children: result!.data!.questions![arrayIndex].choices!
+                      .map((answer) {
+                    final index2 = result!.data!.questions![arrayIndex].choices!
+                        .indexOf(answer);
+                    return Visibility(
+                      visible: isVisibleAnswer,
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedItem = index2;
+                          });
+                        },
+                        child: Container(
+                          width: MediaQuery.of(context).size.width / 3,
+                          padding: const EdgeInsets.only(
+                            top: 20,
+                            bottom: 20,
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.transparent,
+                            border: Border.all(
+                                width: 3.0,
+                                color: selectedItem == index2
+                                    ? Colors.green
+                                    : Colors.black),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  answerAbcd[index2],
+                                  style: const TextStyle(fontSize: 14),
+                                ),
+                                Expanded(
+                                  child: answer.image == null ||
+                                          answer.image!.isEmpty
+                                      ? Text(
+                                          '${answer.value}',
+                                          textAlign: TextAlign.center,
+                                        )
+                                      : Image.asset(
+                                          'images/class6/${answer.image}',
+                                          height: 60,
+                                        ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Visibility(
-                      // // visible: isVisibleIconSound,
+                      visible: isVisibleIconSound,
                       child: IconButton(
                         onPressed: () {
                           setState(() {
-                            // isVisibleIconSound = false;
+                            isVisibleIconSound = false;
                           });
                           openPlayer();
                         },
                         icon: const Icon(Icons.volume_up),
                       ),
                     ),
-                    Visibility(
-                      // visible: isPressedList.contains(true),
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xff006699),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                    Builder(builder: (context) {
+                      final isEnd = result!.data!.questions;
+                      if (arrayIndex == isEnd!.length - 1) {
+                        return Visibility(
+                          visible: selectedItem >= 0,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, '/endscreen', (route) => false);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff006699),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                              child: Text('Finish'),
+                            ),
+                          ),
+                        );
+                      }
+                      return Visibility(
+                        visible: selectedItem >= 0,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              addSoal++;
+                              arrayIndex++;
+                              isVisibleAnswer = false;
+                              isVisibleIconSound = true;
+                              selectedItem = -1;
+                            });
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xff006699),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                            child: Text('Next'),
                           ),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                          child: Text('Next'),
-                        ),
-                      ),
-                    ),
+                      );
+                    }),
                   ],
                 ),
-              ],
-            );
-          },
+              ]);
+            },
+          ),
         ),
       ),
     );
@@ -249,29 +375,15 @@ class _QuestionCState extends State<QuestionC> {
 
   openPlayer() async {
     await _assetAudioPlayer.open(
-      Audio('assets/audios/class2/seta_Item1.mp3r'),
+      Audio(
+          'assets/audios/class6/${result?.data?.questions?[arrayIndex].audio}.mp3'),
       autoStart: true,
     );
     _assetAudioPlayer.playlistAudioFinished.listen((event) {
       setState(() {
-        // isVisibleIconSound = false;
+        isVisibleIconSound = false;
+        isVisibleAnswer = true;
       });
     });
-    // _assetAudioPlayer.currentPosition.listen((event) {
-    //   setState(() {
-    //     if (26600 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
-          // isVisibleAnswerA = true;
-    //     } else if (29081 <= event.inMilliseconds &&
-    //         event.inMilliseconds <= 31000) {
-          // isVisibleAnswerB = true;
-    //     } else if (31416 <= event.inMilliseconds &&
-    //         event.inMilliseconds <= 33000) {
-          // isVisibleAnswerC = true;
-    //     } else if (33564 <= event.inMilliseconds &&
-    //         event.inMilliseconds <= 35000) {
-          // isVisibleAnswerD = true;
-    //     }
-    //   });
-    // });
   }
 }

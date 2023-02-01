@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/model/api_soal_a.dart';
 import 'package:quiz_app/model/api_soal_b.dart';
 
 class QuestionB extends StatefulWidget {
@@ -163,55 +162,53 @@ class _QuestionBState extends State<QuestionB> {
                         questionstring.split("sedang bermain puzzle. ");
                     questionsplit[0] += "sedang bermain puzzle.";
                   }
-                  // if (questionstring.contains('bekas. ')) {
-                  //   return Column(
-                  //     children: [
-                  //       Image.asset(
-                  //         'images/class4/$checkedImage',
-                  //         errorBuilder: (context, error, stackTrace) =>
-                  //             Container(),
-                  //         height: MediaQuery.of(context).size.height * 20 / 100,
-                  //       ),
-                  //       Align(
-                  //         alignment: Alignment.centerLeft,
-                  //         child: Text(
-                  //           checkedQuestion,
-                  //           style: const TextStyle(
-                  //             fontSize: 14,
-                  //             color: Color(0xff006699),
-                  //           ),
-                  //         ),
-                  //       ),
-                  //     ],
-                  //   );
-                  // }
                   if (checkedImage!.isNotEmpty == true) {
-                    return Column(
-                      children: [
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            questionsplit.isNotEmpty
-                                ? questionsplit[0]
-                                : checkedQuestion,
-                            style: const TextStyle(
-                              fontSize: 14,
-                              color: Color(0xff006699),
+                    if (questionsplit.length > 1) {
+                      return Column(
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              questionsplit[0],
+                              style: const TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
                             ),
                           ),
-                        ),
+                          Image.asset(
+                            'images/class4/$checkedImage',
+                            errorBuilder: (context, error, stackTrace) =>
+                                Container(),
+                            height:
+                                MediaQuery.of(context).size.height * 20 / 100,
+                          ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              questionsplit[1],
+                              style: const TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff006699),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    }
+                    return Column(
+                      children: [
                         Image.asset(
                           'images/class4/$checkedImage',
-                          errorBuilder: (context, error, stackTrace) =>
-                              Container(),
                           height: MediaQuery.of(context).size.height * 20 / 100,
+                        ),
+                        const SizedBox(
+                          height: 10,
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            questionsplit.isNotEmpty
-                                ? questionsplit[1]
-                                : checkedQuestion,
+                            checkedQuestion,
                             style: const TextStyle(
                               fontSize: 14,
                               color: Color(0xff006699),
@@ -244,7 +241,7 @@ class _QuestionBState extends State<QuestionB> {
                     final index2 = result!.data!.questions![arrayIndex].choices!
                         .indexOf(answer);
                     return Visibility(
-                      // visible: isVisibleAnswer,
+                      visible: isVisibleAnswer,
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -282,7 +279,7 @@ class _QuestionBState extends State<QuestionB> {
                                           textAlign: TextAlign.center,
                                         )
                                       : Image.asset(
-                                          'assets/images/4/${answer.image}',
+                                          'assets/images/class4/${answer.image}',
                                           height: 50,
                                         ),
                                 ),
@@ -301,7 +298,7 @@ class _QuestionBState extends State<QuestionB> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Visibility(
-                      // visible: isVisibleIconSound,
+                      visible: isVisibleIconSound,
                       child: IconButton(
                         onPressed: () {
                           setState(() {
@@ -316,7 +313,7 @@ class _QuestionBState extends State<QuestionB> {
                       final isEnd = result!.data!.questions;
                       if (arrayIndex == isEnd!.length - 1) {
                         return Visibility(
-                          // visible: selectedItem >= 0,
+                          visible: selectedItem >= 0,
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamedAndRemoveUntil(
@@ -336,14 +333,14 @@ class _QuestionBState extends State<QuestionB> {
                         );
                       }
                       return Visibility(
-                        // visible: selectedItem >= 0,
+                        visible: selectedItem >= 0,
                         child: ElevatedButton(
                           onPressed: () {
                             setState(() {
                               addSoal++;
                               arrayIndex++;
-                              // isVisibleAnswer = false;
-                              // isVisibleIconSound = true;
+                              isVisibleAnswer = false;
+                              isVisibleIconSound = true;
                               selectedItem = -1;
                             });
                           },

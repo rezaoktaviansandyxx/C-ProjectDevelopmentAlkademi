@@ -183,7 +183,7 @@ class _QuestionCState extends State<QuestionC> {
                             ),
                           ),
                           Image.asset(
-                            'images/class6/$checkedImage',
+                            'assets/images/class6/$checkedImage',
                             errorBuilder: (context, error, stackTrace) =>
                                 Container(),
                             height:
@@ -205,7 +205,7 @@ class _QuestionCState extends State<QuestionC> {
                     return Column(
                       children: [
                         Image.asset(
-                          'images/class6/$checkedImage',
+                          'assets/images/class6/$checkedImage',
                           height: MediaQuery.of(context).size.height * 20 / 100,
                         ),
                         const SizedBox(
@@ -285,7 +285,7 @@ class _QuestionCState extends State<QuestionC> {
                                           textAlign: TextAlign.center,
                                         )
                                       : Image.asset(
-                                          'images/class6/${answer.image}',
+                                          'assets/images/class6/${answer.image}',
                                           height: 60,
                                         ),
                                 ),

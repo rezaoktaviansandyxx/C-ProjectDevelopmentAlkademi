@@ -177,7 +177,7 @@ class _QuestionBState extends State<QuestionB> {
                             ),
                           ),
                           Image.asset(
-                            'images/class4/$checkedImage',
+                            'assets/images/class4/$checkedImage',
                             errorBuilder: (context, error, stackTrace) =>
                                 Container(),
                             height:
@@ -199,7 +199,7 @@ class _QuestionBState extends State<QuestionB> {
                     return Column(
                       children: [
                         Image.asset(
-                          'images/class4/$checkedImage',
+                          'assets/images/class4/$checkedImage',
                           height: MediaQuery.of(context).size.height * 20 / 100,
                         ),
                         const SizedBox(

@@ -176,7 +176,7 @@ class _QuestionAState extends State<QuestionA> {
                           ),
                         ),
                         Image.asset(
-                          'images/class2/$checkedImage',
+                          'assets/images/class2/$checkedImage',
                           errorBuilder: (context, error, stackTrace) =>
                               Container(),
                           height: MediaQuery.of(context).size.height * 20 / 100,

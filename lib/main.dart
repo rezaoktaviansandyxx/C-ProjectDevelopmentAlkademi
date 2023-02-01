@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         '/class4' :(context) => const QuestionB(),
         '/class6' :(context) => const QuestionC(),
       },
-      home: const QuestionA(),
+      home: const QuestionB(),
     );
   }
 }

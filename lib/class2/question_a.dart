@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/endscreen.dart';
 import 'package:quiz_app/model/api_soal_a.dart';
 
 class QuestionA extends StatefulWidget {
@@ -14,11 +13,11 @@ class QuestionA extends StatefulWidget {
 }
 
 class _QuestionAState extends State<QuestionA> {
-  int selectedItem = -1;
   List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. '];
   final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
   bool isVisibleAnswer = false;
+  int selectedItem = -1;
   int addSoal = 1;
   int arrayIndex = 0;
   //Load JSON
@@ -87,12 +86,8 @@ class _QuestionAState extends State<QuestionA> {
                             actions: [
                               TextButton(
                                 onPressed: () {
-                                  Navigator.pushAndRemoveUntil(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const EndScreen()),
-                                      (route) => false);
+                                  Navigator.pushNamedAndRemoveUntil(
+                                      context, '/endscreen', (route) => false);
                                 },
                                 child: const Text('Ok'),
                               ),
@@ -131,38 +126,82 @@ class _QuestionAState extends State<QuestionA> {
               }
               return Column(children: [
                 Builder(builder: (context) {
-                  if (result?.data?.questions?[arrayIndex].image?.isNotEmpty ==
-                      true) {
-                    final splitQuestion = result
-                        ?.data?.questions?[arrayIndex].question
-                        ?.split('berikut!');
+                  final checkedImage =
+                      result!.data!.questions![arrayIndex].image;
+                  final checkedQuestion =
+                      result?.data?.questions?[arrayIndex].question;
+                  String questionstring = checkedQuestion!;
+                  List<String> questionsplit = [];
+                  if (questionstring.contains("ini! ")) {
+                    questionsplit = questionstring.split("ini! ");
+                    questionsplit[0] += "ini!";
+                  } else if (questionstring.contains("ini. ")) {
+                    questionsplit = questionstring.split("ini. ");
+                    questionsplit[0] += "ini.";
+                  } else if (questionstring.contains("berikut! ")) {
+                    questionsplit = questionstring.split("berikut! ");
+                    questionsplit[0] += "berikut!";
+                  } else if (questionstring.contains("berikut. ")) {
+                    questionsplit = questionstring.split("berikut. ");
+                    questionsplit[0] += "berikut.";
+                  } else if (questionstring.contains("berikut: ")) {
+                    questionsplit = questionstring.split("berikut: ");
+                    questionsplit[0] += "berikut:";
+                  } else if (questionstring.contains("adalah sama! ")) {
+                    questionsplit = questionstring.split("adalah sama! ");
+                    questionsplit[0] += "adalah sama!";
+                  } else if (questionstring.contains("yang baru. ")) {
+                    questionsplit = questionstring.split("yang baru. ");
+                    questionsplit[0] += "yang baru.";
+                  } else if (questionstring.contains("yang berbeda-beda. ")) {
+                    questionsplit = questionstring.split("yang berbeda-beda. ");
+                    questionsplit[0] += "yang berbeda-beda.";
+                  } else if (questionstring
+                      .contains("sedang bermain puzzle. ")) {
+                    questionsplit =
+                        questionstring.split("sedang bermain puzzle. ");
+                    questionsplit[0] += "sedang bermain puzzle.";
+                  }
+                  if (checkedImage!.isNotEmpty == true) {
                     return Column(
                       children: [
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            splitQuestion![0],
+                            questionsplit[0],
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Color(0xff006699),
+                            ),
                           ),
                         ),
                         Image.asset(
-                          'assets/images/class2/${result!.data!.questions![arrayIndex].image}',
+                          'images/class2/$checkedImage',
                           errorBuilder: (context, error, stackTrace) =>
                               Container(),
+                          height: MediaQuery.of(context).size.height * 20 / 100,
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            splitQuestion[1],
+                            questionsplit[1],
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Color(0xff006699),
+                            ),
                           ),
                         ),
                       ],
                     );
                   }
-                  return Text(
-                    '${result?.data?.questions?[arrayIndex].question}',
-                    style: const TextStyle(
-                      fontSize: 14,
-                      color: Color(0xff006699),
+                  return Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      checkedQuestion,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: Color(0xff006699),
+                      ),
                     ),
                   );
                 }),
@@ -246,30 +285,54 @@ class _QuestionAState extends State<QuestionA> {
                         icon: const Icon(Icons.volume_up),
                       ),
                     ),
-                    Visibility(
-                      visible: selectedItem >= 0,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          setState(() {
-                            addSoal++;
-                            arrayIndex++;
-                            isVisibleAnswer = false;
-                            isVisibleIconSound = true;
-                            selectedItem = -1;
-                          });
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xff006699),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                    Builder(builder: (context) {
+                      final isEnd = result!.data!.questions;
+                      if (arrayIndex == isEnd!.length - 1) {
+                        return Visibility(
+                          visible: selectedItem >= 0,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, '/endscreen', (route) => false);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff006699),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                              child: Text('Finish'),
+                            ),
+                          ),
+                        );
+                      }
+                      return Visibility(
+                        visible: selectedItem >= 0,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              addSoal++;
+                              arrayIndex++;
+                              isVisibleAnswer = false;
+                              isVisibleIconSound = true;
+                              selectedItem = -1;
+                            });
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xff006699),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
+                            child: Text('Next'),
                           ),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
-                          child: Text('Next'),
-                        ),
-                      ),
-                    ),
+                      );
+                    }),
                   ],
                 ),
               ]);
@@ -292,21 +355,5 @@ class _QuestionAState extends State<QuestionA> {
         isVisibleAnswer = true;
       });
     });
-    // _assetAudioPlayer.currentPosition.listen((event) {
-    //   setState(() {
-    //     if (26600 <= event.inMilliseconds && event.inMilliseconds <= 27000) {
-    //       isVisibleAnswerA = true;
-    //     } else if (29081 <= event.inMilliseconds &&
-    //         event.inMilliseconds <= 31000) {
-    //       isVisibleAnswerB = true;
-    //     } else if (31416 <= event.inMilliseconds &&
-    //         event.inMilliseconds <= 33000) {
-    //       isVisibleAnswerC = true;
-    //     } else if (33564 <= event.inMilliseconds &&
-    //         event.inMilliseconds <= 35000) {
-    //       isVisibleAnswerD = true;
-    //     }
-    //   });
-    // });
   }
 }

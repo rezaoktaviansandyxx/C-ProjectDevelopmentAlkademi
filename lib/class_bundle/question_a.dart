@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/model/api_soal_a.dart';
+import 'package:quiz_app/models/soal_a_model.dart';
 
 class QuestionA extends StatefulWidget {
   const QuestionA({super.key});
@@ -43,15 +43,14 @@ class _QuestionAState extends State<QuestionA> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'SOAL $addSoal',
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-            ),
+        title: Text(
+          'SOAL $addSoal',
+          style: const TextStyle(
+            color: Colors.black,
+            fontSize: 20,
           ),
         ),
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [

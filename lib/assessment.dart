@@ -9,8 +9,6 @@ class Assessment extends StatefulWidget {
 }
 
 class _AssessmentState extends State<Assessment> {
-  var passData = 0;
-  var totData = 0;
   final _assetsAudioPlayer = AssetsAudioPlayer();
   bool isEnable = false;
   @override
@@ -21,7 +19,6 @@ class _AssessmentState extends State<Assessment> {
 
   @override
   Widget build(BuildContext context) {
-    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -58,9 +55,7 @@ class _AssessmentState extends State<Assessment> {
               ElevatedButton(
                 onPressed: isEnable
                     ? () {
-                        totData = passData;
-                        Navigator.pushNamed(context, '/tutorial',
-                            arguments: totData);
+                        Navigator.pushNamed(context, '/tutorial');
                       }
                     : null,
                 style: ElevatedButton.styleFrom(

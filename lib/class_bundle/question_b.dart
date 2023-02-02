@@ -3,17 +3,17 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/model/api_soal_c.dart';
+import 'package:quiz_app/models/soal_b_model.dart';
 
-class QuestionC extends StatefulWidget {
-  const QuestionC({super.key});
+class QuestionB extends StatefulWidget {
+  const QuestionB({super.key});
 
   @override
-  State<QuestionC> createState() => _QuestionCState();
+  State<QuestionB> createState() => _QuestionBState();
 }
 
-class _QuestionCState extends State<QuestionC> {
-  List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. ', 'E. '];
+class _QuestionBState extends State<QuestionB> {
+  List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. '];
   final _assetAudioPlayer = AssetsAudioPlayer();
   bool isVisibleIconSound = true;
   bool isVisibleAnswer = false;
@@ -21,12 +21,12 @@ class _QuestionCState extends State<QuestionC> {
   int addSoal = 1;
   int arrayIndex = 0;
   //Load JSON
-  SoalC? result;
+  SoalB? result;
   Future _loadJson() async {
     String jsonString =
-        await rootBundle.loadString('assets/jsonfile/soalc.json');
+        await rootBundle.loadString('assets/jsonfile/soalb.json');
     final jsonData = jsonDecode(jsonString);
-    SoalC soalb = SoalC.fromJson(jsonData);
+    SoalB soalb = SoalB.fromJson(jsonData);
 
     setState(() {
       result = soalb;
@@ -43,15 +43,14 @@ class _QuestionCState extends State<QuestionC> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'SOAL $addSoal',
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-            ),
+        title: Text(
+          'SOAL $addSoal',
+          style: const TextStyle(
+            color: Colors.black,
+            fontSize: 20,
           ),
         ),
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
@@ -137,15 +136,9 @@ class _QuestionCState extends State<QuestionC> {
                 } else if (questionstring.contains("ini. ")) {
                   questionsplit = questionstring.split("ini. ");
                   questionsplit[0] += "ini.";
-                } else if (questionstring.contains("ini: ")) {
-                  questionsplit = questionstring.split("ini: ");
-                  questionsplit[0] += "ini:";
                 } else if (questionstring.contains("berikut! ")) {
                   questionsplit = questionstring.split("berikut! ");
                   questionsplit[0] += "berikut!";
-                } else if (questionstring.contains("satuan panjang. ")) {
-                  questionsplit = questionstring.split("satuan panjang. ");
-                  questionsplit[0] += "satuan panjang.";
                 } else if (questionstring.contains("berikut. ")) {
                   questionsplit = questionstring.split("berikut. ");
                   questionsplit[0] += "berikut.";
@@ -182,7 +175,7 @@ class _QuestionCState extends State<QuestionC> {
                           ),
                         ),
                         Image.asset(
-                          'assets/images/class6/$checkedImage',
+                          'assets/images/class4/$checkedImage',
                           errorBuilder: (context, error, stackTrace) =>
                               Container(),
                           height:
@@ -204,11 +197,11 @@ class _QuestionCState extends State<QuestionC> {
                   return Column(
                     children: [
                       Image.asset(
-                        'assets/images/class6/$checkedImage',
+                        'assets/images/class4/$checkedImage',
                         height: MediaQuery.of(context).size.height * 20 / 100,
                       ),
                       const SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       Align(
                         alignment: Alignment.centerLeft,
@@ -284,8 +277,8 @@ class _QuestionCState extends State<QuestionC> {
                                         textAlign: TextAlign.center,
                                       )
                                     : Image.asset(
-                                        'assets/images/class6/${answer.image}',
-                                        height: 60,
+                                        'assets/images/class4/${answer.image}',
+                                        height: 50,
                                       ),
                               ),
                             ],
@@ -374,7 +367,7 @@ class _QuestionCState extends State<QuestionC> {
   openPlayer() async {
     await _assetAudioPlayer.open(
       Audio(
-          'assets/audios/class6/${result?.data?.questions?[arrayIndex].audio}.mp3'),
+          'assets/audios/class4/${result?.data?.questions?[arrayIndex].audio}.mp3'),
       autoStart: true,
     );
     _assetAudioPlayer.playlistAudioFinished.listen((event) {

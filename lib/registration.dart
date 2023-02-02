@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/widget/custom_text_form_field.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Registration extends StatefulWidget {
   const Registration({super.key});
@@ -8,8 +10,6 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
-  var passData = 0;
-  var totData = 0;
   //controller
   TextEditingController nameController = TextEditingController();
   TextEditingController classController = TextEditingController();
@@ -26,7 +26,6 @@ class _RegistrationState extends State<Registration> {
 
   @override
   Widget build(BuildContext context) {
-    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -58,7 +57,12 @@ class _RegistrationState extends State<Registration> {
                       ),
                       Flexible(
                         flex: 4,
-                        child: nameText(),
+                        child: CustomTextFormField(
+                          controller: nameController,
+                          txtLable: 'Masukkan nama anda',
+                          textInputAction: TextInputAction.next,
+                          textInputType: TextInputType.name,
+                        ),
                       ),
                     ],
                   ),
@@ -77,7 +81,12 @@ class _RegistrationState extends State<Registration> {
                       ),
                       Flexible(
                         flex: 4,
-                        child: classText(),
+                        child: CustomTextFormField(
+                          controller: classController,
+                          txtLable: 'Masukkan kelas anda',
+                          textInputAction: TextInputAction.next,
+                          textInputType: TextInputType.text,
+                        ),
                       ),
                     ],
                   ),
@@ -96,20 +105,25 @@ class _RegistrationState extends State<Registration> {
                       ),
                       Flexible(
                         flex: 4,
-                        child: schoolText(),
+                        child: CustomTextFormField(
+                          controller: schoolController,
+                          txtLable: 'Masukkan nama sekolah anda',
+                          textInputAction: TextInputAction.done,
+                          textInputType: TextInputType.text,
+                        ),
                       ),
                     ],
                   ),
                   const Spacer(),
                   ElevatedButton(
-                    onPressed: () async {
+                    onPressed: () {
                       if (isAllFilled()) {
                         nameController.text;
                         classController.text;
                         schoolController.text;
-                        totData = passData;
-                        Navigator.pushNamed(context, '/logoscreen',
-                            arguments: totData);
+                        saveStringToSF(nameController.text,
+                            classController.text, schoolController.text);
+                        Navigator.pushNamed(context, '/logoscreen');
                         nameController.clear();
                         classController.clear();
                         schoolController.clear();
@@ -170,52 +184,11 @@ class _RegistrationState extends State<Registration> {
         classController.text != null &&
         schoolController.text != null;
   }
+}
 
-  TextFormField schoolText() => TextFormField(
-        controller: schoolController,
-        textInputAction: TextInputAction.done,
-        keyboardType: TextInputType.text,
-        decoration: InputDecoration(
-            labelText: 'Masukkan nama sekolah anda',
-            enabledBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 3, color: Colors.blue),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 3, color: Colors.blue),
-              borderRadius: BorderRadius.circular(15),
-            )),
-      );
-
-  TextFormField classText() => TextFormField(
-        controller: classController,
-        textInputAction: TextInputAction.next,
-        keyboardType: TextInputType.text,
-        decoration: InputDecoration(
-            labelText: 'Masukkan kelas anda',
-            enabledBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 3, color: Colors.blue),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 3, color: Colors.blue),
-              borderRadius: BorderRadius.circular(15),
-            )),
-      );
-
-  TextFormField nameText() => TextFormField(
-        controller: nameController,
-        textInputAction: TextInputAction.next,
-        keyboardType: TextInputType.name,
-        decoration: InputDecoration(
-            labelText: 'Masukkan nama anda',
-            enabledBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 3, color: Colors.blue),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 3, color: Colors.blue),
-              borderRadius: BorderRadius.circular(15),
-            )),
-      );
+saveStringToSF(String name, classes, school) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setString('Nama', name);
+  prefs.setString('Kelas', classes);
+  prefs.setString('Sekolah', school);
 }

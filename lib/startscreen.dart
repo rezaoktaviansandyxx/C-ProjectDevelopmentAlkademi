@@ -1,5 +1,6 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
@@ -9,7 +10,6 @@ class StartScreen extends StatefulWidget {
 }
 
 class _StartScreenState extends State<StartScreen> {
-  var passData = 0;
   final _assetsAudioPlayer = AssetsAudioPlayer();
   bool isEnableButton = false;
   @override
@@ -20,22 +20,12 @@ class _StartScreenState extends State<StartScreen> {
 
   @override
   Widget build(BuildContext context) {
-    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       body: Center(
         child: ElevatedButton(
           onPressed: isEnableButton
               ? () {
-                  if (passData == 1) {
-                    Navigator.pushNamedAndRemoveUntil(
-                        context, '/class2', (route) => false);
-                  } else if (passData == 2) {
-                    Navigator.pushNamedAndRemoveUntil(
-                        context, '/class4', (route) => false);
-                  } else if (passData == 3) {
-                    Navigator.pushNamedAndRemoveUntil(
-                        context, '/class6', (route) => false);
-                  }
+                  getIntSF();
                 }
               : null,
           style: ElevatedButton.styleFrom(
@@ -68,5 +58,22 @@ class _StartScreenState extends State<StartScreen> {
         isEnableButton = true;
       });
     });
+  }
+
+  void getIntSF() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final getInt = prefs.getInt('Classes');
+    if (getInt == 1) {
+      // ignore: use_build_context_synchronously
+      Navigator.pushNamedAndRemoveUntil(context, '/class2', (route) => false);
+    } else if (getInt == 2) {
+      // ignore: use_build_context_synchronously
+      Navigator.pushNamedAndRemoveUntil(context, '/class4', (route) => false);
+    } else if (getInt == 3) {
+      // ignore: use_build_context_synchronously
+      Navigator.pushNamedAndRemoveUntil(context, '/class6', (route) => false);
+    } else {
+      const Text('Route tidak ditemukan');
+    }
   }
 }

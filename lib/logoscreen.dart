@@ -8,11 +8,8 @@ class LogoScreen extends StatefulWidget {
 }
 
 class _LogoScreenState extends State<LogoScreen> {
-  var passData = 0;
-  var totData = 0;
   @override
   Widget build(BuildContext context) {
-    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -55,9 +52,7 @@ class _LogoScreenState extends State<LogoScreen> {
                   const Spacer(),
                   ElevatedButton(
                     onPressed: () {
-                      totData = passData;
-                      Navigator.pushNamed(context, '/assesment',
-                          arguments: totData);
+                      Navigator.pushNamed(context, '/assesment');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),

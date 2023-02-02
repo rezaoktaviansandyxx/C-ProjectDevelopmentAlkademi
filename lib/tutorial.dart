@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/model/api_intro.dart';
+import 'package:quiz_app/models/intro_model.dart';
 
 class Tutorial extends StatefulWidget {
   const Tutorial({super.key});
@@ -13,8 +13,6 @@ class Tutorial extends StatefulWidget {
 }
 
 class _TutorialState extends State<Tutorial> {
-  var passData = 0;
-  var totData = 0;
   int selectedItem = -1;
   List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. '];
   final _assetsAudioPlayer = AssetsAudioPlayer();
@@ -43,7 +41,6 @@ class _TutorialState extends State<Tutorial> {
 
   @override
   Widget build(BuildContext context) {
-    passData = ModalRoute.of(context)!.settings.arguments as int;
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -152,10 +149,8 @@ class _TutorialState extends State<Tutorial> {
                   visible: selectedItem >= 0,
                   child: ElevatedButton(
                     onPressed: () {
-                      totData = passData;
                       Navigator.pushNamedAndRemoveUntil(
-                          context, '/startscreen', (route) => false,
-                          arguments: totData);
+                          context, '/startscreen', (route) => false);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff006699),
@@ -181,7 +176,6 @@ class _TutorialState extends State<Tutorial> {
     await _assetsAudioPlayer.open(
       Audio('assets/audios/misc_aktivasi_suara.mpeg'),
       autoStart: true,
-
     );
     _assetsAudioPlayer.playlistAudioFinished.listen((event) {
       setState(() {

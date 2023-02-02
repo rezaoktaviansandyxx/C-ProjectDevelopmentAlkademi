@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/class2/question_a.dart';
-import 'package:quiz_app/class4/question_b.dart';
-import 'package:quiz_app/class6/question_c.dart';
+import 'package:quiz_app/class_bundle/question_a.dart';
+import 'package:quiz_app/class_bundle/question_b.dart';
+import 'package:quiz_app/class_bundle/question_c.dart';
 import 'package:quiz_app/endscreen.dart';
 import 'package:quiz_app/logoscreen.dart';
 import 'package:quiz_app/mainscreen.dart';

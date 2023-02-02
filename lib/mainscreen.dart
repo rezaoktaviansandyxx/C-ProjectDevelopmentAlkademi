@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var passData = 0;
-    var totData = 0;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -22,9 +21,8 @@ class MainScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    totData = passData + 1;
-                    Navigator.pushNamed(context, '/registration',
-                        arguments: totData);
+                    saveKelas(1);
+                    Navigator.pushNamed(context, '/registration');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff006699),
@@ -42,9 +40,8 @@ class MainScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    totData = passData + 2;
-                    Navigator.pushNamed(context, '/registration',
-                        arguments: totData);
+                    saveKelas(2);
+                    Navigator.pushNamed(context, '/registration');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff006699),
@@ -62,9 +59,8 @@ class MainScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    totData = passData + 3;
-                    Navigator.pushNamed(context, '/registration',
-                        arguments: totData);
+                    saveKelas(3);
+                    Navigator.pushNamed(context, '/registration');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff006699),
@@ -83,5 +79,10 @@ class MainScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  saveKelas(int kelas) async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    pref.setInt('Classes', kelas);
   }
 }

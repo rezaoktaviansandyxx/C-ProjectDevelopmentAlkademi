@@ -78,6 +78,7 @@ class _QuestionCState extends State<QuestionC> {
                         await _assetAudioPlayer.stop();
                         // ignore: use_build_context_synchronously
                         Navigator.pop(context);
+                        timer.endTimer();
                         // ignore: use_build_context_synchronously
                         showDialog(
                           context: context,

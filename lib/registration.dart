@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/widget/custom_text_form_field.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class Registration extends StatefulWidget {
   const Registration({super.key});
@@ -121,8 +120,6 @@ class _RegistrationState extends State<Registration> {
                         nameController.text;
                         classController.text;
                         schoolController.text;
-                        saveStringToSF(nameController.text,
-                            classController.text, schoolController.text);
                         Navigator.pushNamed(context, '/logoscreen');
                         nameController.clear();
                         classController.clear();
@@ -184,11 +181,4 @@ class _RegistrationState extends State<Registration> {
         classController.text != null &&
         schoolController.text != null;
   }
-}
-
-saveStringToSF(String name, classes, school) async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  prefs.setString('Nama', name);
-  prefs.setString('Kelas', classes);
-  prefs.setString('Sekolah', school);
 }

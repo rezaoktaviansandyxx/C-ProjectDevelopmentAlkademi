@@ -4,6 +4,7 @@ import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quiz_app/models/soal_b_model.dart';
+import 'package:quiz_app/utilities/custom_timer.dart';
 
 class QuestionB extends StatefulWidget {
   const QuestionB({super.key});
@@ -15,6 +16,7 @@ class QuestionB extends StatefulWidget {
 class _QuestionBState extends State<QuestionB> {
   List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. '];
   final _assetAudioPlayer = AssetsAudioPlayer();
+  final CtsmTimer timer = CtsmTimer();
   bool isVisibleIconSound = true;
   bool isVisibleAnswer = false;
   int selectedItem = -1;
@@ -76,6 +78,7 @@ class _QuestionBState extends State<QuestionB> {
                         await _assetAudioPlayer.stop();
                         // ignore: use_build_context_synchronously
                         Navigator.pop(context);
+                        timer.endTimer();
                         // ignore: use_build_context_synchronously
                         showDialog(
                           context: context,
@@ -113,8 +116,7 @@ class _QuestionBState extends State<QuestionB> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        margin:
-            const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
+        margin: const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
         child: Builder(
           builder: (context) {
             if (result == null) {
@@ -124,8 +126,7 @@ class _QuestionBState extends State<QuestionB> {
             }
             return Column(children: [
               Builder(builder: (context) {
-                final checkedImage =
-                    result!.data!.questions![arrayIndex].image;
+                final checkedImage = result!.data!.questions![arrayIndex].image;
                 final checkedQuestion =
                     result?.data?.questions?[arrayIndex].question;
                 String questionstring = checkedQuestion!;
@@ -154,8 +155,7 @@ class _QuestionBState extends State<QuestionB> {
                 } else if (questionstring.contains("yang berbeda-beda. ")) {
                   questionsplit = questionstring.split("yang berbeda-beda. ");
                   questionsplit[0] += "yang berbeda-beda.";
-                } else if (questionstring
-                    .contains("sedang bermain puzzle. ")) {
+                } else if (questionstring.contains("sedang bermain puzzle. ")) {
                   questionsplit =
                       questionstring.split("sedang bermain puzzle. ");
                   questionsplit[0] += "sedang bermain puzzle.";
@@ -178,8 +178,7 @@ class _QuestionBState extends State<QuestionB> {
                           'assets/images/class4/$checkedImage',
                           errorBuilder: (context, error, stackTrace) =>
                               Container(),
-                          height:
-                              MediaQuery.of(context).size.height * 20 / 100,
+                          height: MediaQuery.of(context).size.height * 20 / 100,
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
@@ -234,8 +233,8 @@ class _QuestionBState extends State<QuestionB> {
               Wrap(
                 spacing: 20.0,
                 runSpacing: 10.0,
-                children: result!.data!.questions![arrayIndex].choices!
-                    .map((answer) {
+                children:
+                    result!.data!.questions![arrayIndex].choices!.map((answer) {
                   final index2 = result!.data!.questions![arrayIndex].choices!
                       .indexOf(answer);
                   return Visibility(
@@ -314,6 +313,7 @@ class _QuestionBState extends State<QuestionB> {
                         visible: selectedItem >= 0,
                         child: ElevatedButton(
                           onPressed: () {
+                            timer.endTimer();
                             Navigator.pushNamedAndRemoveUntil(
                                 context, '/endscreen', (route) => false);
                           },
@@ -340,6 +340,7 @@ class _QuestionBState extends State<QuestionB> {
                             isVisibleAnswer = false;
                             isVisibleIconSound = true;
                             selectedItem = -1;
+                            timer.endTimer();
                           });
                         },
                         style: ElevatedButton.styleFrom(
@@ -374,6 +375,7 @@ class _QuestionBState extends State<QuestionB> {
       setState(() {
         isVisibleIconSound = false;
         isVisibleAnswer = true;
+        timer.startTimer();
       });
     });
   }

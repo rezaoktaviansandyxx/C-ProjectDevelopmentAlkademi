@@ -25,7 +25,7 @@ class _EndScreenState extends State<EndScreen> {
         elevation: 0,
         actions: [
           IconButton(
-            onPressed: () async{
+            onPressed: () async {
               await _assetAudioPlayer.stop();
               // ignore: use_build_context_synchronously
               Navigator.pushNamedAndRemoveUntil(

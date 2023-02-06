@@ -7,6 +7,7 @@ class CustomTextFormField extends StatelessWidget {
     required String txtLable,
     this.textInputAction,
     this.textInputType,
+    this.onChanged,
   })  : _controller = controller,
         _txtLable = txtLable;
 
@@ -14,6 +15,7 @@ class CustomTextFormField extends StatelessWidget {
   final String _txtLable;
   final TextInputAction? textInputAction;
   final TextInputType? textInputType;
+  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class CustomTextFormField extends StatelessWidget {
             borderSide: const BorderSide(width: 3, color: Colors.blue),
             borderRadius: BorderRadius.circular(15),
           )),
+      onChanged: onChanged,
     );
   }
 }

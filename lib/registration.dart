@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/models/answer_model.dart';
+import 'package:quiz_app/models/shared_prefs_model.dart';
 import 'package:quiz_app/widget/custom_text_form_field.dart';
 
 class Registration extends StatefulWidget {
@@ -14,6 +16,16 @@ class _RegistrationState extends State<Registration> {
   TextEditingController classController = TextEditingController();
   TextEditingController schoolController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  //Variable
+  SharedPrefs sharedPrefs = SharedPrefs();
+  Answer answerLoad = Answer();
+  Answer answerSave = Answer();
+
+  @override
+  void initState() {
+    loadSharedPrefs();
+    super.initState();
+  }
 
   @override
   void dispose() {
@@ -29,8 +41,12 @@ class _RegistrationState extends State<Registration> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: const BackButton(
+        leading: BackButton(
           color: Colors.black,
+          onPressed: () {
+            sharedPrefs.remove('buttonId');
+            Navigator.pop(context);
+          },
         ),
         elevation: 0,
       ),
@@ -61,6 +77,9 @@ class _RegistrationState extends State<Registration> {
                           txtLable: 'Masukkan nama anda',
                           textInputAction: TextInputAction.next,
                           textInputType: TextInputType.name,
+                          onChanged: (value) {
+                            answerSave.nama = value;
+                          },
                         ),
                       ),
                     ],
@@ -85,6 +104,9 @@ class _RegistrationState extends State<Registration> {
                           txtLable: 'Masukkan kelas anda',
                           textInputAction: TextInputAction.next,
                           textInputType: TextInputType.text,
+                          onChanged: (value) {
+                            answerSave.kelas = value;
+                          },
                         ),
                       ),
                     ],
@@ -109,6 +131,9 @@ class _RegistrationState extends State<Registration> {
                           txtLable: 'Masukkan nama sekolah anda',
                           textInputAction: TextInputAction.done,
                           textInputType: TextInputType.text,
+                          onChanged: (value) {
+                            answerSave.sekolah = value;
+                          },
                         ),
                       ),
                     ],
@@ -120,6 +145,7 @@ class _RegistrationState extends State<Registration> {
                         nameController.text;
                         classController.text;
                         schoolController.text;
+                        saveToSF();
                         Navigator.pushNamed(context, '/logoscreen');
                         nameController.clear();
                         classController.clear();
@@ -180,5 +206,30 @@ class _RegistrationState extends State<Registration> {
         nameController.text != null &&
         classController.text != null &&
         schoolController.text != null;
+  }
+
+  loadSharedPrefs() async {
+    try {
+      Answer answer = Answer.fromJson(await sharedPrefs.read('buttonId'));
+      // ignore: use_build_context_synchronously
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text('${answer.buttonId}'),
+        duration: const Duration(milliseconds: 5000),
+      ));
+      setState(() {
+        answerLoad = answer;
+      });
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Nothing Found!'),
+        duration: Duration(milliseconds: 500),
+      ));
+    }
+  }
+
+  saveToSF() {
+    sharedPrefs.save('nama', answerSave);
+    sharedPrefs.save('kelas', answerSave);
+    sharedPrefs.save('sekolah', answerSave);
   }
 }

@@ -3,8 +3,9 @@ import 'dart:convert';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quiz_app/models/answer_model.dart';
+import 'package:quiz_app/models/shared_prefs_model.dart';
 import 'package:quiz_app/models/soal_a_model.dart';
-import 'package:quiz_app/utilities/custom_timer.dart';
 
 class QuestionA extends StatefulWidget {
   const QuestionA({super.key});
@@ -15,8 +16,10 @@ class QuestionA extends StatefulWidget {
 
 class _QuestionAState extends State<QuestionA> {
   List<String> answerAbcd = ['A. ', 'B. ', 'C. ', 'D. '];
+  Answer answerSave = Answer();
+  SharedPrefs sharedPrefs = SharedPrefs();
   final _assetAudioPlayer = AssetsAudioPlayer();
-  final CtsmTimer timer = CtsmTimer();
+  // final CtsmTimer timer = CtsmTimer();
   bool isVisibleIconSound = true;
   bool isVisibleAnswer = false;
   int selectedItem = -1;
@@ -78,7 +81,8 @@ class _QuestionAState extends State<QuestionA> {
                         await _assetAudioPlayer.stop();
                         // ignore: use_build_context_synchronously
                         Navigator.pop(context);
-                        timer.endTimer();
+                        // timer.endTimer();
+                        saveInSF();
                         // ignore: use_build_context_synchronously
                         showDialog(
                           context: context,
@@ -220,6 +224,9 @@ class _QuestionAState extends State<QuestionA> {
                       onTap: () {
                         setState(() {
                           selectedItem = index2;
+                          answerSave.jawaban?[0].answer = selectedItem
+                              .toString()
+                              .replaceRange(0, 3, '$answerAbcd');
                         });
                       },
                       child: Container(
@@ -290,7 +297,8 @@ class _QuestionAState extends State<QuestionA> {
                         visible: selectedItem >= 0,
                         child: ElevatedButton(
                           onPressed: () {
-                            timer.endTimer();
+                            // timer.endTimer();
+                            saveInSF();
                             Navigator.pushNamedAndRemoveUntil(
                                 context, '/endscreen', (route) => false);
                           },
@@ -317,7 +325,8 @@ class _QuestionAState extends State<QuestionA> {
                             isVisibleAnswer = false;
                             isVisibleIconSound = true;
                             selectedItem = -1;
-                            timer.endTimer();
+                            saveInSF();
+                            // timer.endTimer();
                           });
                         },
                         style: ElevatedButton.styleFrom(
@@ -352,8 +361,13 @@ class _QuestionAState extends State<QuestionA> {
       setState(() {
         isVisibleIconSound = false;
         isVisibleAnswer = true;
-        timer.startTimer();
+        // timer.startTimer();
       });
     });
+  }
+
+  saveInSF() {
+    sharedPrefs.save(
+        'answer', selectedItem.toString().replaceRange(0, 3, '$answerAbcd'));
   }
 }

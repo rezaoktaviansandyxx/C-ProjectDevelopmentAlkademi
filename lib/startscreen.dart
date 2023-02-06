@@ -62,7 +62,7 @@ class _StartScreenState extends State<StartScreen> {
 
   void getIntSF() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    final getInt = prefs.getInt('Classes');
+    final getInt = prefs.getInt('buttonId');
     if (getInt == 1) {
       // ignore: use_build_context_synchronously
       Navigator.pushNamedAndRemoveUntil(context, '/class2', (route) => false);

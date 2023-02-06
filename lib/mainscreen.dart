@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:quiz_app/models/answer_model.dart';
+import 'package:quiz_app/models/shared_prefs_model.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SharedPrefs sharedPrefs = SharedPrefs();
+    Answer answer = Answer();
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -21,7 +24,8 @@ class MainScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    saveKelas(1);
+                    answer.buttonId = 1;
+                    sharedPrefs.save('buttonId', answer);
                     Navigator.pushNamed(context, '/registration');
                   },
                   style: ElevatedButton.styleFrom(
@@ -40,7 +44,8 @@ class MainScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    saveKelas(2);
+                    answer.buttonId = 2;
+                    sharedPrefs.save('buttonId', answer);
                     Navigator.pushNamed(context, '/registration');
                   },
                   style: ElevatedButton.styleFrom(
@@ -59,7 +64,8 @@ class MainScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    saveKelas(3);
+                    answer.buttonId = 3;
+                    sharedPrefs.save('buttonId', answer);
                     Navigator.pushNamed(context, '/registration');
                   },
                   style: ElevatedButton.styleFrom(
@@ -79,10 +85,5 @@ class MainScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  saveKelas(int kelas) async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
-    pref.setInt('Classes', kelas);
   }
 }

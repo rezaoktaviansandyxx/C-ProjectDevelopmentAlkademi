@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/models/answer_model.dart';
+import 'package:quiz_app/models/shared_prefs_model.dart';
 
 class LogoScreen extends StatefulWidget {
   const LogoScreen({super.key});
@@ -8,14 +10,29 @@ class LogoScreen extends StatefulWidget {
 }
 
 class _LogoScreenState extends State<LogoScreen> {
+  //Variable
+  SharedPrefs sharedPrefs = SharedPrefs();
+  Answer answerLoad = Answer();
+  @override
+  void initState() {
+    loadSharedPrefs();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: const BackButton(
+        leading: BackButton(
           color: Colors.black,
+          onPressed: () async {
+            sharedPrefs.remove('nama');
+            sharedPrefs.remove('kelas');
+            sharedPrefs.remove('sekolah');
+            Navigator.pop(context);
+          },
         ),
         elevation: 0,
       ),
@@ -75,5 +92,33 @@ class _LogoScreenState extends State<LogoScreen> {
         ),
       ),
     );
+  }
+
+  loadSharedPrefs() async {
+    try {
+      Answer buttonId = Answer.fromJson(await sharedPrefs.read('buttonId'));
+      Answer answer = Answer.fromJson(await sharedPrefs.read('nama'));
+      Answer answer2 = Answer.fromJson(await sharedPrefs.read('kelas'));
+      Answer answer3 = Answer.fromJson(await sharedPrefs.read('sekolah'));
+      // ignore: use_build_context_synchronously
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text('${buttonId.buttonId}\n'
+            '${answer.nama}\n'
+            '${answer2.kelas}\n'
+            '${answer3.sekolah}'),
+        duration: const Duration(milliseconds: 500),
+      ));
+      setState(() {
+        answerLoad = buttonId;
+        answerLoad = answer;
+        answerLoad = answer2;
+        answerLoad = answer3;
+      });
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Nothing Found!'),
+        duration: Duration(milliseconds: 500),
+      ));
+    }
   }
 }
